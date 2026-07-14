@@ -1,0 +1,56 @@
+{
+  "exclude_na": false,
+  "common_cases": 140,
+  "rules": [
+    "H1",
+    "H2",
+    "H3",
+    "H4",
+    "H5",
+    "H6"
+  ],
+  "per_rule": {
+    "H1": {
+      "n": 140,
+      "agree": 140,
+      "agree_rate": 1.0,
+      "kappa": 1.0
+    },
+    "H2": {
+      "n": 140,
+      "agree": 138,
+      "agree_rate": 0.9857142857,
+      "kappa": 0.9553713739
+    },
+    "H3": {
+      "n": 140,
+      "agree": 140,
+      "agree_rate": 1.0,
+      "kappa": 1.0
+    },
+    "H4": {
+      "n": 140,
+      "agree": 137,
+      "agree_rate": 0.9785714286,
+      "kappa": 0.9486552567
+    },
+    "H5": {
+      "n": 140,
+      "agree": 140,
+      "agree_rate": 1.0,
+      "kappa": 1.0
+    },
+    "H6": {
+      "n": 140,
+      "agree": 139,
+      "agree_rate": 0.9928571429,
+      "kappa": 0.9795201872
+    }
+  },
+  "overall": {
+    "n": 840,
+    "agree": 834,
+    "agree_rate": 0.9928571429,
+    "kappa": 0.9875308019
+  }
+}

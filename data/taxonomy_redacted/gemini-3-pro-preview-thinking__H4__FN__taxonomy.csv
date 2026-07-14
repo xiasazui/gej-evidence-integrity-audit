@@ -1,0 +1,4 @@
+release_case_id,model,rule_id,error_type,gold_status,pred_status,taxonomy_l1,taxonomy_l2,actionability,is_gold_disputed,is_case_ambiguous,use_as_example
+pr_case_0007,gemini-3-pro-preview-thinking,H4,FN,FAIL,PASS,RULE_TRIGGER_BRANCH,出现贲门/亚部位线索时未走Critical分支（缺Z线/齿状线距离仍判PASS）,rule_text,0,0,0
+pr_case_0009,gemini-3-pro-preview-thinking,H4,FN,FAIL,PASS,GOLD_DISPUTE,GEJ诊断与‘贲门癌’线索并存时分支口径不一致,label_guideline,0,0,0
+pr_case_0059,gemini-3-pro-preview-thinking,H4,FN,FAIL,PASS,RULE_TRIGGER_BRANCH,贲门线索存在但缺可复核Z线/齿状线中心距离（漏判）,rule_text,0,0,0

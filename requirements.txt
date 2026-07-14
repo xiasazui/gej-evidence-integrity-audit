@@ -1,0 +1,6 @@
+# Minimal dependencies for reproducing paper tables/figures
+numpy>=1.24
+matplotlib>=3.8
+
+# Optional: required only for DOCX export via export_docx.py
+pypandoc>=1.13

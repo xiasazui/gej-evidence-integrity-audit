@@ -1,0 +1,6 @@
+release_case_id,model,rule_id,error_type,gold_status,pred_status,taxonomy_l1,taxonomy_l2,actionability,is_gold_disputed,is_case_ambiguous,use_as_example
+pr_case_0001,qwen3-next-80b-a3b-thinking,H6,FN,FAIL,PASS,FORMAT_STRUCTURED,字段缺失/空值/粘连等格式问题未被识别,parser,0,0,0
+pr_case_0040,qwen3-next-80b-a3b-thinking,H6,FN,FAIL,PASS,FORMAT_STRUCTURED,字段缺失/空值/粘连等格式问题未被识别,parser,0,0,0
+pr_case_0041,qwen3-next-80b-a3b-thinking,H6,FN,FAIL,PASS,FORMAT_STRUCTURED,字段缺失/空值/粘连等格式问题未被识别,parser,0,0,0
+pr_case_0043,qwen3-next-80b-a3b-thinking,H6,FN,FAIL,PASS,FORMAT_STRUCTURED,字段缺失/空值/粘连等格式问题未被识别,parser,0,0,0
+pr_case_0044,qwen3-next-80b-a3b-thinking,H6,FN,FAIL,PASS,FORMAT_STRUCTURED,字段缺失/空值/粘连等格式问题未被识别,parser,0,0,0

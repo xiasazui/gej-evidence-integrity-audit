@@ -1,0 +1,7 @@
+﻿group,n_reviewed,lexical_yes,lexical_partial,lexical_no,semantic_sufficient,semantic_partial,semantic_not_sufficient,lexical_recoverability_rate,semantic_sufficiency_rate,recoverable_but_not_sufficient_rate,rule_id
+H1,16,10,6,0,16,0,0,0.625,1.000,0.000,H1
+H2,16,10,6,0,14,0,2,0.625,0.875,0.062,H2
+H3,16,16,0,0,16,0,0,1.000,1.000,0.000,H3
+H4,16,3,13,0,16,0,0,0.188,1.000,0.000,H4
+H5,16,7,9,0,16,0,0,0.438,1.000,0.000,H5
+H6,16,4,7,5,12,0,4,0.250,0.750,0.000,H6

@@ -1,0 +1,12 @@
+rank,model,fail_applicable_evidence_items_total,fail_applicable_evidence_in_text_strict_rate,fail_applicable_evidence_in_text_lenient_rate,all_evidence_items_total,all_evidence_in_text_strict_rate,all_evidence_in_text_lenient_rate,pass_or_na_evidence_items_total
+1,gemini-3-pro-preview-thinking,1446,0.991,0.998,1451,0.991,0.998,0
+2,kimi-k2-thinking,1805,0.924,0.981,1851,0.923,0.979,0
+3,qwen3-235b-a22b-thinking-2507,1542,0.883,0.978,1575,0.884,0.978,0
+4,deepseek-v3.2-thinking,1556,0.821,0.951,1585,0.818,0.950,0
+5,gpt-oss-120b,1831,0.972,0.986,1856,0.973,0.987,0
+6,gpt-oss-20b,1757,0.986,0.993,1976,0.983,0.991,0
+7,qwen3-next-80b-a3b-thinking,1333,0.927,0.936,1354,0.928,0.937,0
+8,qwen3-30b-a3b-thinking-2507,1116,0.876,0.891,1117,0.876,0.891,0
+9,MiniMax-M2.1,1843,0.789,0.927,1888,0.789,0.926,0
+10,gpt-5.2,2550,0.887,0.950,2612,0.882,0.944,0
+11,deterministic-baseline,387,1.000,1.000,387,1.000,1.000,0

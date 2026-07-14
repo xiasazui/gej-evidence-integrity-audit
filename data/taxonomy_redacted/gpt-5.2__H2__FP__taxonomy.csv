@@ -1,0 +1,9 @@
+release_case_id,model,rule_id,error_type,gold_status,pred_status,taxonomy_l1,taxonomy_l2,actionability,is_gold_disputed,is_case_ambiguous,use_as_example
+pr_case_0054,gpt-5.2,H2,FP,PASS,FAIL,RULE_TRIGGER_BRANCH,H2 对“内镜所见”的最低要求不清（仅部位/结论 vs 形态细节）,rule_text,0,0,0
+pr_case_0062,gpt-5.2,H2,FP,PASS,FAIL,RULE_TRIGGER_BRANCH,H2 对“内镜所见”的最低要求不清（仅部位/结论 vs 形态细节）,rule_text,0,0,0
+pr_case_0065,gpt-5.2,H2,FP,PASS,FAIL,RULE_TRIGGER_BRANCH,H2 对“内镜所见”的最低要求不清（仅部位/结论 vs 形态细节）,rule_text,0,0,0
+pr_case_0066,gpt-5.2,H2,FP,PASS,FAIL,RULE_TRIGGER_BRANCH,H2 对“内镜所见”的最低要求不清（仅部位/结论 vs 形态细节）,rule_text,0,0,0
+pr_case_0083,gpt-5.2,H2,FP,PASS,FAIL,RULE_TRIGGER_BRANCH,H2 对“内镜所见”的最低要求不清（仅部位/结论 vs 形态细节）,rule_text,0,0,0
+pr_case_0084,gpt-5.2,H2,FP,PASS,FAIL,RULE_TRIGGER_BRANCH,H2 对“内镜所见”的最低要求不清（仅部位/结论 vs 形态细节）,rule_text,0,0,0
+pr_case_0089,gpt-5.2,H2,FP,PASS,FAIL,RULE_TRIGGER_BRANCH,H2 对“内镜所见”的最低要求不清（仅部位/结论 vs 形态细节）,rule_text,0,0,0
+pr_case_0090,gpt-5.2,H2,FP,PASS,FAIL,RULE_TRIGGER_BRANCH,H2 对“内镜所见”的最低要求不清（仅部位/结论 vs 形态细节）,rule_text,0,0,0

@@ -1,0 +1,31 @@
+release_case_id,model,rule_id,error_type,gold_status,pred_status,taxonomy_l1,taxonomy_l2,actionability,is_gold_disputed,is_case_ambiguous,use_as_example
+pr_case_0002,gpt-5.2,H6,FP,PASS,FAIL,RULE_TRIGGER_BRANCH,H6命名规范口径过严（将ICD视为必须/否认“X癌”为规范恶性诊断）,rule_text,0,0,1
+pr_case_0003,gpt-5.2,H6,FP,PASS,FAIL,RULE_TRIGGER_BRANCH,H6命名规范口径过严（将ICD视为必须/否认“X癌”为规范恶性诊断）,rule_text,0,0,0
+pr_case_0004,gpt-5.2,H6,FP,PASS,FAIL,RULE_TRIGGER_BRANCH,H6命名规范口径过严（将ICD视为必须/否认“X癌”为规范恶性诊断）,rule_text,0,0,0
+pr_case_0005,gpt-5.2,H6,FP,PASS,FAIL,RULE_TRIGGER_BRANCH,H6命名规范口径过严（将ICD视为必须/否认“X癌”为规范恶性诊断）,rule_text,0,0,0
+pr_case_0007,gpt-5.2,H6,FP,PASS,FAIL,RULE_TRIGGER_BRANCH,H6命名规范口径过严（将ICD视为必须/否认“X癌”为规范恶性诊断）,rule_text,0,0,0
+pr_case_0008,gpt-5.2,H6,FP,PASS,FAIL,RULE_TRIGGER_BRANCH,H6命名规范口径过严（将ICD视为必须/否认“X癌”为规范恶性诊断）,rule_text,0,0,0
+pr_case_0009,gpt-5.2,H6,FP,PASS,FAIL,RULE_TRIGGER_BRANCH,H6命名规范口径过严（将ICD视为必须/否认“X癌”为规范恶性诊断）,rule_text,0,0,0
+pr_case_0010,gpt-5.2,H6,FP,PASS,FAIL,RULE_TRIGGER_BRANCH,H6命名规范口径过严（将ICD视为必须/否认“X癌”为规范恶性诊断）,rule_text,0,0,0
+pr_case_0011,gpt-5.2,H6,FP,PASS,FAIL,EVIDENCE_MISS,字段在文中但被漏读（个人史）,parser,0,0,1
+pr_case_0013,gpt-5.2,H6,FP,PASS,FAIL,RULE_TRIGGER_BRANCH,把‘内容过短/不可复核’当作字段缺失（体格检查）,rule_text,0,0,1
+pr_case_0014,gpt-5.2,H6,FP,PASS,FAIL,RULE_TRIGGER_BRANCH,H6 命名规范口径偏严/分支误用（需与 Gold 口径对齐）,rule_text,0,0,0
+pr_case_0016,gpt-5.2,H6,FP,PASS,FAIL,RULE_TRIGGER_BRANCH,H6 命名规范口径过严（把 ICD 当必需/校验 ICD 正确性）,rule_text,0,0,0
+pr_case_0017,gpt-5.2,H6,FP,PASS,FAIL,RULE_TRIGGER_BRANCH,H6 命名规范口径偏严/分支误用（需与 Gold 口径对齐）,rule_text,0,0,0
+pr_case_0018,gpt-5.2,H6,FP,PASS,FAIL,RULE_TRIGGER_BRANCH,H6 命名规范口径过严（把 ICD 当必需/校验 ICD 正确性）,rule_text,0,0,0
+pr_case_0019,gpt-5.2,H6,FP,PASS,FAIL,RULE_TRIGGER_BRANCH,H6 命名规范口径偏严/分支误用（需与 Gold 口径对齐）,rule_text,0,0,0
+pr_case_0020,gpt-5.2,H6,FP,PASS,FAIL,EVIDENCE_MISS,H6 命名规范口径偏严/分支误用（需与 Gold 口径对齐）,parser,0,0,0
+pr_case_0021,gpt-5.2,H6,FP,PASS,FAIL,RULE_TRIGGER_BRANCH,H6 命名规范口径偏严/分支误用（需与 Gold 口径对齐）,rule_text,0,0,0
+pr_case_0022,gpt-5.2,H6,FP,PASS,FAIL,RULE_TRIGGER_BRANCH,H6 命名规范口径偏严/分支误用（需与 Gold 口径对齐）,rule_text,0,0,0
+pr_case_0023,gpt-5.2,H6,FP,PASS,FAIL,RULE_TRIGGER_BRANCH,H6 命名规范口径偏严/分支误用（需与 Gold 口径对齐）,rule_text,0,0,0
+pr_case_0024,gpt-5.2,H6,FP,PASS,FAIL,RULE_TRIGGER_BRANCH,H6 命名规范口径偏严/分支误用（需与 Gold 口径对齐）,rule_text,0,0,0
+pr_case_0025,gpt-5.2,H6,FP,PASS,FAIL,RULE_TRIGGER_BRANCH,H6 命名规范口径偏严/分支误用（需与 Gold 口径对齐）,rule_text,0,0,0
+pr_case_0026,gpt-5.2,H6,FP,PASS,FAIL,RULE_TRIGGER_BRANCH,H6 命名规范口径偏严/分支误用（需与 Gold 口径对齐）,rule_text,0,0,1
+pr_case_0027,gpt-5.2,H6,FP,PASS,FAIL,RULE_TRIGGER_BRANCH,H6 命名规范口径偏严/分支误用（需与 Gold 口径对齐）,rule_text,0,0,0
+pr_case_0028,gpt-5.2,H6,FP,PASS,FAIL,RULE_TRIGGER_BRANCH,H6 命名规范口径偏严/分支误用（需与 Gold 口径对齐）,rule_text,0,0,0
+pr_case_0029,gpt-5.2,H6,FP,PASS,FAIL,RULE_TRIGGER_BRANCH,H6 命名规范口径偏严/分支误用（需与 Gold 口径对齐）,rule_text,0,0,0
+pr_case_0030,gpt-5.2,H6,FP,PASS,FAIL,RULE_TRIGGER_BRANCH,H6 命名规范口径偏严/分支误用（需与 Gold 口径对齐）,rule_text,0,0,0
+pr_case_0031,gpt-5.2,H6,FP,PASS,FAIL,RULE_TRIGGER_BRANCH,H6 命名规范口径偏严/分支误用（需与 Gold 口径对齐）,rule_text,0,0,0
+pr_case_0032,gpt-5.2,H6,FP,PASS,FAIL,RULE_TRIGGER_BRANCH,H6 命名规范口径偏严/分支误用（需与 Gold 口径对齐）,rule_text,0,0,0
+pr_case_0033,gpt-5.2,H6,FP,PASS,FAIL,RULE_TRIGGER_BRANCH,H6 命名规范口径偏严/分支误用（需与 Gold 口径对齐）,rule_text,0,0,0
+pr_case_0034,gpt-5.2,H6,FP,PASS,FAIL,RULE_TRIGGER_BRANCH,H6 命名规范口径偏严/分支误用（需与 Gold 口径对齐）,rule_text,0,0,0

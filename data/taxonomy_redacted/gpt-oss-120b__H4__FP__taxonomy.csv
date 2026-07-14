@@ -1,0 +1,15 @@
+release_case_id,model,rule_id,error_type,gold_status,pred_status,taxonomy_l1,taxonomy_l2,actionability,is_gold_disputed,is_case_ambiguous,use_as_example
+pr_case_0004,gpt-oss-120b,H4,FP,PASS,FAIL,RULE_TRIGGER_BRANCH,,rule_text,0,0,0
+pr_case_0012,gpt-oss-120b,H4,FP,PASS,FAIL,RULE_TRIGGER_BRANCH,中心距离 vs 边界距离/定位证据口径不一致,rule_text,0,0,0
+pr_case_0013,gpt-oss-120b,H4,FP,PASS,FAIL,RULE_TRIGGER_BRANCH,中心距离 vs 边界距离/定位证据口径不一致,rule_text,0,0,0
+pr_case_0015,gpt-oss-120b,H4,FP,PASS,FAIL,RULE_TRIGGER_BRANCH,中心距离 vs 边界距离/定位证据口径不一致,rule_text,0,0,0
+pr_case_0047,gpt-oss-120b,H4,FP,PASS,FAIL,RULE_TRIGGER_BRANCH,H4 对可接受定位证据类型理解偏差（内镜定位/距离/Z线相关线索）,rule_text,0,0,0
+pr_case_0051,gpt-oss-120b,H4,FP,PASS,FAIL,RULE_TRIGGER_BRANCH,,rule_text,0,0,0
+pr_case_0053,gpt-oss-120b,H4,FP,PASS,FAIL,RULE_TRIGGER_BRANCH,,rule_text,0,0,0
+pr_case_0056,gpt-oss-120b,H4,FP,PASS,FAIL,RULE_TRIGGER_BRANCH,,rule_text,0,0,0
+pr_case_0074,gpt-oss-120b,H4,FP,PASS,FAIL,RULE_TRIGGER_BRANCH,中心距离 vs 边界距离/定位证据口径不一致,rule_text,0,0,0
+pr_case_0079,gpt-oss-120b,H4,FP,PASS,FAIL,RULE_TRIGGER_BRANCH,中心距离 vs 边界距离/定位证据口径不一致,rule_text,0,0,0
+pr_case_0080,gpt-oss-120b,H4,FP,PASS,FAIL,RULE_TRIGGER_BRANCH,中心距离 vs 边界距离/定位证据口径不一致,rule_text,0,0,0
+pr_case_0081,gpt-oss-120b,H4,FP,PASS,FAIL,RULE_TRIGGER_BRANCH,中心距离 vs 边界距离/定位证据口径不一致,rule_text,0,0,0
+pr_case_0093,gpt-oss-120b,H4,FP,PASS,FAIL,RULE_TRIGGER_BRANCH,H4 对可接受定位证据类型理解偏差（内镜定位/距离/Z线相关线索）,rule_text,0,0,0
+pr_case_0096,gpt-oss-120b,H4,FP,PASS,FAIL,RULE_TRIGGER_BRANCH,H4 对可接受定位证据类型理解偏差（内镜定位/距离/Z线相关线索）,rule_text,0,0,0

@@ -1,0 +1,6 @@
+release_case_id,model,rule_id,error_type,gold_status,pred_status,taxonomy_l1,taxonomy_l2,actionability,is_gold_disputed,is_case_ambiguous,use_as_example
+pr_case_0001,gemini-3-pro-preview-thinking,H6,FN,FAIL,PASS,FORMAT_STRUCTURED,字段空值未按缺失处理（例如‘既往史:’后为空）,parser,0,0,1
+pr_case_0040,gemini-3-pro-preview-thinking,H6,FN,FAIL,PASS,FORMAT_STRUCTURED,字段空值未按缺失处理（例如‘既往史:’后为空）,parser,0,0,0
+pr_case_0041,gemini-3-pro-preview-thinking,H6,FN,FAIL,PASS,FORMAT_STRUCTURED,字段空值未按缺失处理（例如‘既往史:’后为空）,parser,0,0,1
+pr_case_0042,gemini-3-pro-preview-thinking,H6,FN,FAIL,PASS,FORMAT_STRUCTURED,字段空值未按缺失处理（例如‘既往史:’后为空）,parser,0,0,0
+pr_case_0043,gemini-3-pro-preview-thinking,H6,FN,FAIL,PASS,FORMAT_STRUCTURED,字段空值未按缺失处理（例如‘既往史:’后为空）,parser,0,0,0

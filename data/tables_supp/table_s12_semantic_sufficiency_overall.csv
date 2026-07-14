@@ -1,0 +1,2 @@
+﻿group,n_reviewed,lexical_yes,lexical_partial,lexical_no,semantic_sufficient,semantic_partial,semantic_not_sufficient,lexical_recoverability_rate,semantic_sufficiency_rate,recoverable_but_not_sufficient_rate
+overall,96,50,41,5,90,0,6,0.521,0.938,0.010

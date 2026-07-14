@@ -1,0 +1,100 @@
+{
+  "labels_sha256": "fe26c03e3fe35405df13a88dbb9a4724717b41ad8c5b815479d71f796fdef9e9",
+  "n_case_files": 700,
+  "n_labeled_cases": 700,
+  "gold_blocked_cases_any_fail": 606,
+  "gold_blocked_rate_any_fail": 0.8657142857,
+  "case_level_summary": {
+    "fail_rules_per_case_distribution": {
+      "1": 486,
+      "0": 94,
+      "2": 103,
+      "3": 13,
+      "4": 4
+    },
+    "fail_rules_per_case_mean": 1.0671428571,
+    "fail_rules_per_case_median": 1.0,
+    "only_one_fail_rule_counts": {
+      "H6": 101,
+      "H1": 97,
+      "H4": 97,
+      "H3": 96,
+      "H5": 95
+    }
+  },
+  "labels_distribution": {
+    "H1": {
+      "PASS": 577,
+      "FAIL": 123,
+      "NA": 0,
+      "total": 700,
+      "fail_rate_eval_only": 0.1757142857,
+      "na_rate": 0.0
+    },
+    "H2": {
+      "PASS": 599,
+      "FAIL": 101,
+      "NA": 0,
+      "total": 700,
+      "fail_rate_eval_only": 0.1442857143,
+      "na_rate": 0.0
+    },
+    "H3": {
+      "PASS": 4,
+      "FAIL": 102,
+      "NA": 594,
+      "total": 700,
+      "fail_rate_eval_only": 0.9622641509,
+      "na_rate": 0.8485714286
+    },
+    "H4": {
+      "PASS": 498,
+      "FAIL": 202,
+      "NA": 0,
+      "total": 700,
+      "fail_rate_eval_only": 0.2885714286,
+      "na_rate": 0.0
+    },
+    "H5": {
+      "PASS": 322,
+      "FAIL": 100,
+      "NA": 278,
+      "total": 700,
+      "fail_rate_eval_only": 0.2369668246,
+      "na_rate": 0.3971428571
+    },
+    "H6": {
+      "PASS": 581,
+      "FAIL": 119,
+      "NA": 0,
+      "total": 700,
+      "fail_rate_eval_only": 0.17,
+      "na_rate": 0.0
+    }
+  },
+  "sex_counts": {
+    "男": 539,
+    "(missing)": 7,
+    "女": 154
+  },
+  "age_summary": {
+    "n": 686,
+    "mean": 65.4081632653,
+    "median": 68.0,
+    "p25": 55.0,
+    "p75": 76.0,
+    "min": 45,
+    "max": 82
+  },
+  "diagnosis_summary": {
+    "siewert_counts_in_dx": {
+      "I": 154,
+      "II": 202,
+      "III": 224
+    },
+    "icd_counts_in_dx": {
+      "C15": 154,
+      "C16": 406
+    }
+  }
+}

@@ -1,0 +1,13 @@
+domain,metric,value
+Cohort,Gold cases,700
+Cohort,"Age, years",n=686; mean 65.4; median 68.0; IQR 55.0-76.0
+Cohort,Sex,Male 539; Female 154; Missing 7
+Audit burden,Any hard FAIL,606/700 (86.6%)
+Audit burden,Failed rules per case,mean 1.07; median 1.0
+Audit burden,Exactly one failed rule,486/700 (69.4%)
+Audit burden,>=2 failed rules,120/700 (17.1%)
+Rule applicability,H3 not applicable,594/700 (84.9%)
+Rule applicability,H5 not applicable,278/700 (39.7%)
+Field completeness,现病史,non-empty rate 0.970
+Field completeness,既往史,non-empty rate 0.973
+Field completeness,过敏史,non-empty rate 0.857

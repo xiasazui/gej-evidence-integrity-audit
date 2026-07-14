@@ -1,0 +1,23 @@
+cff-version: 1.2.0
+message: "Please cite the associated paper and the immutable software/data release."
+title: "Retrospective offline benchmark for diagnostic evidence integrity in gastroesophageal junction and cardia cancer notes - public reproducibility package"
+type: software
+authors:
+  - family-names: Zhou
+    given-names: Junxian
+  - family-names: Liu
+    given-names: Yongzhuo
+  - family-names: Liao
+    given-names: Wanzhe
+  - family-names: Hong
+    given-names: Haopeng
+  - family-names: Zhao
+    given-names: Jiaxu
+  - family-names: Chen
+    given-names: Shanwen
+  - family-names: Zuo
+    given-names: Shuai
+  - family-names: Wang
+    given-names: Pengyuan
+version: 1.0.0-candidate
+date-released: 2026-07-14

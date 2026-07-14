@@ -1,0 +1,12 @@
+release_case_id,model,rule_id,error_type,gold_status,pred_status,taxonomy_l1,taxonomy_l2,actionability,is_gold_disputed,is_case_ambiguous,use_as_example
+pr_case_0004,qwen3-235b-a22b-thinking-2507,H4,FP,PASS,FAIL,RULE_TRIGGER_BRANCH,,rule_text,0,0,0
+pr_case_0012,qwen3-235b-a22b-thinking-2507,H4,FP,PASS,FAIL,RULE_TRIGGER_BRANCH,中心距离 vs 边界距离/定位证据口径不一致,rule_text,0,0,0
+pr_case_0051,qwen3-235b-a22b-thinking-2507,H4,FP,PASS,FAIL,RULE_TRIGGER_BRANCH,,rule_text,0,0,0
+pr_case_0053,qwen3-235b-a22b-thinking-2507,H4,FP,PASS,FAIL,RULE_TRIGGER_BRANCH,,rule_text,0,0,0
+pr_case_0056,qwen3-235b-a22b-thinking-2507,H4,FP,PASS,FAIL,RULE_TRIGGER_BRANCH,,rule_text,0,0,0
+pr_case_0062,qwen3-235b-a22b-thinking-2507,H4,FP,PASS,FAIL,RULE_TRIGGER_BRANCH,H4 对可接受定位证据类型理解偏差（内镜定位/距离/Z线相关线索）,rule_text,0,0,0
+pr_case_0064,qwen3-235b-a22b-thinking-2507,H4,FP,PASS,FAIL,RULE_TRIGGER_BRANCH,H4 对可接受定位证据类型理解偏差（内镜定位/距离/Z线相关线索）,rule_text,0,0,0
+pr_case_0076,qwen3-235b-a22b-thinking-2507,H4,FP,PASS,FAIL,RULE_TRIGGER_BRANCH,中心距离 vs 边界距离/定位证据口径不一致,rule_text,0,0,0
+pr_case_0080,qwen3-235b-a22b-thinking-2507,H4,FP,PASS,FAIL,RULE_TRIGGER_BRANCH,中心距离 vs 边界距离/定位证据口径不一致,parser,0,0,0
+pr_case_0093,qwen3-235b-a22b-thinking-2507,H4,FP,PASS,FAIL,RULE_TRIGGER_BRANCH,中心距离 vs 边界距离/定位证据口径不一致,rule_text,0,0,0
+pr_case_0121,qwen3-235b-a22b-thinking-2507,H4,FP,PASS,FAIL,FORMAT_STRUCTURED,模型输出字段缺失/结构化失败导致误判,parser,0,0,1

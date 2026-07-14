@@ -1,0 +1,20 @@
+release_case_id,model,rule_id,error_type,gold_status,pred_status,taxonomy_l1,taxonomy_l2,actionability,is_gold_disputed,is_case_ambiguous,use_as_example
+pr_case_0007,gpt-oss-20b,H4,FN,FAIL,PASS,RULE_TRIGGER_BRANCH,触发/分支未触发或过宽 PASS（对缺失定位证据不敏感）,rule_text,0,0,0
+pr_case_0009,gpt-oss-20b,H4,FN,FAIL,PASS,GOLD_DISPUTE,触发/分支未触发或过宽 PASS（对缺失定位证据不敏感）,label_guideline,0,0,0
+pr_case_0046,gpt-oss-20b,H4,FN,FAIL,PASS,RULE_TRIGGER_BRANCH,触发/分支未触发或过宽 PASS（对缺失定位证据不敏感）,rule_text,0,0,0
+pr_case_0050,gpt-oss-20b,H4,FN,FAIL,PASS,GOLD_DISPUTE,触发/分支未触发或过宽 PASS（对缺失定位证据不敏感）,label_guideline,0,0,0
+pr_case_0059,gpt-oss-20b,H4,FN,FAIL,PASS,RULE_TRIGGER_BRANCH,触发/分支未触发或过宽 PASS（对缺失定位证据不敏感）,rule_text,0,0,0
+pr_case_0061,gpt-oss-20b,H4,FN,FAIL,PASS,RULE_TRIGGER_BRANCH,触发/分支未触发或过宽 PASS（对缺失定位证据不敏感）,rule_text,0,0,0
+pr_case_0068,gpt-oss-20b,H4,FN,FAIL,PASS,RULE_TRIGGER_BRANCH,触发/分支未触发或过宽 PASS（对缺失定位证据不敏感）,rule_text,0,0,0
+pr_case_0077,gpt-oss-20b,H4,FN,FAIL,PASS,GOLD_DISPUTE,触发/分支未触发或过宽 PASS（对缺失定位证据不敏感）,label_guideline,0,0,0
+pr_case_0104,gpt-oss-20b,H4,FN,FAIL,PASS,RULE_TRIGGER_BRANCH,触发/分支未触发或过宽 PASS（对缺失定位证据不敏感）,rule_text,0,0,0
+pr_case_0109,gpt-oss-20b,H4,FN,FAIL,PASS,RULE_TRIGGER_BRANCH,触发/分支未触发或过宽 PASS（对缺失定位证据不敏感）,rule_text,0,0,0
+pr_case_0110,gpt-oss-20b,H4,FN,FAIL,PASS,RULE_TRIGGER_BRANCH,触发/分支未触发或过宽 PASS（对缺失定位证据不敏感）,rule_text,0,0,0
+pr_case_0111,gpt-oss-20b,H4,FN,FAIL,PASS,RULE_TRIGGER_BRANCH,触发/分支未触发或过宽 PASS（对缺失定位证据不敏感）,rule_text,0,0,0
+pr_case_0124,gpt-oss-20b,H4,FN,FAIL,PASS,RULE_TRIGGER_BRANCH,触发/分支未触发或过宽 PASS（对缺失定位证据不敏感）,rule_text,0,0,0
+pr_case_0126,gpt-oss-20b,H4,FN,FAIL,PASS,RULE_TRIGGER_BRANCH,触发/分支未触发或过宽 PASS（对缺失定位证据不敏感）,rule_text,0,0,0
+pr_case_0139,gpt-oss-20b,H4,FN,FAIL,PASS,RULE_TRIGGER_BRANCH,触发/分支未触发或过宽 PASS（对缺失定位证据不敏感）,rule_text,0,0,0
+pr_case_0140,gpt-oss-20b,H4,FN,FAIL,PASS,RULE_TRIGGER_BRANCH,触发/分支未触发或过宽 PASS（对缺失定位证据不敏感）,rule_text,0,0,0
+pr_case_0142,gpt-oss-20b,H4,FN,FAIL,PASS,RULE_TRIGGER_BRANCH,触发/分支未触发或过宽 PASS（对缺失定位证据不敏感）,rule_text,0,0,0
+pr_case_0143,gpt-oss-20b,H4,FN,FAIL,PASS,RULE_TRIGGER_BRANCH,触发/分支未触发或过宽 PASS（对缺失定位证据不敏感）,rule_text,0,0,0
+pr_case_0144,gpt-oss-20b,H4,FN,FAIL,PASS,RULE_TRIGGER_BRANCH,触发/分支未触发或过宽 PASS（对缺失定位证据不敏感）,rule_text,0,0,0

@@ -1,0 +1,12 @@
+model,fail_outputs,fail_outputs_all_snippets_recoverable,fail_outputs_at_least_one_snippet_recoverable,fail_outputs_any_nonrecoverable_snippet,fail_outputs_empty_evidence,evidence_items_total,evidence_items_recoverable,fail_output_all_snippets_recoverable_rate,fail_output_at_least_one_snippet_recoverable_rate,fail_output_any_nonrecoverable_snippet_rate,fail_output_empty_evidence_rate,evidence_item_recoverable_rate
+MiniMax-M2.1,797,504,718,290,3,1888,1490,0.632371,0.900878,0.363864,0.003764,0.789195
+deepseek-v3.2-thinking,772,492,748,270,10,1585,1297,0.637306,0.968912,0.349741,0.012953,0.818297
+deterministic-baseline,666,387,387,0,279,387,387,0.581081,0.581081,0.000000,0.418919,1.000000
+gemini-3-pro-preview-thinking,755,708,721,13,34,1451,1438,0.937748,0.954967,0.017219,0.045033,0.991041
+gpt-5.2,1206,912,1175,293,1,2612,2304,0.756219,0.974295,0.242952,0.000829,0.882083
+gpt-oss-120b,772,733,767,39,0,1856,1805,0.949482,0.993523,0.050518,0.000000,0.972522
+gpt-oss-20b,831,799,830,31,1,1976,1943,0.961492,0.998797,0.037304,0.001203,0.983300
+kimi-k2-thinking,774,676,742,97,1,1851,1709,0.873385,0.958656,0.125323,0.001292,0.923285
+qwen3-235b-a22b-thinking-2507,779,602,761,170,7,1575,1393,0.772786,0.976893,0.218228,0.008986,0.884444
+qwen3-30b-a3b-thinking-2507,785,656,672,128,1,1117,979,0.835669,0.856051,0.163057,0.001274,0.876455
+qwen3-next-80b-a3b-thinking,787,697,708,84,6,1354,1257,0.885642,0.899619,0.106734,0.007624,0.928360

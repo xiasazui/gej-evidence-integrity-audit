@@ -1,0 +1,11 @@
+release_case_id,model,rule_id,error_type,gold_status,pred_status,taxonomy_l1,taxonomy_l2,actionability,is_gold_disputed,is_case_ambiguous,use_as_example
+pr_case_0012,gemini-3-pro-preview-thinking,H4,FP,PASS,FAIL,RULE_TRIGGER_BRANCH,诊断字段缺失导致触发口径偏差（从主诉/现病史触发）,rule_text,0,1,0
+pr_case_0053,gemini-3-pro-preview-thinking,H4,FP,PASS,FAIL,RULE_TRIGGER_BRANCH,中心距离 vs 边界距离：Gold接受‘上界至齿状线…’但模型要求‘中心距…’,rule_text,0,1,0
+pr_case_0080,gemini-3-pro-preview-thinking,H4,FP,PASS,FAIL,RULE_TRIGGER_BRANCH,诊断字段缺失/字段不全导致触发与Gold不一致,rule_text,0,1,0
+pr_case_0115,gemini-3-pro-preview-thinking,H4,FP,PASS,FAIL,RULE_TRIGGER_BRANCH,把H5(阈值一致性)错误当作H4(定位证据完整性)来判,rule_text,0,0,1
+pr_case_0118,gemini-3-pro-preview-thinking,H4,FP,PASS,FAIL,RULE_TRIGGER_BRANCH,把H5(阈值一致性)错误当作H4(定位证据完整性)来判,rule_text,0,0,0
+pr_case_0119,gemini-3-pro-preview-thinking,H4,FP,PASS,FAIL,RULE_TRIGGER_BRANCH,把H5(阈值一致性)错误当作H4(定位证据完整性)来判,rule_text,0,0,0
+pr_case_0120,gemini-3-pro-preview-thinking,H4,FP,PASS,FAIL,RULE_TRIGGER_BRANCH,把H5(阈值一致性)错误当作H4(定位证据完整性)来判,rule_text,0,0,0
+pr_case_0122,gemini-3-pro-preview-thinking,H4,FP,PASS,FAIL,RULE_TRIGGER_BRANCH,把H5(阈值一致性)错误当作H4(定位证据完整性)来判,rule_text,0,0,0
+pr_case_0131,gemini-3-pro-preview-thinking,H4,FP,PASS,FAIL,RULE_TRIGGER_BRANCH,把H5(阈值一致性)错误当作H4(定位证据完整性)来判,rule_text,0,0,0
+pr_case_0137,gemini-3-pro-preview-thinking,H4,FP,PASS,FAIL,RULE_TRIGGER_BRANCH,把H5(阈值一致性)错误当作H4(定位证据完整性)来判,rule_text,0,0,0
