@@ -1,0 +1,7 @@
+﻿target_rule,n_variants,target_terminal_fail,original_target_fail,evaluable_induction,target_changed_to_fail,target_not_changed_to_fail,variants_with_off_target_change,off_target_changes
+H1,100,100,2,98,98,0,6,6
+H2,100,99,0,100,99,1,98,189
+H3,100,100,0,100,100,0,5,5
+H4,100,100,2,98,98,0,85,86
+H5,100,100,0,100,100,0,5,6
+H6,100,100,4,96,96,0,4,4

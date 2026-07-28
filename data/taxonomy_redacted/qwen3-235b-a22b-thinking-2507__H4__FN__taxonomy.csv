@@ -1,5 +1,0 @@
-release_case_id,model,rule_id,error_type,gold_status,pred_status,taxonomy_l1,taxonomy_l2,actionability,is_gold_disputed,is_case_ambiguous,use_as_example
-pr_case_0007,qwen3-235b-a22b-thinking-2507,H4,FN,FAIL,PASS,RULE_TRIGGER_BRANCH,触发/分支未触发或过宽 PASS（对缺失定位证据不敏感）,rule_text,0,0,0
-pr_case_0009,qwen3-235b-a22b-thinking-2507,H4,FN,FAIL,PASS,GOLD_DISPUTE,触发/分支未触发或过宽 PASS（对缺失定位证据不敏感）,label_guideline,0,0,0
-pr_case_0059,qwen3-235b-a22b-thinking-2507,H4,FN,FAIL,PASS,RULE_TRIGGER_BRANCH,触发/分支未触发或过宽 PASS（对缺失定位证据不敏感）,rule_text,0,0,0
-pr_case_0092,qwen3-235b-a22b-thinking-2507,H4,FN,FAIL,PASS,RULE_TRIGGER_BRANCH,触发/分支未触发或过宽 PASS（对缺失定位证据不敏感）,rule_text,0,0,0

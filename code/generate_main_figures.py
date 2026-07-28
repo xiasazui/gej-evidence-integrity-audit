@@ -10,6 +10,9 @@ from typing import Any, Dict, List, Tuple
 import numpy as np
 
 
+_PACKAGE_ROOT = Path(__file__).resolve().parents[1]
+
+
 _CJK_FONT_FALLBACK: List[str] = [
     "PingFang SC",
     "Hiragino Sans GB",
@@ -436,11 +439,19 @@ def _write_taxonomy_by_rule(taxonomy_dir: Path, out_dir: Path) -> Path:
 
 def main() -> int:
     parser = argparse.ArgumentParser()
-    parser.add_argument("--gold_dataset_summary_json", default="results/paper/gold_dataset_summary.json")
-    parser.add_argument("--gold_eval_viz_json", default="data/gold/gold_700/gold_eval_viz/gold_eval_models_summary.json")
-    parser.add_argument("--kappa_json", default="results/gold_eval/kappa_final_vs_b.json")
-    parser.add_argument("--taxonomy_dir", default="results/paper/error_taxonomy")
-    parser.add_argument("--out_dir", default="results/paper/figures")
+    parser.add_argument(
+        "--gold_dataset_summary_json",
+        default=_PACKAGE_ROOT / "data/aggregate/gold_dataset_summary.json",
+    )
+    parser.add_argument(
+        "--gold_eval_viz_json",
+        default=_PACKAGE_ROOT / "data/aggregate/gold_eval_models_summary.json",
+    )
+    parser.add_argument(
+        "--kappa_json",
+        default=_PACKAGE_ROOT / "data/aggregate/kappa_summary.json",
+    )
+    parser.add_argument("--out_dir", default=_PACKAGE_ROOT / "reproduced_figures")
     args = parser.parse_args()
 
     out_dir = Path(args.out_dir)
@@ -449,13 +460,11 @@ def main() -> int:
     gold_dataset_summary = _load_json(Path(args.gold_dataset_summary_json))
     eval_viz = _load_json(Path(args.gold_eval_viz_json))
     kappa = _load_json(Path(args.kappa_json))
-    taxonomy_dir = Path(args.taxonomy_dir)
 
     wrote = [
         str(_write_case_level_burden(gold_dataset_summary, out_dir)),
         str(_write_f1_vs_grounding(eval_viz, out_dir)),
         str(_write_rule_distribution_and_kappa(gold_dataset_summary, kappa, out_dir)),
-        str(_write_taxonomy_by_rule(taxonomy_dir, out_dir)),
     ]
     print(json.dumps({"wrote": wrote}, ensure_ascii=False))
     return 0

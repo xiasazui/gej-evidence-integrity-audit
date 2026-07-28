@@ -1,41 +1,53 @@
-# GEJ diagnostic-evidence audit: public reproducibility package
+# GEJ evidence-integrity benchmark: synthetic and aggregate public release
 
-This repository accompanies **Retrospective offline benchmark for diagnostic evidence integrity in gastroesophageal junction and cardia cancer notes**.
+This repository accompanies **A constructed challenge benchmark for diagnostic evidence-integrity auditing in gastroesophageal junction and cardia cancer notes**.
 
-It contains publication-level aggregate data, redacted taxonomy tables, figures, and code that regenerates the four main figures derived entirely from public aggregate inputs. It does **not** contain source clinical notes, case-level labels, case-level model outputs, Appendix B excerpts, reviewer worklists, API credentials, private endpoints, or local configuration.
+## Public scope
+
+- 80 script-generated synthetic original records;
+- 480 synthetic-derived H1-H6 variants;
+- synthetic-only lineage and normalized Gold labels;
+- normalized frozen parsed outputs for 11 models/systems (6,160 records, consolidated as one JSONL per system);
+- deterministic generators, evaluation/figure/table code, rule definitions, public model-run metadata, and synthetic construction evidence;
+- aggregate data and publication figures supporting the manuscript.
+
+The package contains **no real or real-derived case text**, real-source case-level Gold or model outputs, patient/seed provenance mapping, Appendix B, API credentials, private endpoints, source clinical notes, or author-review worklists. The synthetic IDs are limited to `gold_0021`-`gold_0100` and `gold_0221`-`gold_0700`.
+
+The release-case `姓名` field is normalized to a package-local `患者XXXX` identifier. The deterministic generator produces random synthetic names, so regeneration identity is evaluated after universal-newline and synthetic-name-field normalization.
 
 ## Contents
 
-- `data/aggregate/`: privacy-minimized aggregate JSON and a public model-run manifest.
-- `data/tables/` and `data/tables_supp/`: manuscript and supplementary aggregate tables.
-- `data/taxonomy_redacted/`: 214 human-reviewed taxonomy rows with package-local release IDs and no clinical text, source path, notes, or reviewer identity.
-- `figures/`: publication PNG files.
-- `code/generate_main_figures.py`: regenerates aggregate-input main figures.
-- `release_manifest.json` and `MANIFEST.sha256`: file inventory and SHA256 checksums.
+- `data/synthetic_cases/`, `data/synthetic_gold_normalized.jsonl` and `data/synthetic_lineage.csv`: the 560-record synthetic-only benchmark layer.
+- `outputs/frozen_parsed_jsonl/`: 11 consolidated synthetic-only model/system output files.
+- `data/aggregate/`, `data/tables/` and `data/tables_supp/`: privacy-minimized aggregate inputs and manuscript tables.
+- `figures/`: 5 main and 9 supplementary publication PNG files.
+- `code/`: deterministic generators, evaluation/table code and aggregate-input figure reproduction code.
+- `methods/` and `evidence/`: rules, prompt/pipeline snapshot and construction/review evidence.
+- `release_manifest.json` and `MANIFEST.sha256`: complete file inventory and checksums.
 
-## Reproducibility scope
+## Provenance boundary
 
-This is **aggregate/frozen-output reproducibility**, not a public case-level benchmark and not an exact rerun of hosted model endpoints. Each model/baseline was evaluated on 3,328 gold-applicable rule-case pairs. The primary prediction-NA policy was `as_pass`; the frozen outputs contain 0 missing predictions, 0 audit-error rule outputs, and 37 predicted-NA outputs on gold-applicable pairs across all models and rules.
+The 80 synthetic originals are reproduced deterministically from the archived standalone Python generator using predefined clinical templates, candidate lists and numeric ranges. The archived generator does not read the 20 real records during execution, and the available provenance does not show case-by-case derivation from them. The original authorship and knowledge source of the embedded templates and candidate lists were not contemporaneously documented; this release therefore does not claim that the templates were developed without reference to any clinical knowledge or records.
 
-Run:
+GPT-5.4 `xhigh` was used in the rule-perturbation workflow. Wanzhe Liao and Zhou Junxian, two clinical medicine professionals, jointly completed one review round covering all 80 synthetic originals, checking appropriateness, completeness and internal contradictions; 0 records were modified and 0 were excluded. This does not imply two independent reviews of the 80 records.
+
+## Validate locally
 
 ```bash
-python3 -m pip install -r requirements.txt
-python3 code/generate_main_figures.py \
-  --gold_dataset_summary_json data/aggregate/gold_dataset_summary.json \
-  --gold_eval_viz_json data/aggregate/gold_eval_models_summary.json \
-  --kappa_json data/aggregate/kappa_summary.json \
-  --taxonomy_dir data/taxonomy_redacted \
-  --out_dir reproduced_figures
-python3 code/validate_release.py
+python3 validate_public_release.py
+python3 verify_synthetic_regeneration.py
+python3 code/generate_main_figures.py --out_dir reproduced_figures
 ```
 
-The regeneration command writes case-level burden, F1-versus-grounding, rule-distribution/kappa, and taxonomy figures in PNG/PDF/SVG/TIFF formats. Figures 2 and 4 are retained as frozen publication figures because their original renderer is outside this minimal package.
+The two validation commands use only the Python standard library. Figure regeneration requires the packages listed in `requirements.txt`. See `REPRODUCE.md` for the reproduction scope, `DATA_AVAILABILITY.md` for the public/restricted data map, and `NON_AUTHOR_TEST_PROTOCOL.md` for anonymous access verification.
 
-## Data availability
+## Licences
 
-The source clinical notes and case-level derived artifacts are not publicly available because they contain confidential patient information and institutional restrictions prohibit public release. This repository exposes only aggregate statistics, privacy-scanned redacted taxonomy data, publication figures, and reproducibility code. Any request for additional de-identified material remains subject to a separately approved institutional access process; no such public access route is implied by this repository.
+- Software in `code/` and Python files in `methods/`: **MIT**.
+- Synthetic data, Gold/lineage, frozen outputs, evidence and documentation: **CC BY 4.0**.
 
-## Licenses and citation
+See `LICENSE.md`, `LICENSE-CODE-MIT.txt` and `LICENSE-DATA-DOCS-CC-BY-4.0.md` for the exact scope, terms and attribution guidance.
 
-The final code and data licenses must be approved by the corresponding author/institution before public release. See `LICENSES_PENDING.md`. Cite the associated paper and the immutable GitHub release/archival DOI once assigned; provisional citation metadata are in `CITATION.cff`.
+## Citation
+
+Cite the associated manuscript and this immutable tagged release. Provisional citation metadata are provided in `CITATION.cff`; update the citation to the journal article DOI when assigned.

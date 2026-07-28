@@ -1,0 +1,55 @@
+{
+  "seed_id": "mock_001",
+  "privacy_scope": "script-generated synthetic example; perturbation uses no real-record input",
+  "n_rules": 6,
+  "examples": [
+    {
+      "rule": "H1",
+      "original_path": "data/mock_cases_80/模拟病历1.md",
+      "original_sha256": "fbf08814d6149837fb8f1681181b10452d6619491a77d16413a61257cf04679c",
+      "variant_path": "data/perturb_cases_600/mock_001_H1.md",
+      "variant_sha256": "7e7a02b7b06be8e3f4b63b4e73e48f7fc57efd2013b4bfe568e741a616319672",
+      "diff_line_count": 17
+    },
+    {
+      "rule": "H2",
+      "original_path": "data/mock_cases_80/模拟病历1.md",
+      "original_sha256": "fbf08814d6149837fb8f1681181b10452d6619491a77d16413a61257cf04679c",
+      "variant_path": "data/perturb_cases_600/mock_001_H2.md",
+      "variant_sha256": "ab2d17585d1c1331056231f784aa3efc1c9f7df8bfc93cf5db6e1f4bb6c3212e",
+      "diff_line_count": 16
+    },
+    {
+      "rule": "H3",
+      "original_path": "data/mock_cases_80/模拟病历1.md",
+      "original_sha256": "fbf08814d6149837fb8f1681181b10452d6619491a77d16413a61257cf04679c",
+      "variant_path": "data/perturb_cases_600/mock_001_H3.md",
+      "variant_sha256": "cdf6d2ef8b91f04ad6bea323eabe6a23ee54adc81e29ff416ccb4c0a27f5adc9",
+      "diff_line_count": 10
+    },
+    {
+      "rule": "H4",
+      "original_path": "data/mock_cases_80/模拟病历1.md",
+      "original_sha256": "fbf08814d6149837fb8f1681181b10452d6619491a77d16413a61257cf04679c",
+      "variant_path": "data/perturb_cases_600/mock_001_H4.md",
+      "variant_sha256": "ee770b085e78b345d7684a318f83359f0438f0309ce7766d25d7cd29db6cc61d",
+      "diff_line_count": 16
+    },
+    {
+      "rule": "H5",
+      "original_path": "data/mock_cases_80/模拟病历1.md",
+      "original_sha256": "fbf08814d6149837fb8f1681181b10452d6619491a77d16413a61257cf04679c",
+      "variant_path": "data/perturb_cases_600/mock_001_H5.md",
+      "variant_sha256": "659478436fa904d8df8d064655d540b76e9dce10cf06781e00b784e0354b8452",
+      "diff_line_count": 17
+    },
+    {
+      "rule": "H6",
+      "original_path": "data/mock_cases_80/模拟病历1.md",
+      "original_sha256": "fbf08814d6149837fb8f1681181b10452d6619491a77d16413a61257cf04679c",
+      "variant_path": "data/perturb_cases_600/mock_001_H6.md",
+      "variant_sha256": "a6803549cbe4439adc6d71df3a5e5720cb73f1a6ab52ff55b83bcc74d2a91a3b",
+      "diff_line_count": 10
+    }
+  ]
+}
