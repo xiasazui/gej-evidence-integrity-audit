@@ -1,5 +1,5 @@
 cff-version: 1.2.0
-message: "Please cite the associated paper and the immutable tagged release."
+message: "Please cite the associated paper and this public repository."
 title: "A constructed challenge benchmark for diagnostic evidence-integrity auditing in gastroesophageal junction and cardia cancer notes - synthetic benchmark release"
 type: dataset
 authors:
@@ -19,7 +19,5 @@ authors:
     given-names: Shuai
   - family-names: Wang
     given-names: Pengyuan
-version: 1.0.0
-date-released: 2026-07-28
 repository-code: "https://github.com/xiasazui/gej-evidence-integrity-audit"
 license: CC-BY-4.0

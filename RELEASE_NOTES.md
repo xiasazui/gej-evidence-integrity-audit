@@ -1,4 +1,4 @@
-# v1.0-submission release notes
+# Public repository contents
 
 This release provides the script-generated synthetic portion of the constructed GEJ evidence-integrity benchmark: 80 synthetic originals, 480 H1-H6 synthetic-derived variants, synthetic-only Gold and lineage, normalized frozen outputs for 11 systems, supporting deterministic code and method files, privacy-minimized aggregate tables, and publication figures.
 

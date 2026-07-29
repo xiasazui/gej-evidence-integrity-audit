@@ -50,4 +50,4 @@ See `LICENSE.md`, `LICENSE-CODE-MIT.txt` and `LICENSE-DATA-DOCS-CC-BY-4.0.md` fo
 
 ## Citation
 
-Cite the associated manuscript and this immutable tagged release. Provisional citation metadata are provided in `CITATION.cff`; update the citation to the journal article DOI when assigned.
+Cite the associated manuscript and this public repository. Provisional citation metadata are provided in `CITATION.cff`; update the citation to the journal article DOI when assigned.

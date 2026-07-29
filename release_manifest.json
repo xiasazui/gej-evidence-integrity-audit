@@ -1,14 +1,15 @@
 {
   "schema_version": 2,
-  "generated_at": "2026-07-28T14:40:24Z",
-  "status": "PRIVATE_REMOTE_STAGING_PUBLICATION_DEFERRED_UNTIL_SUBMISSION",
+  "generated_at": "2026-07-29T10:22:51Z",
+  "status": "PUBLIC_REPOSITORY_CONTENT_PACKAGE",
   "title": "A constructed challenge benchmark for diagnostic evidence-integrity auditing in gastroesophageal junction and cardia cancer notes",
   "source_package_manifest_sha256": "428abbd9694df866750a1c4c56115deae88fe26a056ff5c80a9c14d39ac3bf87",
   "source_canonical_gold_sha256": "fe26c03e3fe35405df13a88dbb9a4724717b41ad8c5b815479d71f796fdef9e9",
   "institutional_synthetic_scope_confirmed": true,
-  "remote_repository_visibility": "PRIVATE",
-  "private_remote_staging_authorized": true,
-  "remote_publication_deferred_until_submission": true,
+  "target_repository": "https://github.com/xiasazui/gej-evidence-integrity-audit",
+  "intended_visibility": "PUBLIC",
+  "author_controls_upload_and_publication": true,
+  "public_access_verification": "AUTHOR_TO_PERFORM_AFTER_PUBLICATION",
   "synthetic_provenance_label": "script-generated synthetic records",
   "public_scope": "80 synthetic originals, 480 synthetic-derived variants, synthetic-only record-level artifacts, aggregate data, code and figures",
   "restricted_scope": "20 real originals, 120 real-derived variants, all real-source record-level artifacts and Appendix B",
@@ -33,13 +34,13 @@
     },
     {
       "path": "CITATION.cff",
-      "bytes": 804,
-      "sha256": "edf0cb949a399f692921aa150f86429aa19f6cebda97a84e05a37b7728b38361"
+      "bytes": 757,
+      "sha256": "ab07529c234a6bc3c32fb1e6efa3ea322eb69f7cd638977176359ea1fba244e5"
     },
     {
       "path": "DATA_AVAILABILITY.md",
-      "bytes": 2116,
-      "sha256": "d610081abef60fbffd331f7b0afb26e1147cac9e9bd95a4c6917422723083c2b"
+      "bytes": 1965,
+      "sha256": "a825e776ef44f63867ae6e30a2da114ce5ea95e0898012db6cc4bd3bbdca3add"
     },
     {
       "path": "LICENSE-CODE-MIT.txt",
@@ -58,23 +59,23 @@
     },
     {
       "path": "NON_AUTHOR_TEST_PROTOCOL.md",
-      "bytes": 729,
-      "sha256": "92ce8498b6b079c94e4acfa9af392b72ad3a337238cce15512f5e0efcd2cff07"
+      "bytes": 720,
+      "sha256": "533ff29c71010101694f19d8920648b5b65dad16b46e96333085b5f506b0bbf4"
     },
     {
       "path": "PUBLICATION_STATUS.json",
-      "bytes": 1045,
-      "sha256": "a8cf59541137bcf5309cf8e4bfc34953288bb25537efde4ec3627fb19ed9ab67"
+      "bytes": 893,
+      "sha256": "bf35b1d801a8e573fa3d1364323373104f6092738892fd7af1120f49277cb7b9"
     },
     {
       "path": "README.md",
-      "bytes": 4010,
-      "sha256": "df4c1929bd60fb1a1385046d9a6ef410b33eb3c4a0fd0614976f5d2aa05aae65"
+      "bytes": 4003,
+      "sha256": "22787ab70c1b6f36f4dc41fb4b214d8f5bf558d8420535f7c6b5a05945e95283"
     },
     {
       "path": "RELEASE_NOTES.md",
-      "bytes": 1049,
-      "sha256": "00533a4a1485790f1b36b9bc63010ba0b635344ae45d33e40b3151c2b9ab2d6c"
+      "bytes": 1046,
+      "sha256": "a729755250ead38a8c34ee5b45886a3579bc8d7ba4fdec8d02bcf378e8bbddaf"
     },
     {
       "path": "REPRODUCE.md",
@@ -113,8 +114,8 @@
     },
     {
       "path": "code/refresh_release_manifest.py",
-      "bytes": 2826,
-      "sha256": "fc32174eb56eea79751d0a65628893c240739a8348d893ffddc96a2adf19495d"
+      "bytes": 2898,
+      "sha256": "86c7cac49768ccab5b422d71e428beedb81ee37d5e1a39ed83bcd0420455c1df"
     },
     {
       "path": "code/validate_reproduce_outputs.py",
@@ -3213,8 +3214,8 @@
     },
     {
       "path": "validate_public_release.py",
-      "bytes": 16271,
-      "sha256": "292f48c2e23d99fe1489a344bbb183993ac074d518454721dbca29971d9d8051"
+      "bytes": 16279,
+      "sha256": "459fc6489166346c73b037b747d526dcbb53d90aa154a0435ae73020b9efeba6"
     },
     {
       "path": "verify_synthetic_regeneration.py",

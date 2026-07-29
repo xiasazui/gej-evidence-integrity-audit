@@ -80,12 +80,13 @@ def validate(root: Path) -> list[str]:
         return ["release_manifest.json missing"]
     manifest = json.loads(manifest_path.read_text(encoding="utf-8"))
     expected_constants = {
-        "status": "PRIVATE_REMOTE_STAGING_PUBLICATION_DEFERRED_UNTIL_SUBMISSION",
+        "status": "PUBLIC_REPOSITORY_CONTENT_PACKAGE",
         "source_canonical_gold_sha256": EXPECTED_GOLD_SHA256,
         "institutional_synthetic_scope_confirmed": True,
-        "remote_repository_visibility": "PRIVATE",
-        "private_remote_staging_authorized": True,
-        "remote_publication_deferred_until_submission": True,
+        "target_repository": "https://github.com/xiasazui/gej-evidence-integrity-audit",
+        "intended_visibility": "PUBLIC",
+        "author_controls_upload_and_publication": True,
+        "public_access_verification": "AUTHOR_TO_PERFORM_AFTER_PUBLICATION",
         "synthetic_provenance_label": "script-generated synthetic records",
         "synthetic_originals": 80,
         "synthetic_derived": 480,
@@ -247,18 +248,18 @@ def validate(root: Path) -> list[str]:
         errors.append("aggregate model manifest constants mismatch")
 
     status = json.loads((root / "PUBLICATION_STATUS.json").read_text(encoding="utf-8"))
-    if status.get("status") != "PRIVATE_REMOTE_STAGING_PUBLICATION_DEFERRED_UNTIL_SUBMISSION":
-        errors.append("private remote-staging deferred-publication status is missing")
-    if status.get("remote_repository_visibility") != "PRIVATE":
-        errors.append("private remote-staging visibility marker is missing")
-    if status.get("private_remote_staging_authorized") is not True:
-        errors.append("private remote staging authorization is missing")
-    if status.get("ready_for_remote_publish") is not False:
-        errors.append("remote publication must remain disabled until submission")
-    if status.get("remote_visibility_change_authorized_now") is not False:
-        errors.append("remote visibility change must remain unauthorized until submission")
-    if status.get("publication_timing") != "AUTHOR_CONTROLLED_AT_SUBMISSION":
-        errors.append("author-controlled submission-time publication gate is missing")
+    if status.get("status") != "PUBLIC_REPOSITORY_CONTENT_PACKAGE":
+        errors.append("public repository content-package status is missing")
+    if status.get("repository") != "https://github.com/xiasazui/gej-evidence-integrity-audit":
+        errors.append("target repository URL is missing")
+    if status.get("intended_visibility") != "PUBLIC":
+        errors.append("intended public visibility marker is missing")
+    if status.get("author_controls_upload_and_publication") is not True:
+        errors.append("author-controlled upload/publication marker is missing")
+    if status.get("ready_for_repository_upload") is not True:
+        errors.append("repository content package is not marked ready for upload")
+    if status.get("public_access_verification") != "AUTHOR_TO_PERFORM_AFTER_PUBLICATION":
+        errors.append("author post-publication verification marker is missing")
     if status.get("institutional_synthetic_scope_confirmed") is not True:
         errors.append("institutional synthetic-scope confirmation is missing")
     if status.get("licensing_approved") is not True:
@@ -267,9 +268,9 @@ def validate(root: Path) -> list[str]:
         errors.append("code licence must be MIT")
     if status.get("data_documentation_license") != "CC BY 4.0":
         errors.append("data/documentation licence must be CC BY 4.0")
-    blockers = set(status.get("remaining_blockers", []))
-    if blockers != {"PUBLICATION_DEFERRED_UNTIL_SUBMISSION"}:
-        errors.append(f"unexpected publication blockers: {sorted(blockers)}")
+    blockers = list(status.get("remaining_content_blockers", []))
+    if blockers:
+        errors.append(f"unexpected content blockers: {blockers}")
 
     missing_licences = sorted(name for name in EXPECTED_LICENSE_FILES if not (root / name).is_file())
     if missing_licences:
@@ -313,7 +314,7 @@ def validate(root: Path) -> list[str]:
             "480 synthetic-derived variants",
             "20 de-identified real original clinical notes",
             "120 real-derived variants",
-            "v1.0-submission",
+            "https://github.com/xiasazui/gej-evidence-integrity-audit",
         ]
         if any(marker not in availability_text for marker in required_availability_markers):
             errors.append("data-availability public/restricted mapping is incomplete")
@@ -332,7 +333,7 @@ def validate(root: Path) -> list[str]:
 
 
 def main() -> int:
-    parser = argparse.ArgumentParser(description="Validate the local pre-publication GitHub candidate.")
+    parser = argparse.ArgumentParser(description="Validate the local public-repository content package.")
     parser.add_argument("--candidate", type=Path, default=Path(__file__).resolve().parent)
     args = parser.parse_args()
     root = args.candidate.resolve()
@@ -349,7 +350,7 @@ def main() -> int:
         f"{manifest['synthetic_cases']} synthetic cases; "
         f"{manifest['systems']} systems; "
         f"{manifest['frozen_output_records']} frozen output records; "
-        "authorized content scope; remote publication deferred until submission"
+        "authorized content scope; ready for author repository upload"
     )
     return 0
 

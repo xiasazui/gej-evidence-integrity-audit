@@ -6,8 +6,6 @@ The public release contains 80 script-generated synthetic original records, 480 
 
 Repository: `https://github.com/xiasazui/gej-evidence-integrity-audit`
 
-Immutable release: tag `v1.0-submission` and the commit recorded on the GitHub release page.
-
 ## Restricted clinical data
 
 The 20 de-identified real original clinical notes, 120 real-derived variants, and all real-source record-level Gold labels, model outputs, evidence, reasons, lineage and patient/seed/provenance mappings are not publicly deposited because public redistribution is restricted by participant privacy and institutional health-data governance requirements. Appendix B and clinical-note excerpts are also excluded.
@@ -18,6 +16,6 @@ Requests for access to restricted clinical materials must follow the separately 
 
 The archived standalone generator deterministically reproduces the 80 synthetic originals from embedded templates, candidate lists and numeric ranges and does not read the 20 real records during execution. Available provenance does not show case-by-case derivation from real records. The historical knowledge source of the embedded templates and candidate lists was not contemporaneously documented; no broader claim of independence from all clinical knowledge or records is made.
 
-## Persistent identifier
+## Repository identifier
 
-The tagged GitHub release is the current stable access route. A repository DOI has not yet been assigned; if one is minted later, it should be added to this file, `CITATION.cff`, and the manuscript data citation without replacing the recorded Git commit and tag.
+The public GitHub repository URL is the current access route. A repository DOI has not been assigned; if one is minted later, it can be added to this file, `CITATION.cff`, and the manuscript data citation.
