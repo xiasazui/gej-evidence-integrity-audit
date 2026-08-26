@@ -3,472 +3,325 @@ from __future__ import annotations
 import argparse
 import csv
 import json
-from collections import Counter, defaultdict
 from pathlib import Path
-from typing import Any, Dict, List, Tuple
 
+import matplotlib
+
+matplotlib.use("Agg")
+import matplotlib.pyplot as plt
 import numpy as np
+from matplotlib.patches import FancyArrowPatch, FancyBboxPatch, Rectangle
 
 
-_PACKAGE_ROOT = Path(__file__).resolve().parents[1]
+RELEASE = Path(__file__).resolve().parents[1]
+OUT = RELEASE / "figures/main"
+ASSET_OUT = OUT
 
-
-_CJK_FONT_FALLBACK: List[str] = [
-    "PingFang SC",
-    "Hiragino Sans GB",
-    "STHeiti",
-    "Microsoft YaHei",
-    "SimHei",
-    "Arial Unicode MS",
-    "Noto Sans CJK SC",
-    "DejaVu Sans",
+MODEL_ORDER = [
+    ("deepseek-v3.2-thinking", "DeepSeek"),
+    ("gemini-3-pro-preview-thinking", "Gemini"),
+    ("gpt-5.2", "GPT-5.2"),
+    ("gpt-oss-20b", "GPT-OSS-20B"),
+    ("gpt-oss-120b", "GPT-OSS-120B"),
+    ("kimi-k2-thinking", "Kimi"),
+    ("MiniMax-M2.1", "MiniMax"),
+    ("qwen3-30b-a3b-thinking-2507", "Qwen3-30B"),
+    ("qwen3-235b-a22b-thinking-2507", "Qwen3-235B"),
+    ("qwen3-next-80b-a3b-thinking", "Qwen3-Next"),
+    ("deterministic-baseline", "Regex"),
 ]
+DISPLAY = dict(MODEL_ORDER)
 
-_RULES: List[str] = ["H1", "H2", "H3", "H4", "H5", "H6"]
-_MODEL_LABELS: Dict[str, str] = {
-    "MiniMax-M2.1": "MiniMax",
-    "deepseek-v3.2-thinking": "DeepSeek",
-    "deterministic-baseline": "Regex",
-    "gemini-3-pro-preview-thinking": "Gemini",
-    "gpt-5.2": "GPT-5.2",
-    "gpt-oss-120b": "GPT-OSS-120B",
-    "gpt-oss-20b": "GPT-OSS-20B",
-    "kimi-k2-thinking": "Kimi",
-    "qwen3-235b-a22b-thinking-2507": "Qwen3-235B",
-    "qwen3-30b-a3b-thinking-2507": "Qwen3-30B",
-    "qwen3-next-80b-a3b-thinking": "Qwen3-Next",
-}
-_TAXONOMY_DISPLAY_LABELS: Dict[str, str] = {
-    "RULE_TRIGGER_BRANCH": "Rule-trigger/branch boundary misunderstanding",
-    "NUMERIC_REASONING": "Numeric reasoning failure",
-    "FORMAT_STRUCTURED": "Structured-output failure",
-    "EVIDENCE_MISS": "Evidence miss",
-    "EVIDENCE_HALLUCINATION": "Evidence hallucination",
-}
-_TAXONOMY_AXIS_LABELS: Dict[str, str] = {
-    "RULE_TRIGGER_BRANCH": "Rule-trigger/branch\nboundary misunderstanding",
-    "NUMERIC_REASONING": "Numeric reasoning\nfailure",
-    "FORMAT_STRUCTURED": "Structured-output\nfailure",
-    "EVIDENCE_MISS": "Evidence miss",
-    "EVIDENCE_HALLUCINATION": "Evidence\nhallucination",
-}
-_ACTIONABILITY_DISPLAY_LABELS: Dict[str, str] = {
-    "rule_text": "Rule-text clarification",
-    "parser": "Parser/output handling",
-    "label_guideline": "Guideline revision",
-}
-_ACTIONABILITY_AXIS_LABELS: Dict[str, str] = {
-    "rule_text": "Rule-text\nclarification",
-    "parser": "Parser/output\nhandling",
-    "label_guideline": "Guideline\nrevision",
-}
-_PALETTE: Dict[str, str] = {
-    "blue": "#0F4D92",
-    "blue_mid": "#3775BA",
-    "blue_soft": "#B4C0E4",
-    "red": "#B64342",
-    "red_soft": "#E9A6A1",
-    "teal": "#42949E",
-    "violet": "#8F5B9A",
-    "gold": "#B8872A",
-    "neutral_light": "#D8D8D8",
-    "neutral_mid": "#767676",
-    "neutral_dark": "#272727",
-    "grid": "#D9D9D9",
-}
+BLUE = "#2563A6"
+TEAL = "#0F8B8D"
+ORANGE = "#D97706"
+PURPLE = "#7C3AED"
+RED = "#C2413B"
+SLATE = "#475569"
+LIGHT = "#E7EEF5"
+GRID = "#D7DEE7"
 
 
-def _configure_matplotlib_fonts() -> None:
-    import matplotlib
+plt.rcParams.update(
+    {
+        "font.family": "sans-serif",
+        "font.sans-serif": ["Arial", "Helvetica", "DejaVu Sans"],
+        "font.size": 7.2,
+        "axes.labelsize": 7.5,
+        "axes.titlesize": 8.0,
+        "axes.linewidth": 0.6,
+        "axes.spines.top": False,
+        "axes.spines.right": False,
+        "xtick.labelsize": 6.6,
+        "ytick.labelsize": 6.6,
+        "legend.fontsize": 6.4,
+        "legend.frameon": False,
+        "pdf.fonttype": 42,
+        "ps.fonttype": 42,
+        "svg.fonttype": "none",
+        "figure.facecolor": "white",
+        "axes.facecolor": "white",
+    }
+)
 
-    matplotlib.rcParams.update(
-        {
-            "font.family": "sans-serif",
-            "font.sans-serif": _CJK_FONT_FALLBACK,
-            "svg.fonttype": "none",
-            "pdf.fonttype": 42,
-            "ps.fonttype": 42,
-            "axes.unicode_minus": False,
-            "font.size": 7.0,
-            "axes.labelsize": 7.3,
-            "axes.titlesize": 7.5,
-            "axes.linewidth": 0.55,
-            "axes.spines.right": False,
-            "axes.spines.top": False,
-            "xtick.labelsize": 6.7,
-            "ytick.labelsize": 6.7,
-            "xtick.major.width": 0.5,
-            "ytick.major.width": 0.5,
-            "legend.fontsize": 6.5,
-            "legend.frameon": False,
-            "figure.facecolor": "white",
-            "axes.facecolor": "white",
-        }
+
+def load_csv(path: Path) -> list[dict[str, str]]:
+    with path.open(encoding="utf-8-sig", newline="") as handle:
+        return list(csv.DictReader(handle))
+
+
+def save(fig: plt.Figure, stem: str) -> None:
+    OUT.mkdir(parents=True, exist_ok=True)
+    ASSET_OUT.mkdir(parents=True, exist_ok=True)
+    fig.savefig(OUT / f"{stem}.pdf", bbox_inches="tight", pad_inches=0.04)
+    fig.savefig(ASSET_OUT / f"{stem}.svg", bbox_inches="tight", pad_inches=0.04)
+    fig.savefig(ASSET_OUT / f"{stem}.png", dpi=600, bbox_inches="tight", pad_inches=0.04)
+    fig.savefig(ASSET_OUT / f"{stem}.tiff", dpi=600, bbox_inches="tight", pad_inches=0.04)
+
+
+def panel(ax: plt.Axes, label: str, x: float = -0.08, y: float = 1.04) -> None:
+    ax.text(x, y, label, transform=ax.transAxes, fontweight="bold", fontsize=9, va="bottom")
+
+
+def box(ax: plt.Axes, xy: tuple[float, float], width: float, height: float, title: str, subtitle: str, color: str) -> None:
+    patch = FancyBboxPatch(
+        xy,
+        width,
+        height,
+        boxstyle="round,pad=0.015,rounding_size=0.02",
+        linewidth=0.9,
+        edgecolor=color,
+        facecolor="white",
     )
+    ax.add_patch(patch)
+    ax.text(xy[0] + width / 2, xy[1] + height * 0.62, title, ha="center", va="center", fontweight="bold", fontsize=7.5, color=color)
+    ax.text(xy[0] + width / 2, xy[1] + height * 0.30, subtitle, ha="center", va="center", fontsize=6.5, color=SLATE)
 
 
-def _load_json(path: Path) -> Any:
-    try:
-        return json.loads(path.read_text(encoding="utf-8"))
-    except UnicodeDecodeError:
-        return json.loads(path.read_text(encoding="utf-8-sig"))
-
-
-def _save_fig(fig, out_path: Path) -> None:
-    out_path.parent.mkdir(parents=True, exist_ok=True)
-    fig.savefig(out_path, dpi=600, bbox_inches="tight", pad_inches=0.04)
-    fig.savefig(out_path.with_suffix(".pdf"), bbox_inches="tight", pad_inches=0.05)
-    fig.savefig(out_path.with_suffix(".svg"), bbox_inches="tight", pad_inches=0.05)
-    fig.savefig(out_path.with_suffix(".tiff"), dpi=600, bbox_inches="tight", pad_inches=0.05)
-
-
-def _annotate_panel(ax, label: str) -> None:
-    ax.text(-0.10, 1.04, label.lower(), transform=ax.transAxes, fontsize=8.3, fontweight="bold", va="bottom")
-
-
-def _short_model_name(model_name: str) -> str:
-    return _MODEL_LABELS.get(model_name, model_name)
-
-
-def _taxonomy_display_name(label: str) -> str:
-    return _TAXONOMY_DISPLAY_LABELS.get(label, label.replace("_", " ").title())
-
-
-def _taxonomy_axis_label(label: str) -> str:
-    return _TAXONOMY_AXIS_LABELS.get(label, _taxonomy_display_name(label))
-
-
-def _actionability_display_name(label: str) -> str:
-    return _ACTIONABILITY_DISPLAY_LABELS.get(label, label.replace("_", " ").title())
-
-
-def _actionability_axis_label(label: str) -> str:
-    return _ACTIONABILITY_AXIS_LABELS.get(label, _actionability_display_name(label))
-
-
-def _taxonomy_counts_by_rule(taxonomy_dir: Path) -> Tuple[List[str], Dict[str, Counter[str]], Counter[str]]:
-    counts_by_rule: Dict[str, Counter[str]] = defaultdict(Counter)
-    actionability_counts: Counter[str] = Counter()
-    for csv_path in sorted(taxonomy_dir.glob("*__taxonomy.csv")):
-        with csv_path.open("r", encoding="utf-8-sig", newline="") as handle:
-            for row in csv.DictReader(handle):
-                taxonomy_l1 = (row.get("taxonomy_l1") or "").strip()
-                rule_id = (row.get("rule_id") or "").strip()
-                actionability = (row.get("actionability") or "").strip()
-                if taxonomy_l1 and rule_id:
-                    counts_by_rule[rule_id][taxonomy_l1] += 1
-                if actionability:
-                    actionability_counts[actionability] += 1
-
-    taxonomy_labels: List[str] = []
-    seen: set[str] = set()
-    for rule_id in _RULES:
-        for taxonomy_l1, _count in counts_by_rule.get(rule_id, Counter()).most_common():
-            if taxonomy_l1 not in seen:
-                taxonomy_labels.append(taxonomy_l1)
-                seen.add(taxonomy_l1)
-    return taxonomy_labels, counts_by_rule, actionability_counts
-
-
-def _write_case_level_burden(gold_dataset_summary: Dict[str, Any], out_dir: Path) -> Path:
-    case_summary = gold_dataset_summary.get("case_level_summary") if isinstance(gold_dataset_summary.get("case_level_summary"), dict) else {}
-    blocked_rate = float(gold_dataset_summary.get("gold_blocked_rate_any_fail") or 0.0)
-    n_cases = int(gold_dataset_summary.get("n_labeled_cases") or gold_dataset_summary.get("n_case_files") or 0)
-    blocked_cases = int(round(n_cases * blocked_rate))
-    reviewable_cases = max(n_cases - blocked_cases, 0)
-
-    fail_distribution_raw = case_summary.get("fail_rules_per_case_distribution") if isinstance(case_summary.get("fail_rules_per_case_distribution"), dict) else {}
-    fail_distribution = {int(k): int(v) for k, v in fail_distribution_raw.items()}
-    only_one_fail = case_summary.get("only_one_fail_rule_counts") if isinstance(case_summary.get("only_one_fail_rule_counts"), dict) else {}
-    ordered_single_fail = sorted(((rule_id, int(count)) for rule_id, count in only_one_fail.items()), key=lambda item: (-item[1], item[0]))
-
-    import matplotlib
-
-    matplotlib.use("Agg")
-    import matplotlib.pyplot as plt
-
-    _configure_matplotlib_fonts()
-
-    fig, axes = plt.subplots(1, 3, figsize=(7.2, 2.35), gridspec_kw={"width_ratios": [1.0, 1.12, 1.35]})
+def figure1() -> None:
+    fig, axes = plt.subplots(1, 2, figsize=(7.2, 3.25), gridspec_kw={"width_ratios": [1.18, 1.0]})
 
     ax = axes[0]
-    ax.bar([0], [blocked_cases], color=_PALETTE["red"], width=0.58, label="Any FAIL")
-    ax.bar([0], [reviewable_cases], bottom=[blocked_cases], color=_PALETTE["teal"], width=0.58, label="No FAIL")
-    ax.set_ylim(0, max(n_cases, 1))
-    ax.set_xticks([0])
-    ax.set_xticklabels(["Cases"])
-    ax.set_ylabel("Count")
-    ax.text(0, blocked_cases / 2, f"{blocked_cases}\n({blocked_rate * 100:.1f}%)", ha="center", va="center", color="white", fontsize=6.8, fontweight="bold")
-    ax.text(0, blocked_cases + reviewable_cases / 2, f"{reviewable_cases}\n({(1 - blocked_rate) * 100:.1f}%)", ha="center", va="center", color="white", fontsize=6.8, fontweight="bold")
-    ax.legend(loc="lower center", bbox_to_anchor=(0.5, 1.02), ncol=2, handlelength=1.0, columnspacing=1.0)
-    ax.grid(axis="y", color=_PALETTE["grid"], alpha=0.65, linewidth=0.45)
-    _annotate_panel(ax, "A")
+    ax.set_xlim(0, 1)
+    ax.set_ylim(0, 1)
+    ax.axis("off")
+    panel(ax, "a")
+    box(ax, (0.02, 0.66), 0.25, 0.20, "100 seeds", "20 real + 80 synthetic", BLUE)
+    box(ax, (0.37, 0.66), 0.27, 0.20, "600 variants", "one H1–H6 variant\nper seed", ORANGE)
+    box(ax, (0.73, 0.66), 0.25, 0.20, "700 instances", "100 originals +\n600 variants", TEAL)
+    for start, end in [((0.27, 0.76), (0.37, 0.76)), ((0.64, 0.76), (0.73, 0.76))]:
+        ax.add_patch(FancyArrowPatch(start, end, arrowstyle="-|>", mutation_scale=10, linewidth=1.0, color=SLATE))
+    box(ax, (0.08, 0.22), 0.34, 0.20, "Frozen audit policy", "H1–H6 PASS / FAIL / NA", PURPLE)
+    box(ax, (0.58, 0.22), 0.34, 0.20, "Frozen evaluation", "11 systems\n4,200 pairs/model", BLUE)
+    ax.add_patch(FancyArrowPatch((0.42, 0.32), (0.58, 0.32), arrowstyle="-|>", mutation_scale=10, linewidth=1.0, color=SLATE))
+    ax.add_patch(FancyArrowPatch((0.85, 0.66), (0.75, 0.42), arrowstyle="-|>", mutation_scale=10, linewidth=1.0, color=SLATE))
+    ax.text(0.5, 0.04, "Gold-applicable pairs: 3,328/model; Gold-NA pairs: 872/model", ha="center", fontsize=6.7, color=SLATE)
 
     ax = axes[1]
-    xs = sorted(fail_distribution)
-    ys = [fail_distribution[x] for x in xs]
-    ax.bar(range(len(xs)), ys, color=_PALETTE["blue"], alpha=0.92)
-    ax.set_xticks(range(len(xs)))
-    ax.set_xticklabels([str(x) for x in xs])
-    ax.set_xlabel("Failed rules per case")
-    ax.set_ylabel("Count")
-    ax.grid(axis="y", color=_PALETTE["grid"], alpha=0.65, linewidth=0.45)
-    for idx, value in enumerate(ys):
-        ax.text(idx, value + max(n_cases * 0.005, 2), str(value), ha="center", va="bottom", fontsize=6.3)
-    _annotate_panel(ax, "B")
+    ax.set_xlim(0, 1)
+    ax.set_ylim(0, 1)
+    ax.axis("off")
+    panel(ax, "b")
+    ax.set_title("Operator-induced coupling", pad=12, fontweight="bold")
+    nodes = {"H2": (0.18, 0.70), "H4": (0.78, 0.70), "H5": (0.50, 0.20)}
+    for label, (x, y) in nodes.items():
+        circle = plt.Circle((x, y), 0.10, facecolor=LIGHT, edgecolor=BLUE, linewidth=1.2)
+        ax.add_patch(circle)
+        ax.text(x, y, label, ha="center", va="center", fontsize=9, fontweight="bold", color=BLUE)
+
+    arrows = [
+        ("H2", "H4", "97 PASS→FAIL", RED, 0.12),
+        ("H2", "H5", "82 PASS→NA", ORANGE, -0.08),
+        ("H4", "H5", "82 PASS→NA", ORANGE, 0.08),
+    ]
+    for source, target, label, color, rad in arrows:
+        start = nodes[source]
+        end = nodes[target]
+        arrow = FancyArrowPatch(
+            start,
+            end,
+            connectionstyle=f"arc3,rad={rad}",
+            arrowstyle="-|>",
+            mutation_scale=12,
+            linewidth=1.4,
+            color=color,
+            shrinkA=18,
+            shrinkB=18,
+        )
+        ax.add_patch(arrow)
+        midx = (start[0] + end[0]) / 2
+        midy = (start[1] + end[1]) / 2 + (0.10 if source == "H2" and target == "H4" else 0.01)
+        ax.text(midx, midy, label, ha="center", va="center", fontsize=6.6, color=color, bbox={"facecolor": "white", "edgecolor": "none", "pad": 0.4})
+    ax.text(0.5, 0.94, "Off-target changes: H2 98/100; H4 85/100", ha="center", fontsize=6.8, color=SLATE)
+    ax.text(0.5, 0.02, "Transitions characterize the constructed operators, not clinical co-occurrence.", ha="center", fontsize=6.5, color=SLATE)
+
+    fig.tight_layout(w_pad=1.3)
+    save(fig, "Figure_1")
+    plt.close(fig)
+
+
+def figure2() -> None:
+    data = json.loads((RELEASE / "data/aggregate/gold_eval_models_summary.json").read_text(encoding="utf-8"))
+    summary_rows = load_csv(RELEASE / "data/tables/table_model_performance_summary.csv")
+    summary = {row["model_identifier"]: row for row in summary_rows}
+    metric_index = {model: idx for idx, model in enumerate(data["models"])}
+    ordered = sorted(MODEL_ORDER, key=lambda item: float(summary[item[0]]["macro_f1"]))
+    labels = [display for _model, display in ordered]
+    y = np.arange(len(ordered))
+
+    fig, axes = plt.subplots(1, 3, figsize=(7.2, 3.65), gridspec_kw={"width_ratios": [1.0, 1.18, 0.76]})
+
+    ax = axes[0]
+    macro = np.array([float(summary[model]["macro_f1"]) for model, _ in ordered])
+    micro = np.array([float(summary[model]["micro_f1"]) for model, _ in ordered])
+    ax.scatter(macro, y + 0.13, s=20, color=BLUE, label="Macro-F1", zorder=3)
+    ax.scatter(micro, y - 0.13, s=20, color=ORANGE, marker="s", label="Micro-F1", zorder=3)
+    ax.set_yticks(y)
+    ax.set_yticklabels(labels)
+    ax.set_xlim(0.74, 1.01)
+    ax.set_xlabel("FAIL-class F1 among Gold-applicable pairs")
+    ax.grid(axis="x", color=GRID, linewidth=0.5)
+    ax.legend(loc="lower right")
+    panel(ax, "a")
+
+    ax = axes[1]
+    coverage = np.array([float(summary[model]["evidence_coverage"]) for model, _ in ordered])
+    conditional = np.array([float(summary[model]["conditional_item_recoverability"]) for model, _ in ordered])
+    all_snippet = np.array([float(summary[model]["all_snippet_recoverability"]) for model, _ in ordered])
+    ax.scatter(coverage, y + 0.22, s=18, color=TEAL, marker="o", label="Evidence coverage", zorder=3)
+    ax.scatter(conditional, y, s=18, color=PURPLE, marker="D", label="Conditional item recoverability", zorder=3)
+    ax.scatter(all_snippet, y - 0.22, s=18, color=RED, marker="s", label="All-snippet recoverability", zorder=3)
+    ax.set_yticks(y)
+    ax.set_yticklabels([])
+    ax.set_xlim(0.50, 1.02)
+    ax.set_xlabel("Evidence endpoint")
+    ax.grid(axis="x", color=GRID, linewidth=0.5)
+    ax.legend(loc="upper left", borderaxespad=0.35)
+    panel(ax, "b")
 
     ax = axes[2]
-    xs2 = np.arange(len(ordered_single_fail))
-    ys2 = [count for _rule_id, count in ordered_single_fail]
-    ax.bar(xs2, ys2, color=_PALETTE["violet"], alpha=0.9)
-    ax.set_xticks(xs2)
-    ax.set_xticklabels([rule_id for rule_id, _count in ordered_single_fail])
-    ax.set_xlabel("Rule among cases with exactly one FAIL")
-    ax.set_ylabel("Count")
-    ax.grid(axis="y", color=_PALETTE["grid"], alpha=0.65, linewidth=0.45)
-    for idx, value in enumerate(ys2):
-        ax.text(idx, value + 1.5, str(value), ha="center", va="bottom", fontsize=6.3)
-    _annotate_panel(ax, "C")
+    categories = ["Lexical\nrating", "Semantic\nsupport"]
+    yes = [50 / 96, 90 / 96]
+    partial = [41 / 96, 0]
+    no = [5 / 96, 6 / 96]
+    x = np.arange(2)
+    ax.bar(x, yes, color=TEAL, label="Yes / sufficient")
+    ax.bar(x, partial, bottom=yes, color="#E5B553", label="Partial")
+    ax.bar(x, no, bottom=np.array(yes) + np.array(partial), color=RED, label="No / insufficient")
+    ax.set_xticks(x)
+    ax.set_xticklabels(categories)
+    ax.set_ylim(0, 1)
+    ax.set_ylabel("Proportion of targeted outputs")
+    ax.set_yticks([0, 0.5, 1.0])
+    ax.set_yticklabels(["0", "0.5", "1.0"])
+    ax.text(0, yes[0] / 2, "50/96", color="white", ha="center", va="center", fontsize=6.7, fontweight="bold")
+    ax.text(1, yes[1] / 2, "90/96", color="white", ha="center", va="center", fontsize=6.7, fontweight="bold")
+    ax.legend(loc="lower center", bbox_to_anchor=(0.5, 1.01), ncol=1)
+    panel(ax, "c")
 
-    fig.tight_layout(rect=(0, 0, 1, 0.91), w_pad=1.0)
-    out_path = out_dir / "fig_case_level_burden.png"
-    _save_fig(fig, out_path)
+    fig.tight_layout(w_pad=0.9)
+    save(fig, "Figure_2")
     plt.close(fig)
-    return out_path
 
 
-def _write_f1_vs_grounding(eval_viz: Dict[str, Any], out_dir: Path) -> Path:
-    models = [str(x) for x in (eval_viz.get("models") or [])]
-    macro_f1 = [float(x) for x in (eval_viz.get("macro") or {}).get("f1", [])]
-    evidence_rates = [float(x) for x in (eval_viz.get("evidence_in_text_rate") or [])]
+def figure3() -> None:
+    data = json.loads((RELEASE / "data/aggregate/gold_eval_models_summary.json").read_text(encoding="utf-8"))
+    applicability_rows = load_csv(RELEASE / "data/tables_supp/table_s25a_applicability_metrics.csv")
+    applicability = {row["model_identifier"]: row for row in applicability_rows}
+    index = {model: idx for idx, model in enumerate(data["models"])}
+    ordered = sorted(MODEL_ORDER, key=lambda item: float(data["macro"]["f1"][index[item[0]]]), reverse=True)
+    labels = [display for _model, display in ordered]
+    matrix = np.array([data["matrix"]["f1"][index[model]] for model, _display in ordered], dtype=float)
 
-    import matplotlib
-
-    matplotlib.use("Agg")
-    import matplotlib.pyplot as plt
-
-    _configure_matplotlib_fonts()
-
-    fig, ax = plt.subplots(figsize=(3.55, 2.75))
-    order = sorted(range(len(models)), key=lambda idx: macro_f1[idx], reverse=True)
-    top3 = set(order[:3])
-
-    from matplotlib import patheffects as pe
-
-    x_min = min(macro_f1) - 0.03
-    max_x = max(macro_f1)
-    right_col_x = max_x + 0.025
-    x_max = max_x + 0.08
-    y_min = max(min(evidence_rates) - 0.06, 0.0)
-    y_max = min(max(evidence_rates) + 0.04, 1.04)
-
-    # Place most labels in a right-side column and enforce a minimum vertical
-    # separation to avoid text/point overlap and improve readability.
-    right_col_indices = [i for i, x in enumerate(macro_f1) if x >= 0.94]
-    desired_y = {i: evidence_rates[i] for i in right_col_indices}
-    min_sep = 0.018
-    margin = 0.01
-    placed_y: Dict[int, float] = {}
-    prev_y: float | None = None
-    for idx in sorted(right_col_indices, key=lambda i: desired_y[i], reverse=True):
-        y = desired_y[idx]
-        if prev_y is not None and y > prev_y - min_sep:
-            y = prev_y - min_sep
-        placed_y[idx] = y
-        prev_y = y
-    if placed_y:
-        min_label_y = min(placed_y.values())
-        max_label_y = max(placed_y.values())
-        if min_label_y < y_min + margin:
-            shift = (y_min + margin) - min_label_y
-            for k in list(placed_y):
-                placed_y[k] += shift
-        if max_label_y > y_max - margin:
-            shift = max_label_y - (y_max - margin)
-            for k in list(placed_y):
-                placed_y[k] -= shift
-
-    for idx, model_name in enumerate(models):
-        color = _PALETTE["blue"] if idx in top3 else (_PALETTE["gold"] if model_name == "deterministic-baseline" else _PALETTE["neutral_mid"])
-        size = 28 if idx in top3 else 21
-        x = macro_f1[idx]
-        y = evidence_rates[idx]
-        ax.scatter(x, y, s=size, color=color, edgecolor="white", linewidth=0.7, zorder=4)
-        if idx in placed_y:
-            label_x, label_y = right_col_x, placed_y[idx]
-            ha, va = "left", "center"
-        else:
-            label_x, label_y = x + 0.015, y + 0.006
-            ha, va = "left", "center"
-        annotation = ax.annotate(
-            _short_model_name(model_name),
-            (x, y),
-            xytext=(label_x, label_y),
-            textcoords="data",
-            fontsize=5.9,
-            color=_PALETTE["neutral_dark"],
-            ha=ha,
-            va=va,
-            annotation_clip=False,
-            bbox={"boxstyle": "round,pad=0.10", "facecolor": "white", "edgecolor": "none", "alpha": 0.82},
-            arrowprops={"arrowstyle": "-", "color": "#A8A8A8", "lw": 0.45, "shrinkA": 3, "shrinkB": 3},
-        )
-        annotation.set_path_effects([pe.Stroke(linewidth=2.0, foreground="white"), pe.Normal()])
-
-    ax.set_xlim(x_min, x_max)
-    ax.set_ylim(y_min, y_max)
-    ax.set_xlabel("Macro-F1")
-    ax.set_ylabel("Evidence-in-text rate")
-    ax.grid(color=_PALETTE["grid"], alpha=0.65, linewidth=0.45)
-    fig.tight_layout()
-    out_path = out_dir / "fig_f1_vs_evidence_grounding.png"
-    _save_fig(fig, out_path)
-    plt.close(fig)
-    return out_path
-
-
-def _write_rule_distribution_and_kappa(gold_dataset_summary: Dict[str, Any], kappa: Dict[str, Any], out_dir: Path) -> Path:
-    distribution = gold_dataset_summary.get("labels_distribution") if isinstance(gold_dataset_summary.get("labels_distribution"), dict) else {}
-    per_rule_kappa = kappa.get("per_rule") if isinstance(kappa.get("per_rule"), dict) else {}
-
-    pass_counts: List[int] = []
-    fail_counts: List[int] = []
-    na_counts: List[int] = []
-    kappas: List[float] = []
-    for rule_id in _RULES:
-        row = distribution.get(rule_id, {}) if isinstance(distribution.get(rule_id), dict) else {}
-        pass_counts.append(int(row.get("PASS") or 0))
-        fail_counts.append(int(row.get("FAIL") or 0))
-        na_counts.append(int(row.get("NA") or 0))
-        kappas.append(float((per_rule_kappa.get(rule_id) or {}).get("kappa") or 0.0))
-
-    import matplotlib
-
-    matplotlib.use("Agg")
-    import matplotlib.pyplot as plt
-
-    _configure_matplotlib_fonts()
-
-    fig, axes = plt.subplots(1, 2, figsize=(6.7, 2.45), gridspec_kw={"width_ratios": [1.35, 1.0]})
-
+    fig, axes = plt.subplots(1, 3, figsize=(7.2, 3.35), gridspec_kw={"width_ratios": [1.36, 1.0, 1.0]})
     ax = axes[0]
-    xs = np.arange(len(_RULES))
-    ax.bar(xs, pass_counts, color=_PALETTE["teal"], label="PASS")
-    ax.bar(xs, fail_counts, bottom=pass_counts, color=_PALETTE["red"], label="FAIL")
-    bottoms = [p + f for p, f in zip(pass_counts, fail_counts)]
-    ax.bar(xs, na_counts, bottom=bottoms, color=_PALETTE["neutral_light"], label="NA")
-    ax.set_xticks(xs)
-    ax.set_xticklabels(_RULES)
-    ax.set_ylabel("Count")
-    ax.legend(ncol=3, loc="lower center", bbox_to_anchor=(0.5, 1.02), handlelength=1.0, columnspacing=1.0)
-    ax.grid(axis="y", color=_PALETTE["grid"], alpha=0.65, linewidth=0.45)
-    for idx, value in enumerate(fail_counts):
-        ax.text(xs[idx], pass_counts[idx] + value / 2, str(value), ha="center", va="center", color="white", fontsize=6.2, fontweight="bold")
-    _annotate_panel(ax, "A")
+    image = ax.pcolormesh(
+        np.arange(matrix.shape[1] + 1),
+        np.arange(matrix.shape[0] + 1),
+        matrix,
+        vmin=0.0,
+        vmax=1.0,
+        cmap="Blues",
+        shading="flat",
+        rasterized=False,
+    )
+    ax.set_xlim(0, matrix.shape[1])
+    ax.set_ylim(matrix.shape[0], 0)
+    ax.set_xticks(np.arange(6) + 0.5)
+    ax.set_xticklabels(data["rules"])
+    ax.set_yticks(np.arange(len(labels)) + 0.5)
+    ax.set_yticklabels(labels)
+    ax.set_xlabel("Audit rule")
+    ax.set_title("FAIL-class F1")
+    for row in range(matrix.shape[0]):
+        for col in range(matrix.shape[1]):
+            value = matrix[row, col]
+            color = "white" if value > 0.68 else "#1F2937"
+            ax.text(col + 0.5, row + 0.5, f"{value:.2f}", ha="center", va="center", fontsize=5.4, color=color)
+    cax = ax.inset_axes([1.02, 0.14, 0.045, 0.65])
+    cmap = plt.get_cmap("Blues")
+    for band in range(20):
+        lower = band / 20
+        cax.add_patch(Rectangle((0, lower), 1, 1 / 20, facecolor=cmap((band + 0.5) / 20), edgecolor="none"))
+    cax.set_xlim(0, 1)
+    cax.set_ylim(0, 1)
+    cax.set_xticks([])
+    cax.yaxis.tick_right()
+    cax.set_yticks(np.linspace(0, 1, 6))
+    cax.tick_params(labelsize=6, width=0.4, length=2)
+    panel(ax, "a", y=1.10)
 
     ax = axes[1]
-    ax.bar(xs, kappas, color=_PALETTE["blue"], alpha=0.92)
-    ax.set_xticks(xs)
-    ax.set_xticklabels(_RULES)
-    ax.set_ylim(0, 1.02)
-    ax.set_ylabel("Cohen's κ")
-    ax.grid(axis="y", color=_PALETTE["grid"], alpha=0.65, linewidth=0.45)
-    for idx, value in enumerate(kappas):
-        ax.text(xs[idx], value + 0.02, f"{value:.3f}", ha="center", va="bottom", fontsize=6.1)
-    _annotate_panel(ax, "B")
+    for rank, (model, display) in enumerate(ordered, start=1):
+        i = index[model]
+        x = float(data["macro"]["specificity"][i])
+        y = float(data["macro"]["sensitivity"][i])
+        color = SLATE if model == "deterministic-baseline" else BLUE
+        ax.scatter(x, y, s=34, color=color, zorder=3)
+        if display in {"GPT-5.2", "Regex"}:
+            ax.annotate(display, (x, y), xytext=(4, 2), textcoords="offset points", fontsize=5.8)
+    ax.set_xlim(0.72, 1.01)
+    ax.set_ylim(0.72, 1.01)
+    ax.set_xlabel("FAIL-class macro-specificity")
+    ax.set_ylabel("FAIL-class macro-sensitivity")
+    ax.set_title("Gold-applicable discrimination")
+    ax.grid(color=GRID, linewidth=0.5)
+    panel(ax, "b", x=-0.18, y=1.10)
 
-    fig.tight_layout(rect=(0, 0, 1, 0.91), w_pad=1.0)
-    out_path = out_dir / "fig_rule_distribution_and_kappa.png"
-    _save_fig(fig, out_path)
+    ax = axes[2]
+    for model, display in ordered:
+        row = applicability[model]
+        x = float(row["na_specificity"])
+        y = float(row["applicability_sensitivity"])
+        color = SLATE if model == "deterministic-baseline" else TEAL
+        ax.scatter(x, y, s=34, color=color, zorder=3)
+        if display in {"GPT-OSS-20B", "MiniMax", "Regex"}:
+            ax.annotate(display, (x, y), xytext=(4, -6 if display in {"Regex", "MiniMax"} else 2), textcoords="offset points", fontsize=5.8)
+    ax.set_xlim(0.86, 1.005)
+    ax.set_ylim(0.994, 1.0003)
+    ax.set_xlabel("Gold-NA specificity")
+    ax.set_ylabel("Gold-applicable sensitivity")
+    ax.set_title("Applicability classification")
+    ax.grid(color=GRID, linewidth=0.5)
+    panel(ax, "c", x=-0.18, y=1.10)
+
+    fig.tight_layout(w_pad=1.0)
+    save(fig, "Figure_3")
     plt.close(fig)
-    return out_path
 
 
-def _write_taxonomy_by_rule(taxonomy_dir: Path, out_dir: Path) -> Path:
-    taxonomy_labels, counts_by_rule, actionability_counts = _taxonomy_counts_by_rule(taxonomy_dir)
-    if not taxonomy_labels:
-        raise SystemExit(f"No taxonomy rows found under: {taxonomy_dir}")
-
-    matrix = np.array([[counts_by_rule.get(rule_id, Counter()).get(label, 0) for rule_id in _RULES] for label in taxonomy_labels], dtype=float)
-    actionability_items = sorted(actionability_counts.items(), key=lambda item: (-item[1], item[0]))
-
-    import matplotlib
-
-    matplotlib.use("Agg")
-    import matplotlib.pyplot as plt
-
-    _configure_matplotlib_fonts()
-
-    fig, axes = plt.subplots(1, 2, figsize=(7.05, 2.75), gridspec_kw={"width_ratios": [1.45, 0.8]})
-
-    ax = axes[0]
-    im = ax.imshow(matrix, cmap="Blues")
-    ax.set_xticks(np.arange(len(_RULES)))
-    ax.set_xticklabels(_RULES)
-    ax.set_yticks(np.arange(len(taxonomy_labels)))
-    ax.set_yticklabels([_taxonomy_axis_label(label) for label in taxonomy_labels], fontsize=6.2)
-    ax.set_xlabel("Rule")
-    ax.set_ylabel("Primary error mechanism")
-    for row_idx in range(matrix.shape[0]):
-        for col_idx in range(matrix.shape[1]):
-            value = int(matrix[row_idx, col_idx])
-            color = "white" if value >= max(matrix.max() * 0.45, 1) else _PALETTE["neutral_dark"]
-            ax.text(col_idx, row_idx, str(value), ha="center", va="center", fontsize=5.9, color=color)
-    cbar = fig.colorbar(im, ax=ax, fraction=0.046, pad=0.04)
-    cbar.ax.set_ylabel("Count", rotation=90)
-    _annotate_panel(ax, "A")
-
-    ax = axes[1]
-    xs = np.arange(len(actionability_items))
-    ys = [count for _name, count in actionability_items]
-    ax.bar(xs, ys, color=_PALETTE["gold"], alpha=0.9)
-    ax.set_xticks(xs)
-    ax.set_xticklabels([_actionability_axis_label(name) for name, _count in actionability_items], fontsize=6.1)
-    ax.set_ylabel("Count")
-    ax.grid(axis="y", color=_PALETTE["grid"], alpha=0.65, linewidth=0.45)
-    for idx, value in enumerate(ys):
-        ax.text(idx, value + 1.2, str(value), ha="center", va="bottom", fontsize=6.2)
-    _annotate_panel(ax, "B")
-
-    fig.tight_layout(w_pad=1.6)
-    out_path = out_dir / "fig_taxonomy_by_rule_and_actionability.png"
-    _save_fig(fig, out_path)
-    plt.close(fig)
-    return out_path
-
-
-def main() -> int:
-    parser = argparse.ArgumentParser()
-    parser.add_argument(
-        "--gold_dataset_summary_json",
-        default=_PACKAGE_ROOT / "data/aggregate/gold_dataset_summary.json",
-    )
-    parser.add_argument(
-        "--gold_eval_viz_json",
-        default=_PACKAGE_ROOT / "data/aggregate/gold_eval_models_summary.json",
-    )
-    parser.add_argument(
-        "--kappa_json",
-        default=_PACKAGE_ROOT / "data/aggregate/kappa_summary.json",
-    )
-    parser.add_argument("--out_dir", default=_PACKAGE_ROOT / "reproduced_figures")
+def main() -> None:
+    global OUT, ASSET_OUT
+    parser = argparse.ArgumentParser(description="Regenerate the three V3 main figures from frozen aggregate inputs.")
+    parser.add_argument("--out_dir", type=Path, default=OUT)
     args = parser.parse_args()
-
-    out_dir = Path(args.out_dir)
-    out_dir.mkdir(parents=True, exist_ok=True)
-
-    gold_dataset_summary = _load_json(Path(args.gold_dataset_summary_json))
-    eval_viz = _load_json(Path(args.gold_eval_viz_json))
-    kappa = _load_json(Path(args.kappa_json))
-
-    wrote = [
-        str(_write_case_level_burden(gold_dataset_summary, out_dir)),
-        str(_write_f1_vs_grounding(eval_viz, out_dir)),
-        str(_write_rule_distribution_and_kappa(gold_dataset_summary, kappa, out_dir)),
-    ]
-    print(json.dumps({"wrote": wrote}, ensure_ascii=False))
-    return 0
+    OUT = args.out_dir
+    ASSET_OUT = args.out_dir
+    figure1()
+    figure2()
+    figure3()
+    print(json.dumps({"figures": 3, "pdf_dir": str(OUT), "asset_dir": str(ASSET_OUT)}))
 
 
 if __name__ == "__main__":
-    raise SystemExit(main())
+    main()

@@ -38,7 +38,7 @@ _MODEL_LABELS: Dict[str, str] = {
 _TAXONOMY_DISPLAY_LABELS: Dict[str, str] = {
     "RULE_TRIGGER_BRANCH": "Rule-trigger/branch boundary misunderstanding",
     "NUMERIC_REASONING": "Numeric reasoning failure",
-    "FORMAT_STRUCTURED": "Structured-output failure",
+    "FORMAT_STRUCTURED": "Required-field/content omission",
     "EVIDENCE_MISS": "Evidence miss",
     "EVIDENCE_HALLUCINATION": "Evidence hallucination",
 }
