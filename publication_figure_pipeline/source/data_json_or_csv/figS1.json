@@ -1,0 +1,105 @@
+{
+  "panels": {
+    "a": {
+      "title": "Case-level audit burden",
+      "bars": [
+        {
+          "fail_rules": 0,
+          "cases": 94,
+          "prov": "S1_Rules_Gold!B25"
+        },
+        {
+          "fail_rules": 1,
+          "cases": 486,
+          "prov": "S1_Rules_Gold!B26"
+        },
+        {
+          "fail_rules": 2,
+          "cases": 103,
+          "prov": "S1_Rules_Gold!B27"
+        },
+        {
+          "fail_rules": 3,
+          "cases": 13,
+          "prov": "S1_Rules_Gold!B28"
+        },
+        {
+          "fail_rules": 4,
+          "cases": 4,
+          "prov": "S1_Rules_Gold!B29"
+        }
+      ]
+    },
+    "b": {
+      "title": "Gold label composition by rule",
+      "rows": [
+        {
+          "rule": "H1",
+          "PASS": 577,
+          "FAIL": 123,
+          "NA": 0,
+          "prov": {
+            "PASS": "S1_Rules_Gold!B16",
+            "FAIL": "S1_Rules_Gold!C16",
+            "NA": "S1_Rules_Gold!D16"
+          }
+        },
+        {
+          "rule": "H2",
+          "PASS": 599,
+          "FAIL": 101,
+          "NA": 0,
+          "prov": {
+            "PASS": "S1_Rules_Gold!B17",
+            "FAIL": "S1_Rules_Gold!C17",
+            "NA": "S1_Rules_Gold!D17"
+          }
+        },
+        {
+          "rule": "H3",
+          "PASS": 4,
+          "FAIL": 102,
+          "NA": 594,
+          "prov": {
+            "PASS": "S1_Rules_Gold!B18",
+            "FAIL": "S1_Rules_Gold!C18",
+            "NA": "S1_Rules_Gold!D18"
+          }
+        },
+        {
+          "rule": "H4",
+          "PASS": 498,
+          "FAIL": 202,
+          "NA": 0,
+          "prov": {
+            "PASS": "S1_Rules_Gold!B19",
+            "FAIL": "S1_Rules_Gold!C19",
+            "NA": "S1_Rules_Gold!D19"
+          }
+        },
+        {
+          "rule": "H5",
+          "PASS": 322,
+          "FAIL": 100,
+          "NA": 278,
+          "prov": {
+            "PASS": "S1_Rules_Gold!B20",
+            "FAIL": "S1_Rules_Gold!C20",
+            "NA": "S1_Rules_Gold!D20"
+          }
+        },
+        {
+          "rule": "H6",
+          "PASS": 581,
+          "FAIL": 119,
+          "NA": 0,
+          "prov": {
+            "PASS": "S1_Rules_Gold!B21",
+            "FAIL": "S1_Rules_Gold!C21",
+            "NA": "S1_Rules_Gold!D21"
+          }
+        }
+      ]
+    }
+  }
+}

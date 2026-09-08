@@ -1,0 +1,47 @@
+{
+  "schema_version": 1,
+  "canonical_release": "V2",
+  "kappa": {
+    "source": "Frozen manuscript Table 3 and Supplementary_Data.xlsx S00_Rules",
+    "raw_double_review_records_public": false,
+    "exclude_na": false,
+    "common_cases": 140,
+    "per_rule": {
+      "H1": {"n": 140, "agree": 140, "agree_rate": 1.0, "kappa": 1.0},
+      "H2": {"n": 140, "agree": 137, "agree_rate": 0.9785714286, "kappa": 0.932},
+      "H3": {"n": 140, "agree": 139, "agree_rate": 0.9928571429, "kappa": 0.98},
+      "H4": {"n": 140, "agree": 140, "agree_rate": 1.0, "kappa": 1.0},
+      "H5": {"n": 140, "agree": 140, "agree_rate": 1.0, "kappa": 1.0},
+      "H6": {"n": 140, "agree": 140, "agree_rate": 1.0, "kappa": 1.0}
+    },
+    "overall": {"n": 840, "agree": 836, "agree_rate": 0.9952380952, "kappa": 0.992}
+  },
+  "operator_transitions": {
+    "H2_to_H4_PASS_to_FAIL": 97,
+    "H2_to_H5_PASS_to_NA": 82,
+    "H4_to_H5_PASS_to_NA": 82
+  },
+  "composition": {
+    "real_original": {"n_instances": 20, "n_unique_seeds": 20},
+    "synthetic_original": {"n_instances": 80, "n_unique_seeds": 80},
+    "real_derived": {"n_instances": 120, "n_unique_seeds": 20},
+    "synthetic_derived": {"n_instances": 480, "n_unique_seeds": 80}
+  },
+  "taxonomy": {"Evidence miss": 2},
+  "evidence": {
+    "full_700_aggregate_source": "data/tables_supp/table_case_level_evidence_grounding.csv",
+    "record_level_full_700_public": false,
+    "primary_analysis_set": "all non-audit-error predicted FAIL outputs",
+    "coverage_definition": "predicted FAIL outputs returning at least one non-empty snippet / predicted FAIL outputs",
+    "conditional_item_recoverability_definition": "recoverable returned evidence items / returned evidence items",
+    "all_snippet_recoverability_definition": "predicted FAIL outputs for which all returned snippets are recoverable / predicted FAIL outputs; empty evidence fails"
+  },
+  "missing_submission_gate_inputs": [
+    "ethics approval letter and approved protocol",
+    "full 700-case Gold labels",
+    "full 700-case source texts",
+    "full 700-case frozen outputs for all systems",
+    "100-seed record-level mapping",
+    "semantic reviewer-level ratings or semantic 3x3 contingency table"
+  ]
+}

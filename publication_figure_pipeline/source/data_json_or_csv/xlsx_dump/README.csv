@@ -1,0 +1,13 @@
+Analysis source tables extracted from the Supplementary Data workbook,,,
+"This source bundle contains the non-provenance worksheets used by the analysis and figure pipeline.",,,
+,,,
+Table,Worksheet,Contents,Consolidates prior content
+S1,S1_Rules_Gold,Frozen rules and Gold structure,"S00, Gold summaries"
+S2,S2_Model_Summary,"Model, applicability, evidence endpoints","S02, S23, S25A"
+S3,S3_Rule_NA,Predicted-NA diagnostics,"S03, S04"
+S4,S4_Evidence,Evidence and snippet sensitivity,"S08, S10, S25B"
+S5,S5_Bootstrap,Pairwise seed-cluster bootstrap,"S01, S20"
+S6,S6_Source_Layer,Source and layer sensitivity,S16–S18
+S7,S7_Human_Taxonomy,Human review and taxonomy,"S05–S06, S12–S15, S21, lexical sheets"
+S8,S8_Transitions_Real,Transitions and real-original descriptors,"transition sheets, S22"
+,,,

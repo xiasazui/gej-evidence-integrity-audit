@@ -1,0 +1,72 @@
+{
+  "s2_rank_order": [
+    [
+      "1",
+      "gemini-3-pro-preview-thinking",
+      "0.984"
+    ],
+    [
+      "2",
+      "kimi-k2-thinking",
+      "0.983"
+    ],
+    [
+      "3",
+      "qwen3-235b-a22b-thinking-2507",
+      "0.983"
+    ],
+    [
+      "4",
+      "deepseek-v3.2-thinking",
+      "0.982"
+    ],
+    [
+      "5",
+      "gpt-oss-120b",
+      "0.975"
+    ],
+    [
+      "6",
+      "gpt-oss-20b",
+      "0.973"
+    ],
+    [
+      "7",
+      "qwen3-next-80b-a3b-thinking",
+      "0.970"
+    ],
+    [
+      "8",
+      "qwen3-30b-a3b-thinking-2507",
+      "0.969"
+    ],
+    [
+      "9",
+      "MiniMax-M2.1",
+      "0.961"
+    ],
+    [
+      "10",
+      "gpt-5.2",
+      "0.871"
+    ],
+    [
+      "11",
+      "deterministic-baseline",
+      "0.813"
+    ]
+  ],
+  "unrounded": {
+    "DeepSeek": "0.982",
+    "Gemini": "0.984",
+    "GPT-5.2": "0.871",
+    "GPT-OSS-20B": "0.973",
+    "GPT-OSS-120B": "0.975",
+    "Kimi": "0.983",
+    "MiniMax": "0.961",
+    "Qwen3-30B": "0.969",
+    "Qwen3-235B": "0.983",
+    "Qwen3-Next": "0.970",
+    "Regex": "0.813"
+  }
+}

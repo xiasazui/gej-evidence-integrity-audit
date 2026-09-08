@@ -1,0 +1,12 @@
+model,predicted_fail_outputs,outputs_with_nonempty_evidence,returned_evidence_items,recoverable_evidence_items,outputs_all_snippets_recoverable,evidence_coverage,conditional_item_recoverability,all_snippet_recoverability,mean_snippets_per_predicted_fail,analysis_set,record_level_recomputed_in_public_package
+MiniMax-M2.1,797,794,1888,1490,504,0.996236,0.789195,0.632371,2.368883,all non-audit-error predicted FAIL outputs,no
+deepseek-v3.2-thinking,772,762,1585,1297,492,0.987047,0.818297,0.637306,2.053109,all non-audit-error predicted FAIL outputs,no
+deterministic-baseline,666,387,387,387,387,0.581081,1.000000,0.581081,0.581081,all non-audit-error predicted FAIL outputs,no
+gemini-3-pro-preview-thinking,755,721,1451,1438,708,0.954967,0.991041,0.937748,1.921854,all non-audit-error predicted FAIL outputs,no
+gpt-5.2,1206,1205,2612,2304,912,0.999171,0.882083,0.756219,2.165837,all non-audit-error predicted FAIL outputs,no
+gpt-oss-120b,772,772,1856,1805,733,1.000000,0.972522,0.949482,2.404145,all non-audit-error predicted FAIL outputs,no
+gpt-oss-20b,831,830,1976,1943,799,0.998797,0.983300,0.961492,2.377858,all non-audit-error predicted FAIL outputs,no
+kimi-k2-thinking,774,773,1851,1709,676,0.998708,0.923285,0.873385,2.391473,all non-audit-error predicted FAIL outputs,no
+qwen3-235b-a22b-thinking-2507,779,772,1575,1393,602,0.991014,0.884444,0.772786,2.021823,all non-audit-error predicted FAIL outputs,no
+qwen3-30b-a3b-thinking-2507,785,784,1117,979,656,0.998726,0.876455,0.835669,1.422930,all non-audit-error predicted FAIL outputs,no
+qwen3-next-80b-a3b-thinking,787,781,1354,1257,697,0.992376,0.928360,0.885642,1.720457,all non-audit-error predicted FAIL outputs,no

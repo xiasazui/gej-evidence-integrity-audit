@@ -1,0 +1,61 @@
+{
+  "canonical_model_order": [
+    {
+      "rank": 1,
+      "model_id": "gemini-3-pro-preview-thinking",
+      "display": "Gemini"
+    },
+    {
+      "rank": 2,
+      "model_id": "kimi-k2-thinking",
+      "display": "Kimi"
+    },
+    {
+      "rank": 3,
+      "model_id": "qwen3-235b-a22b-thinking-2507",
+      "display": "Qwen3-235B"
+    },
+    {
+      "rank": 4,
+      "model_id": "deepseek-v3.2-thinking",
+      "display": "DeepSeek"
+    },
+    {
+      "rank": 5,
+      "model_id": "gpt-oss-120b",
+      "display": "GPT-OSS-120B"
+    },
+    {
+      "rank": 6,
+      "model_id": "gpt-oss-20b",
+      "display": "GPT-OSS-20B"
+    },
+    {
+      "rank": 7,
+      "model_id": "qwen3-next-80b-a3b-thinking",
+      "display": "Qwen3-Next"
+    },
+    {
+      "rank": 8,
+      "model_id": "qwen3-30b-a3b-thinking-2507",
+      "display": "Qwen3-30B"
+    },
+    {
+      "rank": 9,
+      "model_id": "MiniMax-M2.1",
+      "display": "MiniMax"
+    },
+    {
+      "rank": 10,
+      "model_id": "gpt-5.2",
+      "display": "GPT-5.2"
+    },
+    {
+      "rank": 11,
+      "model_id": "deterministic-baseline",
+      "display": "Regex"
+    }
+  ],
+  "order_note": "Order = Supplementary_Data.xlsx S2_Model_Summary rank column (FAIL-class macro-F1, descending; Regex always last). Cross-checked against unrounded macro_f1 in gold_eval_models_summary.json: identical ordering (kimi 0.9829064509 > qwen3-235b 0.9826282817).",
+  "legend_note": "In-figure label 'Regex' = the deterministic baseline (stated once in each legend)."
+}

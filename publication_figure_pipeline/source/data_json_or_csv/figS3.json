@@ -1,0 +1,504 @@
+{
+  "panels": {
+    "a": {
+      "title": "Predicted NA rate on Gold-applicable pairs",
+      "matrix": [
+        {
+          "model": "Gemini",
+          "model_id": "gemini-3-pro-preview-thinking",
+          "values": {
+            "H1": 0.0,
+            "H2": 0.0,
+            "H3": 0.0,
+            "H4": 0.0,
+            "H5": 0.005,
+            "H6": 0.0
+          },
+          "prov": {
+            "H1": "S3_Rule_NA!I60",
+            "H2": "S3_Rule_NA!I61",
+            "H3": "S3_Rule_NA!I62",
+            "H4": "S3_Rule_NA!I63",
+            "H5": "S3_Rule_NA!I64",
+            "H6": "S3_Rule_NA!I65"
+          }
+        },
+        {
+          "model": "Kimi",
+          "model_id": "kimi-k2-thinking",
+          "values": {
+            "H1": 0.0,
+            "H2": 0.0,
+            "H3": 0.0,
+            "H4": 0.0,
+            "H5": 0.005,
+            "H6": 0.0
+          },
+          "prov": {
+            "H1": "S3_Rule_NA!I84",
+            "H2": "S3_Rule_NA!I85",
+            "H3": "S3_Rule_NA!I86",
+            "H4": "S3_Rule_NA!I87",
+            "H5": "S3_Rule_NA!I88",
+            "H6": "S3_Rule_NA!I89"
+          }
+        },
+        {
+          "model": "Qwen3-235B",
+          "model_id": "qwen3-235b-a22b-thinking-2507",
+          "values": {
+            "H1": 0.0,
+            "H2": 0.0,
+            "H3": 0.0,
+            "H4": 0.0,
+            "H5": 0.005,
+            "H6": 0.0
+          },
+          "prov": {
+            "H1": "S3_Rule_NA!I90",
+            "H2": "S3_Rule_NA!I91",
+            "H3": "S3_Rule_NA!I92",
+            "H4": "S3_Rule_NA!I93",
+            "H5": "S3_Rule_NA!I94",
+            "H6": "S3_Rule_NA!I95"
+          }
+        },
+        {
+          "model": "DeepSeek",
+          "model_id": "deepseek-v3.2-thinking",
+          "values": {
+            "H1": 0.0,
+            "H2": 0.0,
+            "H3": 0.0,
+            "H4": 0.0,
+            "H5": 0.005,
+            "H6": 0.0
+          },
+          "prov": {
+            "H1": "S3_Rule_NA!I48",
+            "H2": "S3_Rule_NA!I49",
+            "H3": "S3_Rule_NA!I50",
+            "H4": "S3_Rule_NA!I51",
+            "H5": "S3_Rule_NA!I52",
+            "H6": "S3_Rule_NA!I53"
+          }
+        },
+        {
+          "model": "GPT-OSS-120B",
+          "model_id": "gpt-oss-120b",
+          "values": {
+            "H1": 0.0,
+            "H2": 0.0,
+            "H3": 0.0,
+            "H4": 0.0,
+            "H5": 0.002,
+            "H6": 0.0
+          },
+          "prov": {
+            "H1": "S3_Rule_NA!I72",
+            "H2": "S3_Rule_NA!I73",
+            "H3": "S3_Rule_NA!I74",
+            "H4": "S3_Rule_NA!I75",
+            "H5": "S3_Rule_NA!I76",
+            "H6": "S3_Rule_NA!I77"
+          }
+        },
+        {
+          "model": "GPT-OSS-20B",
+          "model_id": "gpt-oss-20b",
+          "values": {
+            "H1": 0.0,
+            "H2": 0.0,
+            "H3": 0.0,
+            "H4": 0.0,
+            "H5": 0.002,
+            "H6": 0.0
+          },
+          "prov": {
+            "H1": "S3_Rule_NA!I78",
+            "H2": "S3_Rule_NA!I79",
+            "H3": "S3_Rule_NA!I80",
+            "H4": "S3_Rule_NA!I81",
+            "H5": "S3_Rule_NA!I82",
+            "H6": "S3_Rule_NA!I83"
+          }
+        },
+        {
+          "model": "Qwen3-Next",
+          "model_id": "qwen3-next-80b-a3b-thinking",
+          "values": {
+            "H1": 0.0,
+            "H2": 0.0,
+            "H3": 0.009,
+            "H4": 0.0,
+            "H5": 0.005,
+            "H6": 0.0
+          },
+          "prov": {
+            "H1": "S3_Rule_NA!I102",
+            "H2": "S3_Rule_NA!I103",
+            "H3": "S3_Rule_NA!I104",
+            "H4": "S3_Rule_NA!I105",
+            "H5": "S3_Rule_NA!I106",
+            "H6": "S3_Rule_NA!I107"
+          }
+        },
+        {
+          "model": "Qwen3-30B",
+          "model_id": "qwen3-30b-a3b-thinking-2507",
+          "values": {
+            "H1": 0.0,
+            "H2": 0.0,
+            "H3": 0.0,
+            "H4": 0.0,
+            "H5": 0.005,
+            "H6": 0.0
+          },
+          "prov": {
+            "H1": "S3_Rule_NA!I96",
+            "H2": "S3_Rule_NA!I97",
+            "H3": "S3_Rule_NA!I98",
+            "H4": "S3_Rule_NA!I99",
+            "H5": "S3_Rule_NA!I100",
+            "H6": "S3_Rule_NA!I101"
+          }
+        },
+        {
+          "model": "MiniMax",
+          "model_id": "MiniMax-M2.1",
+          "values": {
+            "H1": 0.0,
+            "H2": 0.001,
+            "H3": 0.0,
+            "H4": 0.001,
+            "H5": 0.005,
+            "H6": 0.013
+          },
+          "prov": {
+            "H1": "S3_Rule_NA!I42",
+            "H2": "S3_Rule_NA!I43",
+            "H3": "S3_Rule_NA!I44",
+            "H4": "S3_Rule_NA!I45",
+            "H5": "S3_Rule_NA!I46",
+            "H6": "S3_Rule_NA!I47"
+          }
+        },
+        {
+          "model": "GPT-5.2",
+          "model_id": "gpt-5.2",
+          "values": {
+            "H1": 0.0,
+            "H2": 0.0,
+            "H3": 0.0,
+            "H4": 0.0,
+            "H5": 0.005,
+            "H6": 0.0
+          },
+          "prov": {
+            "H1": "S3_Rule_NA!I66",
+            "H2": "S3_Rule_NA!I67",
+            "H3": "S3_Rule_NA!I68",
+            "H4": "S3_Rule_NA!I69",
+            "H5": "S3_Rule_NA!I70",
+            "H6": "S3_Rule_NA!I71"
+          }
+        },
+        {
+          "model": "Regex",
+          "model_id": "deterministic-baseline",
+          "values": {
+            "H1": 0.0,
+            "H2": 0.0,
+            "H3": 0.057,
+            "H4": 0.0,
+            "H5": 0.002,
+            "H6": 0.0
+          },
+          "prov": {
+            "H1": "S3_Rule_NA!I54",
+            "H2": "S3_Rule_NA!I55",
+            "H3": "S3_Rule_NA!I56",
+            "H4": "S3_Rule_NA!I57",
+            "H5": "S3_Rule_NA!I58",
+            "H6": "S3_Rule_NA!I59"
+          }
+        }
+      ],
+      "colorbar_max": 0.057
+    },
+    "b": {
+      "title": "Applicability discrimination",
+      "points": [
+        {
+          "model": "Gemini",
+          "model_id": "gemini-3-pro-preview-thinking",
+          "x_na_specificity": 0.982798,
+          "y_applicability_sensitivity": 0.999399,
+          "prov": {
+            "x": "S2_Model_Summary!H21",
+            "y": "S2_Model_Summary!G21"
+          }
+        },
+        {
+          "model": "Kimi",
+          "model_id": "kimi-k2-thinking",
+          "x_na_specificity": 0.966743,
+          "y_applicability_sensitivity": 0.999399,
+          "prov": {
+            "x": "S2_Model_Summary!H25",
+            "y": "S2_Model_Summary!G25"
+          }
+        },
+        {
+          "model": "Qwen3-235B",
+          "model_id": "qwen3-235b-a22b-thinking-2507",
+          "x_na_specificity": 0.954128,
+          "y_applicability_sensitivity": 0.999399,
+          "prov": {
+            "x": "S2_Model_Summary!H28",
+            "y": "S2_Model_Summary!G28"
+          }
+        },
+        {
+          "model": "DeepSeek",
+          "model_id": "deepseek-v3.2-thinking",
+          "x_na_specificity": 0.961009,
+          "y_applicability_sensitivity": 0.999399,
+          "prov": {
+            "x": "S2_Model_Summary!H20",
+            "y": "S2_Model_Summary!G20"
+          }
+        },
+        {
+          "model": "GPT-OSS-120B",
+          "model_id": "gpt-oss-120b",
+          "x_na_specificity": 0.979358,
+          "y_applicability_sensitivity": 0.9997,
+          "prov": {
+            "x": "S2_Model_Summary!H24",
+            "y": "S2_Model_Summary!G24"
+          }
+        },
+        {
+          "model": "GPT-OSS-20B",
+          "model_id": "gpt-oss-20b",
+          "x_na_specificity": 0.883028,
+          "y_applicability_sensitivity": 0.9997,
+          "prov": {
+            "x": "S2_Model_Summary!H23",
+            "y": "S2_Model_Summary!G23"
+          }
+        },
+        {
+          "model": "Qwen3-Next",
+          "model_id": "qwen3-next-80b-a3b-thinking",
+          "x_na_specificity": 0.979358,
+          "y_applicability_sensitivity": 0.999099,
+          "prov": {
+            "x": "S2_Model_Summary!H29",
+            "y": "S2_Model_Summary!G29"
+          }
+        },
+        {
+          "model": "Qwen3-30B",
+          "model_id": "qwen3-30b-a3b-thinking-2507",
+          "x_na_specificity": 0.988532,
+          "y_applicability_sensitivity": 0.999399,
+          "prov": {
+            "x": "S2_Model_Summary!H27",
+            "y": "S2_Model_Summary!G27"
+          }
+        },
+        {
+          "model": "MiniMax",
+          "model_id": "MiniMax-M2.1",
+          "x_na_specificity": 0.969037,
+          "y_applicability_sensitivity": 0.996094,
+          "prov": {
+            "x": "S2_Model_Summary!H26",
+            "y": "S2_Model_Summary!G26"
+          }
+        },
+        {
+          "model": "GPT-5.2",
+          "model_id": "gpt-5.2",
+          "x_na_specificity": 0.959862,
+          "y_applicability_sensitivity": 0.999399,
+          "prov": {
+            "x": "S2_Model_Summary!H22",
+            "y": "S2_Model_Summary!G22"
+          }
+        },
+        {
+          "model": "Regex",
+          "model_id": "deterministic-baseline",
+          "x_na_specificity": 0.99656,
+          "y_applicability_sensitivity": 0.997897,
+          "prov": {
+            "x": "S2_Model_Summary!H30",
+            "y": "S2_Model_Summary!G30"
+          }
+        }
+      ]
+    },
+    "c": {
+      "title": "Predicted-NA policy sensitivity",
+      "series": [
+        {
+          "model": "Gemini",
+          "model_id": "gemini-3-pro-preview-thinking",
+          "values": {
+            "as_pass": 0.984,
+            "exclude": 0.984,
+            "as_fail": 0.983
+          },
+          "prov": {
+            "as_pass": "S3_Rule_NA!C15",
+            "exclude": "S3_Rule_NA!C16",
+            "as_fail": "S3_Rule_NA!C17"
+          }
+        },
+        {
+          "model": "Kimi",
+          "model_id": "kimi-k2-thinking",
+          "values": {
+            "as_pass": 0.983,
+            "exclude": 0.983,
+            "as_fail": 0.981
+          },
+          "prov": {
+            "as_pass": "S3_Rule_NA!C27",
+            "exclude": "S3_Rule_NA!C28",
+            "as_fail": "S3_Rule_NA!C29"
+          }
+        },
+        {
+          "model": "Qwen3-235B",
+          "model_id": "qwen3-235b-a22b-thinking-2507",
+          "values": {
+            "as_pass": 0.983,
+            "exclude": 0.983,
+            "as_fail": 0.981
+          },
+          "prov": {
+            "as_pass": "S3_Rule_NA!C30",
+            "exclude": "S3_Rule_NA!C31",
+            "as_fail": "S3_Rule_NA!C32"
+          }
+        },
+        {
+          "model": "DeepSeek",
+          "model_id": "deepseek-v3.2-thinking",
+          "values": {
+            "as_pass": 0.982,
+            "exclude": 0.982,
+            "as_fail": 0.981
+          },
+          "prov": {
+            "as_pass": "S3_Rule_NA!C9",
+            "exclude": "S3_Rule_NA!C10",
+            "as_fail": "S3_Rule_NA!C11"
+          }
+        },
+        {
+          "model": "GPT-OSS-120B",
+          "model_id": "gpt-oss-120b",
+          "values": {
+            "as_pass": 0.975,
+            "exclude": 0.975,
+            "as_fail": 0.974
+          },
+          "prov": {
+            "as_pass": "S3_Rule_NA!C21",
+            "exclude": "S3_Rule_NA!C22",
+            "as_fail": "S3_Rule_NA!C23"
+          }
+        },
+        {
+          "model": "GPT-OSS-20B",
+          "model_id": "gpt-oss-20b",
+          "values": {
+            "as_pass": 0.973,
+            "exclude": 0.973,
+            "as_fail": 0.972
+          },
+          "prov": {
+            "as_pass": "S3_Rule_NA!C24",
+            "exclude": "S3_Rule_NA!C25",
+            "as_fail": "S3_Rule_NA!C26"
+          }
+        },
+        {
+          "model": "Qwen3-Next",
+          "model_id": "qwen3-next-80b-a3b-thinking",
+          "values": {
+            "as_pass": 0.97,
+            "exclude": 0.971,
+            "as_fail": 0.97
+          },
+          "prov": {
+            "as_pass": "S3_Rule_NA!C36",
+            "exclude": "S3_Rule_NA!C37",
+            "as_fail": "S3_Rule_NA!C38"
+          }
+        },
+        {
+          "model": "Qwen3-30B",
+          "model_id": "qwen3-30b-a3b-thinking-2507",
+          "values": {
+            "as_pass": 0.969,
+            "exclude": 0.969,
+            "as_fail": 0.968
+          },
+          "prov": {
+            "as_pass": "S3_Rule_NA!C33",
+            "exclude": "S3_Rule_NA!C34",
+            "as_fail": "S3_Rule_NA!C35"
+          }
+        },
+        {
+          "model": "MiniMax",
+          "model_id": "MiniMax-M2.1",
+          "values": {
+            "as_pass": 0.961,
+            "exclude": 0.961,
+            "as_fail": 0.953
+          },
+          "prov": {
+            "as_pass": "S3_Rule_NA!C6",
+            "exclude": "S3_Rule_NA!C7",
+            "as_fail": "S3_Rule_NA!C8"
+          }
+        },
+        {
+          "model": "GPT-5.2",
+          "model_id": "gpt-5.2",
+          "values": {
+            "as_pass": 0.871,
+            "exclude": 0.871,
+            "as_fail": 0.869
+          },
+          "prov": {
+            "as_pass": "S3_Rule_NA!C18",
+            "exclude": "S3_Rule_NA!C19",
+            "as_fail": "S3_Rule_NA!C20"
+          }
+        },
+        {
+          "model": "Regex",
+          "model_id": "deterministic-baseline",
+          "values": {
+            "as_pass": 0.813,
+            "exclude": 0.814,
+            "as_fail": 0.81
+          },
+          "prov": {
+            "as_pass": "S3_Rule_NA!C12",
+            "exclude": "S3_Rule_NA!C13",
+            "as_fail": "S3_Rule_NA!C14"
+          }
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,94 @@
+{
+  "panels": {
+    "a": {
+      "title": "Benchmark construction",
+      "main_flow": [
+        {
+          "node": "100 seeds",
+          "sub": "20 real + 80 synthetic",
+          "prov": {
+            "20": "S6_Source_Layer!B6",
+            "80": "S6_Source_Layer!B7"
+          }
+        },
+        {
+          "node": "600 variants",
+          "sub": "one H1–H6 variant per seed",
+          "prov": {
+            "600_total": "derived: 120 (S6_Source_Layer!B8) + 480 (S6_Source_Layer!B9) = 600"
+          }
+        },
+        {
+          "node": "700 instances",
+          "sub": "100 originals + 600 variants",
+          "prov": {
+            "700": "100 + 600"
+          }
+        }
+      ],
+      "aux_flow": [
+        {
+          "node": "Frozen audit policy",
+          "sub": "H1–H6 PASS / FAIL / NA"
+        },
+        {
+          "node": "Frozen evaluation",
+          "sub": "11 systems · 4,200 pairs/model",
+          "prov": {
+            "11": "S2_Model_Summary section A rows (11 systems)",
+            "4200": "S6_Source_Layer!E40"
+          }
+        }
+      ],
+      "footnote": "Gold-applicable pairs: 3,328/model; Gold-NA pairs: 872/model",
+      "footnote_prov": {
+        "3328": "S6_Source_Layer!F40",
+        "872": "S6_Source_Layer!I40"
+      }
+    },
+    "b": {
+      "title": "Operator-induced coupling",
+      "off_target_line": "Off-target changes: H2 98/100; H4 85/100",
+      "off_target": {
+        "H2": {
+          "n": 98,
+          "denom": 100,
+          "prov": "S8_Transitions_Real!H7"
+        },
+        "H4": {
+          "n": 85,
+          "denom": 100,
+          "prov": "S8_Transitions_Real!H9"
+        }
+      },
+      "nodes": [
+        "H2",
+        "H4",
+        "H5"
+      ],
+      "edges": [
+        {
+          "from": "H2",
+          "to": "H4",
+          "n": 97,
+          "kind": "PASS→FAIL",
+          "prov": "S8_Transitions_Real!E20"
+        },
+        {
+          "from": "H2",
+          "to": "H5",
+          "n": 82,
+          "kind": "PASS→NA",
+          "prov": "S8_Transitions_Real!E21"
+        },
+        {
+          "from": "H4",
+          "to": "H5",
+          "n": 82,
+          "kind": "PASS→NA",
+          "prov": "S8_Transitions_Real!E29"
+        }
+      ]
+    }
+  }
+}

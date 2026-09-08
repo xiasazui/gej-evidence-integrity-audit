@@ -1,0 +1,12 @@
+model,model_identifier,macro_f1,micro_f1,evidence_coverage,conditional_item_recoverability,all_snippet_recoverability,mean_snippets_per_predicted_fail,weak_rule,weak_f1
+DeepSeek,deepseek-v3.2-thinking,0.982,0.983,0.987,0.818,0.637,2.05,H6,0.962
+Gemini,gemini-3-pro-preview-thinking,0.984,0.982,0.955,0.991,0.938,1.92,H4,0.968
+GPT-5.2,gpt-5.2,0.871,0.771,0.999,0.882,0.756,2.17,H6,0.374
+GPT-OSS-20B,gpt-oss-20b,0.973,0.968,0.999,0.983,0.961,2.38,H4,0.934
+GPT-OSS-120B,gpt-oss-120b,0.975,0.970,1.000,0.973,0.949,2.40,H4,0.941
+Kimi,kimi-k2-thinking,0.983,0.983,0.999,0.923,0.873,2.39,H2,0.962
+MiniMax,MiniMax-M2.1,0.961,0.958,0.996,0.789,0.632,2.37,H6,0.921
+Qwen3-30B,qwen3-30b-a3b-thinking-2507,0.969,0.967,0.999,0.876,0.836,1.42,H6,0.888
+Qwen3-235B,qwen3-235b-a22b-thinking-2507,0.983,0.980,0.991,0.884,0.773,2.02,H4,0.964
+Qwen3-Next,qwen3-next-80b-a3b-thinking,0.970,0.967,0.992,0.928,0.886,1.72,H6,0.891
+Regex,deterministic-baseline,0.813,0.893,0.581,1.000,0.581,0.58,H2,0.037

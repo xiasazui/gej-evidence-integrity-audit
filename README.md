@@ -1,60 +1,34 @@
-# GEJ audit analysis code
+# GEJ evidence-traceability benchmark: synthetic public release
 
-This is a code-only repository package. It contains analysis, bootstrap,
-synthetic-generation, table-generation, and independent plotting source code.
+This repository accompanies **Evidence traceability distinguishes large language models in a constructed gastroesophageal junction cancer benchmark**.
 
-## Deliberately excluded
+## Contents
 
-This package does not contain:
+- `data/`: the 560-instance synthetic benchmark layer (80 originals + 480 H1–H6 variants), normalized Gold labels, lineage map, frozen aggregate tables, and manuscript table inputs.
+- `outputs/frozen_parsed_jsonl/`: 6,160 frozen parsed outputs (560 instances × 11 systems).
+- `outputs/rule_source_consistency_audit.csv`: result of the rule-source consistency audit (`code/audit_rule_source_consistency.py`).
+- `figures/`, `publication_figure_pipeline/`: the locked publication figures and their deterministic SVG source.
+- `code/`: evaluation, bootstrap, audit, and plotting utilities. `methods/`: the frozen prompt/rule pipeline snapshot.
 
-- a manuscript, cover letter, submission files, or editable article source;
-- rendered figures or publication-figure assets;
-- generated tables or frozen aggregate results;
-- synthetic or real record text;
-- Gold labels, lineage, model outputs, evidence artifacts, or review files;
-- real-source or real-derived case-level materials;
-- API credentials, endpoint configuration, or private data.
+## Scope
 
-The analysis scripts therefore require caller-supplied inputs. Their command-line
-help describes the expected paths and output locations.
+The release is synthetic-only: no real or real-derived case text, real-source record-level labels or outputs, or patient/seed mapping. Manuscript 700-instance results are released as frozen aggregates and cannot be publicly recomputed from the record-level files. Hosted model endpoints cannot be rerun; provider snapshots and credentials are not included. See `DATA_AVAILABILITY.md` for details.
 
-## Included code
+## Reproduce
 
-- `code/evaluate_gold_dataset.py`: Gold-label evaluation and evidence endpoints.
-- `code/seed_cluster_bootstrap.py`: paired synthetic seed-cluster bootstrap.
-- `code/evidence_seed_cluster_bootstrap.py`: evidence-endpoint seed-cluster bootstrap.
-- `code/generate_mock_cases.py`: deterministic synthetic-seed generator.
-- `code/generate_perturbed_cases.py`: H1-H6 perturbation generator.
-- `code/generate_paper_tables.py`: table-generation utilities.
-- `code/generate_paper_figures.py`: aggregate-input plotting utilities.
-- `code/generate_main_figures.py`: independent main-figure plotting utilities.
-- `code/generate_supplementary_figures_compact.py`: independent supplementary plotting utilities.
-- `code/test_evaluate_gold_dataset.py`: evaluator unit tests.
-- `methods/frozen_prompt_rule_pipeline.f79e92dd.py`: frozen method snapshot for code inspection; it is not a standalone executable and requires the original private runtime modules and endpoint configuration.
+See `REPRODUCE.md` for synthetic-layer rescoring and seed-cluster bootstrap commands. Regeneration identity of the synthetic originals is evaluated after universal-newline and synthetic-name-field normalization (the patient-name field uses package-local `患者XXXX` identifiers).
 
-Rendered publication figures and the publication-figure asset pipeline are not
-included in this code-only route.
+## Provenance
 
-## Environment and checks
+The 80 synthetic originals are generated deterministically by the archived generator (`code/generate_mock_cases.py`) from embedded clinical templates and candidate lists; the generator does not read the 20 real records, and the historical knowledge source of the embedded templates was not contemporaneously documented. GPT-5.4 `xhigh` assisted rule-targeted variant construction; variants were finalized before the reported model-evaluation runs, and exact run timestamps are not recoverable from the retained artifacts. The annotation manual dated 1 May 2026 codifies the pre-existing frozen audit policy and did not change the PASS/FAIL/NA decision criteria or the released Gold labels. Two clinical reviewers (Wanzhe Liao, Zhou Junxian) jointly completed one review round of the 80 originals; 0 records were modified or excluded.
 
-Optional numerical and plotting dependencies are listed in `requirements.txt`.
-The standard-library evaluator tests can be run with:
+## Licences
 
-```bash
-python3 code/test_evaluate_gold_dataset.py
-```
+- Software in `code/` and `methods/`: **MIT**.
+- Synthetic data, Gold/lineage, frozen outputs, and documentation: **CC BY 4.0**.
 
-The two self-contained tests run in this package. The record-level regression
-test is skipped because its data, Gold, lineage, and frozen-output fixtures are
-deliberately excluded.
+See `LICENSE.md` for exact scope and attribution.
 
-All Python files can be syntax-checked with:
+## Citation
 
-```bash
-python3 -m compileall -q code methods
-```
-
-## Licence
-
-The source code in this package is released under the MIT License. See
-`LICENSE`.
+Cite the associated manuscript and this repository. Provisional metadata in `CITATION.cff`; update to the journal article DOI when assigned.

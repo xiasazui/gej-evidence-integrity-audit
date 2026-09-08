@@ -1,0 +1,355 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="170mm" height="121mm" viewBox="0 0 170 121">
+<rect x="0" y="0" width="170" height="121" fill="#FFFFFF"/>
+<text class="panel-letter" x="4" y="8" font-family="Arial, Helvetica, sans-serif" font-size="3.175" font-weight="bold" text-anchor="start" fill="#1A1D21">a</text>
+<text class="panel-title" x="8.2" y="8" font-family="Arial, Helvetica, sans-serif" font-size="2.999" font-weight="bold" text-anchor="start" fill="#1A1D21">Predicted NA rate on Gold-applicable pairs</text>
+<text class="row-label" x="27.5" y="17.664" font-family="Arial, Helvetica, sans-serif" font-size="2.469" font-weight="normal" text-anchor="end" fill="#1A1D21">Gemini</text>
+<rect class="cell" x="29" y="14.5" width="20" height="4.6" fill="rgb(255,250,244)" stroke="#E8ECF0" stroke-width="0.353"/>
+<text class="cell-value" x="39" y="17.64" font-family="Arial, Helvetica, sans-serif" font-size="2.399" font-weight="normal" text-anchor="middle" fill="#1A1D21">0.000</text>
+<rect class="cell" x="49" y="14.5" width="20" height="4.6" fill="rgb(255,250,244)" stroke="#E8ECF0" stroke-width="0.353"/>
+<text class="cell-value" x="59" y="17.64" font-family="Arial, Helvetica, sans-serif" font-size="2.399" font-weight="normal" text-anchor="middle" fill="#1A1D21">0.000</text>
+<rect class="cell" x="69" y="14.5" width="20" height="4.6" fill="rgb(255,250,244)" stroke="#E8ECF0" stroke-width="0.353"/>
+<text class="cell-value" x="79" y="17.64" font-family="Arial, Helvetica, sans-serif" font-size="2.399" font-weight="normal" text-anchor="middle" fill="#1A1D21">0.000</text>
+<rect class="cell" x="89" y="14.5" width="20" height="4.6" fill="rgb(255,250,244)" stroke="#E8ECF0" stroke-width="0.353"/>
+<text class="cell-value" x="99" y="17.64" font-family="Arial, Helvetica, sans-serif" font-size="2.399" font-weight="normal" text-anchor="middle" fill="#1A1D21">0.000</text>
+<rect class="cell" x="109" y="14.5" width="20" height="4.6" fill="rgb(254,243,230)" stroke="#E8ECF0" stroke-width="0.353"/>
+<text class="cell-value" x="119" y="17.64" font-family="Arial, Helvetica, sans-serif" font-size="2.399" font-weight="normal" text-anchor="middle" fill="#1A1D21">0.005</text>
+<rect class="cell" x="129" y="14.5" width="20" height="4.6" fill="rgb(255,250,244)" stroke="#E8ECF0" stroke-width="0.353"/>
+<text class="cell-value" x="139" y="17.64" font-family="Arial, Helvetica, sans-serif" font-size="2.399" font-weight="normal" text-anchor="middle" fill="#1A1D21">0.000</text>
+<text class="row-label" x="27.5" y="22.264" font-family="Arial, Helvetica, sans-serif" font-size="2.469" font-weight="normal" text-anchor="end" fill="#1A1D21">Kimi</text>
+<rect class="cell" x="29" y="19.1" width="20" height="4.6" fill="rgb(255,250,244)" stroke="#E8ECF0" stroke-width="0.353"/>
+<text class="cell-value" x="39" y="22.24" font-family="Arial, Helvetica, sans-serif" font-size="2.399" font-weight="normal" text-anchor="middle" fill="#1A1D21">0.000</text>
+<rect class="cell" x="49" y="19.1" width="20" height="4.6" fill="rgb(255,250,244)" stroke="#E8ECF0" stroke-width="0.353"/>
+<text class="cell-value" x="59" y="22.24" font-family="Arial, Helvetica, sans-serif" font-size="2.399" font-weight="normal" text-anchor="middle" fill="#1A1D21">0.000</text>
+<rect class="cell" x="69" y="19.1" width="20" height="4.6" fill="rgb(255,250,244)" stroke="#E8ECF0" stroke-width="0.353"/>
+<text class="cell-value" x="79" y="22.24" font-family="Arial, Helvetica, sans-serif" font-size="2.399" font-weight="normal" text-anchor="middle" fill="#1A1D21">0.000</text>
+<rect class="cell" x="89" y="19.1" width="20" height="4.6" fill="rgb(255,250,244)" stroke="#E8ECF0" stroke-width="0.353"/>
+<text class="cell-value" x="99" y="22.24" font-family="Arial, Helvetica, sans-serif" font-size="2.399" font-weight="normal" text-anchor="middle" fill="#1A1D21">0.000</text>
+<rect class="cell" x="109" y="19.1" width="20" height="4.6" fill="rgb(254,243,230)" stroke="#E8ECF0" stroke-width="0.353"/>
+<text class="cell-value" x="119" y="22.24" font-family="Arial, Helvetica, sans-serif" font-size="2.399" font-weight="normal" text-anchor="middle" fill="#1A1D21">0.005</text>
+<rect class="cell" x="129" y="19.1" width="20" height="4.6" fill="rgb(255,250,244)" stroke="#E8ECF0" stroke-width="0.353"/>
+<text class="cell-value" x="139" y="22.24" font-family="Arial, Helvetica, sans-serif" font-size="2.399" font-weight="normal" text-anchor="middle" fill="#1A1D21">0.000</text>
+<text class="row-label" x="27.5" y="26.864" font-family="Arial, Helvetica, sans-serif" font-size="2.469" font-weight="normal" text-anchor="end" fill="#1A1D21">Qwen3-235B</text>
+<rect class="cell" x="29" y="23.7" width="20" height="4.6" fill="rgb(255,250,244)" stroke="#E8ECF0" stroke-width="0.353"/>
+<text class="cell-value" x="39" y="26.84" font-family="Arial, Helvetica, sans-serif" font-size="2.399" font-weight="normal" text-anchor="middle" fill="#1A1D21">0.000</text>
+<rect class="cell" x="49" y="23.7" width="20" height="4.6" fill="rgb(255,250,244)" stroke="#E8ECF0" stroke-width="0.353"/>
+<text class="cell-value" x="59" y="26.84" font-family="Arial, Helvetica, sans-serif" font-size="2.399" font-weight="normal" text-anchor="middle" fill="#1A1D21">0.000</text>
+<rect class="cell" x="69" y="23.7" width="20" height="4.6" fill="rgb(255,250,244)" stroke="#E8ECF0" stroke-width="0.353"/>
+<text class="cell-value" x="79" y="26.84" font-family="Arial, Helvetica, sans-serif" font-size="2.399" font-weight="normal" text-anchor="middle" fill="#1A1D21">0.000</text>
+<rect class="cell" x="89" y="23.7" width="20" height="4.6" fill="rgb(255,250,244)" stroke="#E8ECF0" stroke-width="0.353"/>
+<text class="cell-value" x="99" y="26.84" font-family="Arial, Helvetica, sans-serif" font-size="2.399" font-weight="normal" text-anchor="middle" fill="#1A1D21">0.000</text>
+<rect class="cell" x="109" y="23.7" width="20" height="4.6" fill="rgb(254,243,230)" stroke="#E8ECF0" stroke-width="0.353"/>
+<text class="cell-value" x="119" y="26.84" font-family="Arial, Helvetica, sans-serif" font-size="2.399" font-weight="normal" text-anchor="middle" fill="#1A1D21">0.005</text>
+<rect class="cell" x="129" y="23.7" width="20" height="4.6" fill="rgb(255,250,244)" stroke="#E8ECF0" stroke-width="0.353"/>
+<text class="cell-value" x="139" y="26.84" font-family="Arial, Helvetica, sans-serif" font-size="2.399" font-weight="normal" text-anchor="middle" fill="#1A1D21">0.000</text>
+<text class="row-label" x="27.5" y="31.464" font-family="Arial, Helvetica, sans-serif" font-size="2.469" font-weight="normal" text-anchor="end" fill="#1A1D21">DeepSeek</text>
+<rect class="cell" x="29" y="28.3" width="20" height="4.6" fill="rgb(255,250,244)" stroke="#E8ECF0" stroke-width="0.353"/>
+<text class="cell-value" x="39" y="31.44" font-family="Arial, Helvetica, sans-serif" font-size="2.399" font-weight="normal" text-anchor="middle" fill="#1A1D21">0.000</text>
+<rect class="cell" x="49" y="28.3" width="20" height="4.6" fill="rgb(255,250,244)" stroke="#E8ECF0" stroke-width="0.353"/>
+<text class="cell-value" x="59" y="31.44" font-family="Arial, Helvetica, sans-serif" font-size="2.399" font-weight="normal" text-anchor="middle" fill="#1A1D21">0.000</text>
+<rect class="cell" x="69" y="28.3" width="20" height="4.6" fill="rgb(255,250,244)" stroke="#E8ECF0" stroke-width="0.353"/>
+<text class="cell-value" x="79" y="31.44" font-family="Arial, Helvetica, sans-serif" font-size="2.399" font-weight="normal" text-anchor="middle" fill="#1A1D21">0.000</text>
+<rect class="cell" x="89" y="28.3" width="20" height="4.6" fill="rgb(255,250,244)" stroke="#E8ECF0" stroke-width="0.353"/>
+<text class="cell-value" x="99" y="31.44" font-family="Arial, Helvetica, sans-serif" font-size="2.399" font-weight="normal" text-anchor="middle" fill="#1A1D21">0.000</text>
+<rect class="cell" x="109" y="28.3" width="20" height="4.6" fill="rgb(254,243,230)" stroke="#E8ECF0" stroke-width="0.353"/>
+<text class="cell-value" x="119" y="31.44" font-family="Arial, Helvetica, sans-serif" font-size="2.399" font-weight="normal" text-anchor="middle" fill="#1A1D21">0.005</text>
+<rect class="cell" x="129" y="28.3" width="20" height="4.6" fill="rgb(255,250,244)" stroke="#E8ECF0" stroke-width="0.353"/>
+<text class="cell-value" x="139" y="31.44" font-family="Arial, Helvetica, sans-serif" font-size="2.399" font-weight="normal" text-anchor="middle" fill="#1A1D21">0.000</text>
+<text class="row-label" x="27.5" y="36.064" font-family="Arial, Helvetica, sans-serif" font-size="2.469" font-weight="normal" text-anchor="end" fill="#1A1D21">GPT-OSS-120B</text>
+<rect class="cell" x="29" y="32.9" width="20" height="4.6" fill="rgb(255,250,244)" stroke="#E8ECF0" stroke-width="0.353"/>
+<text class="cell-value" x="39" y="36.04" font-family="Arial, Helvetica, sans-serif" font-size="2.399" font-weight="normal" text-anchor="middle" fill="#1A1D21">0.000</text>
+<rect class="cell" x="49" y="32.9" width="20" height="4.6" fill="rgb(255,250,244)" stroke="#E8ECF0" stroke-width="0.353"/>
+<text class="cell-value" x="59" y="36.04" font-family="Arial, Helvetica, sans-serif" font-size="2.399" font-weight="normal" text-anchor="middle" fill="#1A1D21">0.000</text>
+<rect class="cell" x="69" y="32.9" width="20" height="4.6" fill="rgb(255,250,244)" stroke="#E8ECF0" stroke-width="0.353"/>
+<text class="cell-value" x="79" y="36.04" font-family="Arial, Helvetica, sans-serif" font-size="2.399" font-weight="normal" text-anchor="middle" fill="#1A1D21">0.000</text>
+<rect class="cell" x="89" y="32.9" width="20" height="4.6" fill="rgb(255,250,244)" stroke="#E8ECF0" stroke-width="0.353"/>
+<text class="cell-value" x="99" y="36.04" font-family="Arial, Helvetica, sans-serif" font-size="2.399" font-weight="normal" text-anchor="middle" fill="#1A1D21">0.000</text>
+<rect class="cell" x="109" y="32.9" width="20" height="4.6" fill="rgb(255,247,239)" stroke="#E8ECF0" stroke-width="0.353"/>
+<text class="cell-value" x="119" y="36.04" font-family="Arial, Helvetica, sans-serif" font-size="2.399" font-weight="normal" text-anchor="middle" fill="#1A1D21">0.002</text>
+<rect class="cell" x="129" y="32.9" width="20" height="4.6" fill="rgb(255,250,244)" stroke="#E8ECF0" stroke-width="0.353"/>
+<text class="cell-value" x="139" y="36.04" font-family="Arial, Helvetica, sans-serif" font-size="2.399" font-weight="normal" text-anchor="middle" fill="#1A1D21">0.000</text>
+<text class="row-label" x="27.5" y="40.664" font-family="Arial, Helvetica, sans-serif" font-size="2.469" font-weight="normal" text-anchor="end" fill="#1A1D21">GPT-OSS-20B</text>
+<rect class="cell" x="29" y="37.5" width="20" height="4.6" fill="rgb(255,250,244)" stroke="#E8ECF0" stroke-width="0.353"/>
+<text class="cell-value" x="39" y="40.64" font-family="Arial, Helvetica, sans-serif" font-size="2.399" font-weight="normal" text-anchor="middle" fill="#1A1D21">0.000</text>
+<rect class="cell" x="49" y="37.5" width="20" height="4.6" fill="rgb(255,250,244)" stroke="#E8ECF0" stroke-width="0.353"/>
+<text class="cell-value" x="59" y="40.64" font-family="Arial, Helvetica, sans-serif" font-size="2.399" font-weight="normal" text-anchor="middle" fill="#1A1D21">0.000</text>
+<rect class="cell" x="69" y="37.5" width="20" height="4.6" fill="rgb(255,250,244)" stroke="#E8ECF0" stroke-width="0.353"/>
+<text class="cell-value" x="79" y="40.64" font-family="Arial, Helvetica, sans-serif" font-size="2.399" font-weight="normal" text-anchor="middle" fill="#1A1D21">0.000</text>
+<rect class="cell" x="89" y="37.5" width="20" height="4.6" fill="rgb(255,250,244)" stroke="#E8ECF0" stroke-width="0.353"/>
+<text class="cell-value" x="99" y="40.64" font-family="Arial, Helvetica, sans-serif" font-size="2.399" font-weight="normal" text-anchor="middle" fill="#1A1D21">0.000</text>
+<rect class="cell" x="109" y="37.5" width="20" height="4.6" fill="rgb(255,247,239)" stroke="#E8ECF0" stroke-width="0.353"/>
+<text class="cell-value" x="119" y="40.64" font-family="Arial, Helvetica, sans-serif" font-size="2.399" font-weight="normal" text-anchor="middle" fill="#1A1D21">0.002</text>
+<rect class="cell" x="129" y="37.5" width="20" height="4.6" fill="rgb(255,250,244)" stroke="#E8ECF0" stroke-width="0.353"/>
+<text class="cell-value" x="139" y="40.64" font-family="Arial, Helvetica, sans-serif" font-size="2.399" font-weight="normal" text-anchor="middle" fill="#1A1D21">0.000</text>
+<text class="row-label" x="27.5" y="45.264" font-family="Arial, Helvetica, sans-serif" font-size="2.469" font-weight="normal" text-anchor="end" fill="#1A1D21">Qwen3-Next</text>
+<rect class="cell" x="29" y="42.1" width="20" height="4.6" fill="rgb(255,250,244)" stroke="#E8ECF0" stroke-width="0.353"/>
+<text class="cell-value" x="39" y="45.24" font-family="Arial, Helvetica, sans-serif" font-size="2.399" font-weight="normal" text-anchor="middle" fill="#1A1D21">0.000</text>
+<rect class="cell" x="49" y="42.1" width="20" height="4.6" fill="rgb(255,250,244)" stroke="#E8ECF0" stroke-width="0.353"/>
+<text class="cell-value" x="59" y="45.24" font-family="Arial, Helvetica, sans-serif" font-size="2.399" font-weight="normal" text-anchor="middle" fill="#1A1D21">0.000</text>
+<rect class="cell" x="69" y="42.1" width="20" height="4.6" fill="rgb(254,237,219)" stroke="#E8ECF0" stroke-width="0.353"/>
+<text class="cell-value" x="79" y="45.24" font-family="Arial, Helvetica, sans-serif" font-size="2.399" font-weight="normal" text-anchor="middle" fill="#1A1D21">0.009</text>
+<rect class="cell" x="89" y="42.1" width="20" height="4.6" fill="rgb(255,250,244)" stroke="#E8ECF0" stroke-width="0.353"/>
+<text class="cell-value" x="99" y="45.24" font-family="Arial, Helvetica, sans-serif" font-size="2.399" font-weight="normal" text-anchor="middle" fill="#1A1D21">0.000</text>
+<rect class="cell" x="109" y="42.1" width="20" height="4.6" fill="rgb(254,243,230)" stroke="#E8ECF0" stroke-width="0.353"/>
+<text class="cell-value" x="119" y="45.24" font-family="Arial, Helvetica, sans-serif" font-size="2.399" font-weight="normal" text-anchor="middle" fill="#1A1D21">0.005</text>
+<rect class="cell" x="129" y="42.1" width="20" height="4.6" fill="rgb(255,250,244)" stroke="#E8ECF0" stroke-width="0.353"/>
+<text class="cell-value" x="139" y="45.24" font-family="Arial, Helvetica, sans-serif" font-size="2.399" font-weight="normal" text-anchor="middle" fill="#1A1D21">0.000</text>
+<text class="row-label" x="27.5" y="49.864" font-family="Arial, Helvetica, sans-serif" font-size="2.469" font-weight="normal" text-anchor="end" fill="#1A1D21">Qwen3-30B</text>
+<rect class="cell" x="29" y="46.7" width="20" height="4.6" fill="rgb(255,250,244)" stroke="#E8ECF0" stroke-width="0.353"/>
+<text class="cell-value" x="39" y="49.84" font-family="Arial, Helvetica, sans-serif" font-size="2.399" font-weight="normal" text-anchor="middle" fill="#1A1D21">0.000</text>
+<rect class="cell" x="49" y="46.7" width="20" height="4.6" fill="rgb(255,250,244)" stroke="#E8ECF0" stroke-width="0.353"/>
+<text class="cell-value" x="59" y="49.84" font-family="Arial, Helvetica, sans-serif" font-size="2.399" font-weight="normal" text-anchor="middle" fill="#1A1D21">0.000</text>
+<rect class="cell" x="69" y="46.7" width="20" height="4.6" fill="rgb(255,250,244)" stroke="#E8ECF0" stroke-width="0.353"/>
+<text class="cell-value" x="79" y="49.84" font-family="Arial, Helvetica, sans-serif" font-size="2.399" font-weight="normal" text-anchor="middle" fill="#1A1D21">0.000</text>
+<rect class="cell" x="89" y="46.7" width="20" height="4.6" fill="rgb(255,250,244)" stroke="#E8ECF0" stroke-width="0.353"/>
+<text class="cell-value" x="99" y="49.84" font-family="Arial, Helvetica, sans-serif" font-size="2.399" font-weight="normal" text-anchor="middle" fill="#1A1D21">0.000</text>
+<rect class="cell" x="109" y="46.7" width="20" height="4.6" fill="rgb(254,243,230)" stroke="#E8ECF0" stroke-width="0.353"/>
+<text class="cell-value" x="119" y="49.84" font-family="Arial, Helvetica, sans-serif" font-size="2.399" font-weight="normal" text-anchor="middle" fill="#1A1D21">0.005</text>
+<rect class="cell" x="129" y="46.7" width="20" height="4.6" fill="rgb(255,250,244)" stroke="#E8ECF0" stroke-width="0.353"/>
+<text class="cell-value" x="139" y="49.84" font-family="Arial, Helvetica, sans-serif" font-size="2.399" font-weight="normal" text-anchor="middle" fill="#1A1D21">0.000</text>
+<text class="row-label" x="27.5" y="54.464" font-family="Arial, Helvetica, sans-serif" font-size="2.469" font-weight="normal" text-anchor="end" fill="#1A1D21">MiniMax</text>
+<rect class="cell" x="29" y="51.3" width="20" height="4.6" fill="rgb(255,250,244)" stroke="#E8ECF0" stroke-width="0.353"/>
+<text class="cell-value" x="39" y="54.44" font-family="Arial, Helvetica, sans-serif" font-size="2.399" font-weight="normal" text-anchor="middle" fill="#1A1D21">0.000</text>
+<rect class="cell" x="49" y="51.3" width="20" height="4.6" fill="rgb(255,249,241)" stroke="#E8ECF0" stroke-width="0.353"/>
+<text class="cell-value" x="59" y="54.44" font-family="Arial, Helvetica, sans-serif" font-size="2.399" font-weight="normal" text-anchor="middle" fill="#1A1D21">0.001</text>
+<rect class="cell" x="69" y="51.3" width="20" height="4.6" fill="rgb(255,250,244)" stroke="#E8ECF0" stroke-width="0.353"/>
+<text class="cell-value" x="79" y="54.44" font-family="Arial, Helvetica, sans-serif" font-size="2.399" font-weight="normal" text-anchor="middle" fill="#1A1D21">0.000</text>
+<rect class="cell" x="89" y="51.3" width="20" height="4.6" fill="rgb(255,249,241)" stroke="#E8ECF0" stroke-width="0.353"/>
+<text class="cell-value" x="99" y="54.44" font-family="Arial, Helvetica, sans-serif" font-size="2.399" font-weight="normal" text-anchor="middle" fill="#1A1D21">0.001</text>
+<rect class="cell" x="109" y="51.3" width="20" height="4.6" fill="rgb(254,243,230)" stroke="#E8ECF0" stroke-width="0.353"/>
+<text class="cell-value" x="119" y="54.44" font-family="Arial, Helvetica, sans-serif" font-size="2.399" font-weight="normal" text-anchor="middle" fill="#1A1D21">0.005</text>
+<rect class="cell" x="129" y="51.3" width="20" height="4.6" fill="rgb(253,232,208)" stroke="#E8ECF0" stroke-width="0.353"/>
+<text class="cell-value" x="139" y="54.44" font-family="Arial, Helvetica, sans-serif" font-size="2.399" font-weight="normal" text-anchor="middle" fill="#1A1D21">0.013</text>
+<text class="row-label" x="27.5" y="59.064" font-family="Arial, Helvetica, sans-serif" font-size="2.469" font-weight="normal" text-anchor="end" fill="#1A1D21">GPT-5.2</text>
+<rect class="cell" x="29" y="55.9" width="20" height="4.6" fill="rgb(255,250,244)" stroke="#E8ECF0" stroke-width="0.353"/>
+<text class="cell-value" x="39" y="59.04" font-family="Arial, Helvetica, sans-serif" font-size="2.399" font-weight="normal" text-anchor="middle" fill="#1A1D21">0.000</text>
+<rect class="cell" x="49" y="55.9" width="20" height="4.6" fill="rgb(255,250,244)" stroke="#E8ECF0" stroke-width="0.353"/>
+<text class="cell-value" x="59" y="59.04" font-family="Arial, Helvetica, sans-serif" font-size="2.399" font-weight="normal" text-anchor="middle" fill="#1A1D21">0.000</text>
+<rect class="cell" x="69" y="55.9" width="20" height="4.6" fill="rgb(255,250,244)" stroke="#E8ECF0" stroke-width="0.353"/>
+<text class="cell-value" x="79" y="59.04" font-family="Arial, Helvetica, sans-serif" font-size="2.399" font-weight="normal" text-anchor="middle" fill="#1A1D21">0.000</text>
+<rect class="cell" x="89" y="55.9" width="20" height="4.6" fill="rgb(255,250,244)" stroke="#E8ECF0" stroke-width="0.353"/>
+<text class="cell-value" x="99" y="59.04" font-family="Arial, Helvetica, sans-serif" font-size="2.399" font-weight="normal" text-anchor="middle" fill="#1A1D21">0.000</text>
+<rect class="cell" x="109" y="55.9" width="20" height="4.6" fill="rgb(254,243,230)" stroke="#E8ECF0" stroke-width="0.353"/>
+<text class="cell-value" x="119" y="59.04" font-family="Arial, Helvetica, sans-serif" font-size="2.399" font-weight="normal" text-anchor="middle" fill="#1A1D21">0.005</text>
+<rect class="cell" x="129" y="55.9" width="20" height="4.6" fill="rgb(255,250,244)" stroke="#E8ECF0" stroke-width="0.353"/>
+<text class="cell-value" x="139" y="59.04" font-family="Arial, Helvetica, sans-serif" font-size="2.399" font-weight="normal" text-anchor="middle" fill="#1A1D21">0.000</text>
+<text class="row-label" x="27.5" y="63.664" font-family="Arial, Helvetica, sans-serif" font-size="2.469" font-weight="normal" text-anchor="end" fill="#1A1D21">Regex</text>
+<rect class="cell" x="29" y="60.5" width="20" height="4.6" fill="rgb(255,250,244)" stroke="#E8ECF0" stroke-width="0.353"/>
+<text class="cell-value" x="39" y="63.64" font-family="Arial, Helvetica, sans-serif" font-size="2.399" font-weight="normal" text-anchor="middle" fill="#1A1D21">0.000</text>
+<rect class="cell" x="49" y="60.5" width="20" height="4.6" fill="rgb(255,250,244)" stroke="#E8ECF0" stroke-width="0.353"/>
+<text class="cell-value" x="59" y="63.64" font-family="Arial, Helvetica, sans-serif" font-size="2.399" font-weight="normal" text-anchor="middle" fill="#1A1D21">0.000</text>
+<rect class="cell" x="69" y="60.5" width="20" height="4.6" fill="rgb(166,70,12)" stroke="#E8ECF0" stroke-width="0.353"/>
+<text class="cell-value" x="79" y="63.64" font-family="Arial, Helvetica, sans-serif" font-size="2.399" font-weight="normal" text-anchor="middle" fill="#FFFFFF">0.057</text>
+<rect class="cell" x="89" y="60.5" width="20" height="4.6" fill="rgb(255,250,244)" stroke="#E8ECF0" stroke-width="0.353"/>
+<text class="cell-value" x="99" y="63.64" font-family="Arial, Helvetica, sans-serif" font-size="2.399" font-weight="normal" text-anchor="middle" fill="#1A1D21">0.000</text>
+<rect class="cell" x="109" y="60.5" width="20" height="4.6" fill="rgb(255,247,239)" stroke="#E8ECF0" stroke-width="0.353"/>
+<text class="cell-value" x="119" y="63.64" font-family="Arial, Helvetica, sans-serif" font-size="2.399" font-weight="normal" text-anchor="middle" fill="#1A1D21">0.002</text>
+<rect class="cell" x="129" y="60.5" width="20" height="4.6" fill="rgb(255,250,244)" stroke="#E8ECF0" stroke-width="0.353"/>
+<text class="cell-value" x="139" y="63.64" font-family="Arial, Helvetica, sans-serif" font-size="2.399" font-weight="normal" text-anchor="middle" fill="#1A1D21">0.000</text>
+<line class="regex-separator" x1="29" y1="60.5" x2="149" y2="60.5" stroke="#B8C0CC" stroke-width="0.353" stroke-dasharray="2,1.4" stroke-linecap="butt"/>
+<text class="col-label" x="39" y="68.7" font-family="Arial, Helvetica, sans-serif" font-size="2.469" font-weight="normal" text-anchor="middle" fill="#1A1D21">H1</text>
+<text class="col-label" x="59" y="68.7" font-family="Arial, Helvetica, sans-serif" font-size="2.469" font-weight="normal" text-anchor="middle" fill="#1A1D21">H2</text>
+<text class="col-label" x="79" y="68.7" font-family="Arial, Helvetica, sans-serif" font-size="2.469" font-weight="normal" text-anchor="middle" fill="#1A1D21">H3</text>
+<text class="col-label" x="99" y="68.7" font-family="Arial, Helvetica, sans-serif" font-size="2.469" font-weight="normal" text-anchor="middle" fill="#1A1D21">H4</text>
+<text class="col-label" x="119" y="68.7" font-family="Arial, Helvetica, sans-serif" font-size="2.469" font-weight="normal" text-anchor="middle" fill="#1A1D21">H5</text>
+<text class="col-label" x="139" y="68.7" font-family="Arial, Helvetica, sans-serif" font-size="2.469" font-weight="normal" text-anchor="middle" fill="#1A1D21">H6</text>
+<rect class="colorbar-step" x="153" y="14.5" width="3.5" height="0.843" fill="rgb(168,72,13)"/>
+<rect class="colorbar-step" x="153" y="15.343" width="3.5" height="0.843" fill="rgb(172,75,16)"/>
+<rect class="colorbar-step" x="153" y="16.187" width="3.5" height="0.843" fill="rgb(175,79,18)"/>
+<rect class="colorbar-step" x="153" y="17.03" width="3.5" height="0.843" fill="rgb(179,82,20)"/>
+<rect class="colorbar-step" x="153" y="17.873" width="3.5" height="0.843" fill="rgb(183,86,22)"/>
+<rect class="colorbar-step" x="153" y="18.717" width="3.5" height="0.843" fill="rgb(187,89,25)"/>
+<rect class="colorbar-step" x="153" y="19.56" width="3.5" height="0.843" fill="rgb(190,93,27)"/>
+<rect class="colorbar-step" x="153" y="20.403" width="3.5" height="0.843" fill="rgb(194,96,30)"/>
+<rect class="colorbar-step" x="153" y="21.247" width="3.5" height="0.843" fill="rgb(198,99,32)"/>
+<rect class="colorbar-step" x="153" y="22.09" width="3.5" height="0.843" fill="rgb(201,103,34)"/>
+<rect class="colorbar-step" x="153" y="22.933" width="3.5" height="0.843" fill="rgb(205,106,37)"/>
+<rect class="colorbar-step" x="153" y="23.777" width="3.5" height="0.843" fill="rgb(209,110,39)"/>
+<rect class="colorbar-step" x="153" y="24.62" width="3.5" height="0.843" fill="rgb(213,113,41)"/>
+<rect class="colorbar-step" x="153" y="25.463" width="3.5" height="0.843" fill="rgb(216,117,44)"/>
+<rect class="colorbar-step" x="153" y="26.307" width="3.5" height="0.843" fill="rgb(220,120,46)"/>
+<rect class="colorbar-step" x="153" y="27.15" width="3.5" height="0.843" fill="rgb(223,124,50)"/>
+<rect class="colorbar-step" x="153" y="27.993" width="3.5" height="0.843" fill="rgb(224,129,56)"/>
+<rect class="colorbar-step" x="153" y="28.837" width="3.5" height="0.843" fill="rgb(226,133,61)"/>
+<rect class="colorbar-step" x="153" y="29.68" width="3.5" height="0.843" fill="rgb(228,138,67)"/>
+<rect class="colorbar-step" x="153" y="30.523" width="3.5" height="0.843" fill="rgb(229,142,72)"/>
+<rect class="colorbar-step" x="153" y="31.367" width="3.5" height="0.843" fill="rgb(231,147,78)"/>
+<rect class="colorbar-step" x="153" y="32.21" width="3.5" height="0.843" fill="rgb(232,151,84)"/>
+<rect class="colorbar-step" x="153" y="33.053" width="3.5" height="0.843" fill="rgb(234,156,90)"/>
+<rect class="colorbar-step" x="153" y="33.897" width="3.5" height="0.843" fill="rgb(236,161,95)"/>
+<rect class="colorbar-step" x="153" y="34.74" width="3.5" height="0.843" fill="rgb(237,165,101)"/>
+<rect class="colorbar-step" x="153" y="35.583" width="3.5" height="0.843" fill="rgb(239,170,107)"/>
+<rect class="colorbar-step" x="153" y="36.427" width="3.5" height="0.843" fill="rgb(240,174,112)"/>
+<rect class="colorbar-step" x="153" y="37.27" width="3.5" height="0.843" fill="rgb(242,179,118)"/>
+<rect class="colorbar-step" x="153" y="38.113" width="3.5" height="0.843" fill="rgb(244,183,124)"/>
+<rect class="colorbar-step" x="153" y="38.957" width="3.5" height="0.843" fill="rgb(245,188,129)"/>
+<rect class="colorbar-step" x="153" y="39.8" width="3.5" height="0.843" fill="rgb(246,191,134)"/>
+<rect class="colorbar-step" x="153" y="40.643" width="3.5" height="0.843" fill="rgb(247,194,139)"/>
+<rect class="colorbar-step" x="153" y="41.487" width="3.5" height="0.843" fill="rgb(247,197,144)"/>
+<rect class="colorbar-step" x="153" y="42.33" width="3.5" height="0.843" fill="rgb(248,199,149)"/>
+<rect class="colorbar-step" x="153" y="43.173" width="3.5" height="0.843" fill="rgb(248,202,154)"/>
+<rect class="colorbar-step" x="153" y="44.017" width="3.5" height="0.843" fill="rgb(249,205,159)"/>
+<rect class="colorbar-step" x="153" y="44.86" width="3.5" height="0.843" fill="rgb(249,207,164)"/>
+<rect class="colorbar-step" x="153" y="45.703" width="3.5" height="0.843" fill="rgb(250,210,169)"/>
+<rect class="colorbar-step" x="153" y="46.547" width="3.5" height="0.843" fill="rgb(250,213,173)"/>
+<rect class="colorbar-step" x="153" y="47.39" width="3.5" height="0.843" fill="rgb(250,215,178)"/>
+<rect class="colorbar-step" x="153" y="48.233" width="3.5" height="0.843" fill="rgb(251,218,183)"/>
+<rect class="colorbar-step" x="153" y="49.077" width="3.5" height="0.843" fill="rgb(251,221,188)"/>
+<rect class="colorbar-step" x="153" y="49.92" width="3.5" height="0.843" fill="rgb(252,223,193)"/>
+<rect class="colorbar-step" x="153" y="50.763" width="3.5" height="0.843" fill="rgb(252,226,198)"/>
+<rect class="colorbar-step" x="153" y="51.607" width="3.5" height="0.843" fill="rgb(253,229,203)"/>
+<rect class="colorbar-step" x="153" y="52.45" width="3.5" height="0.843" fill="rgb(253,231,206)"/>
+<rect class="colorbar-step" x="153" y="53.293" width="3.5" height="0.843" fill="rgb(253,232,209)"/>
+<rect class="colorbar-step" x="153" y="54.137" width="3.5" height="0.843" fill="rgb(253,233,212)"/>
+<rect class="colorbar-step" x="153" y="54.98" width="3.5" height="0.843" fill="rgb(253,235,214)"/>
+<rect class="colorbar-step" x="153" y="55.823" width="3.5" height="0.843" fill="rgb(254,236,217)"/>
+<rect class="colorbar-step" x="153" y="56.667" width="3.5" height="0.843" fill="rgb(254,237,219)"/>
+<rect class="colorbar-step" x="153" y="57.51" width="3.5" height="0.843" fill="rgb(254,239,222)"/>
+<rect class="colorbar-step" x="153" y="58.353" width="3.5" height="0.843" fill="rgb(254,240,225)"/>
+<rect class="colorbar-step" x="153" y="59.197" width="3.5" height="0.843" fill="rgb(254,241,227)"/>
+<rect class="colorbar-step" x="153" y="60.04" width="3.5" height="0.843" fill="rgb(254,243,230)"/>
+<rect class="colorbar-step" x="153" y="60.883" width="3.5" height="0.843" fill="rgb(254,244,232)"/>
+<rect class="colorbar-step" x="153" y="61.727" width="3.5" height="0.843" fill="rgb(255,245,235)"/>
+<rect class="colorbar-step" x="153" y="62.57" width="3.5" height="0.843" fill="rgb(255,247,238)"/>
+<rect class="colorbar-step" x="153" y="63.413" width="3.5" height="0.843" fill="rgb(255,248,240)"/>
+<rect class="colorbar-step" x="153" y="64.257" width="3.5" height="0.843" fill="rgb(255,249,243)"/>
+<rect class="colorbar-frame" x="153" y="14.5" width="3.5" height="50.6" fill="none" stroke="#3A3F44" stroke-width="0.353"/>
+<text class="colorbar-label" x="157.7" y="16.5" font-family="Arial, Helvetica, sans-serif" font-size="2.399" font-weight="normal" text-anchor="start" fill="#1A1D21">0.057</text>
+<text class="colorbar-label" x="157.7" y="65.1" font-family="Arial, Helvetica, sans-serif" font-size="2.399" font-weight="normal" text-anchor="start" fill="#1A1D21">0</text>
+<text class="panel-letter" x="4" y="76" font-family="Arial, Helvetica, sans-serif" font-size="3.175" font-weight="bold" text-anchor="start" fill="#1A1D21">b</text>
+<text class="panel-title" x="8.2" y="76" font-family="Arial, Helvetica, sans-serif" font-size="2.999" font-weight="bold" text-anchor="start" fill="#1A1D21">Applicability discrimination</text>
+<line class="axis-x" x1="16" y1="105" x2="70" y2="105" stroke="#3A3F44" stroke-width="0.353" stroke-linecap="butt"/>
+<line class="grid" x1="16" y1="82" x2="16" y2="105" stroke="#E3E7EC" stroke-width="0.353" stroke-linecap="butt"/>
+<line class="axis-x" x1="16" y1="105" x2="16" y2="106.6" stroke="#3A3F44" stroke-width="0.353" stroke-linecap="butt"/>
+<text class="tick-label" x="16" y="109.869" font-family="Arial, Helvetica, sans-serif" font-size="2.469" font-weight="normal" text-anchor="middle" fill="#1A1D21">0.88</text>
+<line class="grid" x1="25" y1="82" x2="25" y2="105" stroke="#E3E7EC" stroke-width="0.353" stroke-linecap="butt"/>
+<line class="axis-x" x1="25" y1="105" x2="25" y2="106.6" stroke="#3A3F44" stroke-width="0.353" stroke-linecap="butt"/>
+<text class="tick-label" x="25" y="109.869" font-family="Arial, Helvetica, sans-serif" font-size="2.469" font-weight="normal" text-anchor="middle" fill="#1A1D21">0.90</text>
+<line class="grid" x1="34" y1="82" x2="34" y2="105" stroke="#E3E7EC" stroke-width="0.353" stroke-linecap="butt"/>
+<line class="axis-x" x1="34" y1="105" x2="34" y2="106.6" stroke="#3A3F44" stroke-width="0.353" stroke-linecap="butt"/>
+<text class="tick-label" x="34" y="109.869" font-family="Arial, Helvetica, sans-serif" font-size="2.469" font-weight="normal" text-anchor="middle" fill="#1A1D21">0.92</text>
+<line class="grid" x1="43" y1="82" x2="43" y2="105" stroke="#E3E7EC" stroke-width="0.353" stroke-linecap="butt"/>
+<line class="axis-x" x1="43" y1="105" x2="43" y2="106.6" stroke="#3A3F44" stroke-width="0.353" stroke-linecap="butt"/>
+<text class="tick-label" x="43" y="109.869" font-family="Arial, Helvetica, sans-serif" font-size="2.469" font-weight="normal" text-anchor="middle" fill="#1A1D21">0.94</text>
+<line class="grid" x1="52" y1="82" x2="52" y2="105" stroke="#E3E7EC" stroke-width="0.353" stroke-linecap="butt"/>
+<line class="axis-x" x1="52" y1="105" x2="52" y2="106.6" stroke="#3A3F44" stroke-width="0.353" stroke-linecap="butt"/>
+<text class="tick-label" x="52" y="109.869" font-family="Arial, Helvetica, sans-serif" font-size="2.469" font-weight="normal" text-anchor="middle" fill="#1A1D21">0.96</text>
+<line class="grid" x1="61" y1="82" x2="61" y2="105" stroke="#E3E7EC" stroke-width="0.353" stroke-linecap="butt"/>
+<line class="axis-x" x1="61" y1="105" x2="61" y2="106.6" stroke="#3A3F44" stroke-width="0.353" stroke-linecap="butt"/>
+<text class="tick-label" x="61" y="109.869" font-family="Arial, Helvetica, sans-serif" font-size="2.469" font-weight="normal" text-anchor="middle" fill="#1A1D21">0.98</text>
+<line class="grid" x1="70" y1="82" x2="70" y2="105" stroke="#E3E7EC" stroke-width="0.353" stroke-linecap="butt"/>
+<line class="axis-x" x1="70" y1="105" x2="70" y2="106.6" stroke="#3A3F44" stroke-width="0.353" stroke-linecap="butt"/>
+<text class="tick-label" x="70" y="109.869" font-family="Arial, Helvetica, sans-serif" font-size="2.469" font-weight="normal" text-anchor="middle" fill="#1A1D21">1.00</text>
+<text class="axis-title" x="43" y="113.646" font-family="Arial, Helvetica, sans-serif" font-size="2.646" font-weight="normal" text-anchor="middle" fill="#1A1D21">Gold-NA specificity</text>
+<line class="axis-y" x1="16" y1="82" x2="16" y2="105" stroke="#3A3F44" stroke-width="0.353" stroke-linecap="butt"/>
+<line class="grid" x1="16" y1="102.553" x2="70" y2="102.553" stroke="#E3E7EC" stroke-width="0.353" stroke-linecap="butt"/>
+<line class="axis-y" x1="14.4" y1="102.553" x2="16" y2="102.553" stroke="#3A3F44" stroke-width="0.353" stroke-linecap="butt"/>
+<text class="tick-label" x="13.4" y="103.442" font-family="Arial, Helvetica, sans-serif" font-size="2.469" font-weight="normal" text-anchor="end" fill="#1A1D21">0.996</text>
+<line class="grid" x1="16" y1="97.66" x2="70" y2="97.66" stroke="#E3E7EC" stroke-width="0.353" stroke-linecap="butt"/>
+<line class="axis-y" x1="14.4" y1="97.66" x2="16" y2="97.66" stroke="#3A3F44" stroke-width="0.353" stroke-linecap="butt"/>
+<text class="tick-label" x="13.4" y="98.549" font-family="Arial, Helvetica, sans-serif" font-size="2.469" font-weight="normal" text-anchor="end" fill="#1A1D21">0.997</text>
+<line class="grid" x1="16" y1="92.766" x2="70" y2="92.766" stroke="#E3E7EC" stroke-width="0.353" stroke-linecap="butt"/>
+<line class="axis-y" x1="14.4" y1="92.766" x2="16" y2="92.766" stroke="#3A3F44" stroke-width="0.353" stroke-linecap="butt"/>
+<text class="tick-label" x="13.4" y="93.655" font-family="Arial, Helvetica, sans-serif" font-size="2.469" font-weight="normal" text-anchor="end" fill="#1A1D21">0.998</text>
+<line class="grid" x1="16" y1="87.872" x2="70" y2="87.872" stroke="#E3E7EC" stroke-width="0.353" stroke-linecap="butt"/>
+<line class="axis-y" x1="14.4" y1="87.872" x2="16" y2="87.872" stroke="#3A3F44" stroke-width="0.353" stroke-linecap="butt"/>
+<text class="tick-label" x="13.4" y="88.761" font-family="Arial, Helvetica, sans-serif" font-size="2.469" font-weight="normal" text-anchor="end" fill="#1A1D21">0.999</text>
+<line class="grid" x1="16" y1="82.979" x2="70" y2="82.979" stroke="#E3E7EC" stroke-width="0.353" stroke-linecap="butt"/>
+<line class="axis-y" x1="14.4" y1="82.979" x2="16" y2="82.979" stroke="#3A3F44" stroke-width="0.353" stroke-linecap="butt"/>
+<text class="tick-label" x="13.4" y="83.868" font-family="Arial, Helvetica, sans-serif" font-size="2.469" font-weight="normal" text-anchor="end" fill="#1A1D21">1.000</text>
+<text class="axis-title" x="4.8" y="93.5" font-family="Arial, Helvetica, sans-serif" font-size="2.646" font-weight="normal" text-anchor="middle" fill="#1A1D21" transform="rotate(-90 4.8 93.5)">Gold-applicable sensitivity</text>
+<text class="axis-note" x="17.6" y="102.4" font-family="Arial, Helvetica, sans-serif" font-size="2.399" font-weight="normal" font-style="italic" text-anchor="start" fill="#4A5058">Expanded y-axis</text>
+<circle class="marker point" cx="62.259" cy="85.92" r="1.05" fill="#0072B2"/>
+<circle class="marker point" cx="55.034" cy="85.92" r="1.05" fill="#0072B2"/>
+<circle class="marker point" cx="49.358" cy="85.92" r="1.05" fill="#0072B2"/>
+<circle class="marker point" cx="52.454" cy="85.92" r="1.05" fill="#0072B2"/>
+<circle class="marker point" cx="60.711" cy="84.447" r="1.05" fill="#0072B2"/>
+<circle class="marker point" cx="17.363" cy="84.447" r="1.05" fill="#0072B2"/>
+<circle class="marker point" cx="60.711" cy="87.388" r="1.05" fill="#0072B2"/>
+<circle class="marker point" cx="64.839" cy="85.92" r="1.05" fill="#0072B2"/>
+<circle class="marker point" cx="56.067" cy="102.093" r="1.05" fill="#0072B2"/>
+<circle class="marker point" cx="51.938" cy="85.92" r="1.05" fill="#0072B2"/>
+<circle class="marker point" cx="68.452" cy="93.27" r="1.05" fill="#5F6670"/>
+<text class="point-label" x="19.363" y="85.297" font-family="Arial, Helvetica, sans-serif" font-size="2.399" font-weight="normal" text-anchor="start" fill="#1A1D21">GPT-OSS-20B</text>
+<text class="point-label" x="58.067" y="102.943" font-family="Arial, Helvetica, sans-serif" font-size="2.399" font-weight="normal" text-anchor="start" fill="#1A1D21">MiniMax</text>
+<text class="point-label" x="66.452" y="94.12" font-family="Arial, Helvetica, sans-serif" font-size="2.399" font-weight="normal" text-anchor="end" fill="#1A1D21">Regex</text>
+<text class="panel-letter" x="78" y="76" font-family="Arial, Helvetica, sans-serif" font-size="3.175" font-weight="bold" text-anchor="start" fill="#1A1D21">c</text>
+<text class="panel-title" x="82.2" y="76" font-family="Arial, Helvetica, sans-serif" font-size="2.999" font-weight="bold" text-anchor="start" fill="#1A1D21">Predicted-NA policy sensitivity</text>
+<line class="axis-y" x1="92" y1="82" x2="92" y2="105" stroke="#3A3F44" stroke-width="0.353" stroke-linecap="butt"/>
+<line class="grid" x1="92" y1="102.956" x2="138" y2="102.956" stroke="#E3E7EC" stroke-width="0.353" stroke-linecap="butt"/>
+<line class="axis-y" x1="90.4" y1="102.956" x2="92" y2="102.956" stroke="#3A3F44" stroke-width="0.353" stroke-linecap="butt"/>
+<text class="tick-label" x="89.4" y="103.845" font-family="Arial, Helvetica, sans-serif" font-size="2.469" font-weight="normal" text-anchor="end" fill="#1A1D21">0.80</text>
+<line class="grid" x1="92" y1="97.844" x2="138" y2="97.844" stroke="#E3E7EC" stroke-width="0.353" stroke-linecap="butt"/>
+<line class="axis-y" x1="90.4" y1="97.844" x2="92" y2="97.844" stroke="#3A3F44" stroke-width="0.353" stroke-linecap="butt"/>
+<text class="tick-label" x="89.4" y="98.733" font-family="Arial, Helvetica, sans-serif" font-size="2.469" font-weight="normal" text-anchor="end" fill="#1A1D21">0.85</text>
+<line class="grid" x1="92" y1="92.733" x2="138" y2="92.733" stroke="#E3E7EC" stroke-width="0.353" stroke-linecap="butt"/>
+<line class="axis-y" x1="90.4" y1="92.733" x2="92" y2="92.733" stroke="#3A3F44" stroke-width="0.353" stroke-linecap="butt"/>
+<text class="tick-label" x="89.4" y="93.622" font-family="Arial, Helvetica, sans-serif" font-size="2.469" font-weight="normal" text-anchor="end" fill="#1A1D21">0.90</text>
+<line class="grid" x1="92" y1="87.622" x2="138" y2="87.622" stroke="#E3E7EC" stroke-width="0.353" stroke-linecap="butt"/>
+<line class="axis-y" x1="90.4" y1="87.622" x2="92" y2="87.622" stroke="#3A3F44" stroke-width="0.353" stroke-linecap="butt"/>
+<text class="tick-label" x="89.4" y="88.511" font-family="Arial, Helvetica, sans-serif" font-size="2.469" font-weight="normal" text-anchor="end" fill="#1A1D21">0.95</text>
+<line class="grid" x1="92" y1="82.511" x2="138" y2="82.511" stroke="#E3E7EC" stroke-width="0.353" stroke-linecap="butt"/>
+<line class="axis-y" x1="90.4" y1="82.511" x2="92" y2="82.511" stroke="#3A3F44" stroke-width="0.353" stroke-linecap="butt"/>
+<text class="tick-label" x="89.4" y="83.4" font-family="Arial, Helvetica, sans-serif" font-size="2.469" font-weight="normal" text-anchor="end" fill="#1A1D21">1.00</text>
+<text class="axis-title" x="82.5" y="93.5" font-family="Arial, Helvetica, sans-serif" font-size="2.646" font-weight="normal" text-anchor="middle" fill="#1A1D21" transform="rotate(-90 82.5 93.5)">FAIL-class macro-F1</text>
+<line class="axis-x" x1="92" y1="105" x2="138" y2="105" stroke="#3A3F44" stroke-width="0.353" stroke-linecap="butt"/>
+<line class="axis-x" x1="100" y1="105" x2="100" y2="106.6" stroke="#3A3F44" stroke-width="0.353" stroke-linecap="butt"/>
+<text class="tick-label" x="100" y="109.869" font-family="Arial, Helvetica, sans-serif" font-size="2.469" font-weight="normal" text-anchor="middle" fill="#1A1D21">NA as PASS</text>
+<line class="axis-x" x1="115" y1="105" x2="115" y2="106.6" stroke="#3A3F44" stroke-width="0.353" stroke-linecap="butt"/>
+<text class="tick-label" x="115" y="109.869" font-family="Arial, Helvetica, sans-serif" font-size="2.469" font-weight="normal" text-anchor="middle" fill="#1A1D21">exclude NA</text>
+<line class="axis-x" x1="130" y1="105" x2="130" y2="106.6" stroke="#3A3F44" stroke-width="0.353" stroke-linecap="butt"/>
+<text class="tick-label" x="130" y="109.869" font-family="Arial, Helvetica, sans-serif" font-size="2.469" font-weight="normal" text-anchor="middle" fill="#1A1D21">NA as FAIL</text>
+<path class="policy-line background" d="M 100.000 84.147 L 115.000 84.147 L 130.000 84.249" fill="none" stroke="#B8C0CC" stroke-width="0.353" stroke-linecap="butt" stroke-linejoin="miter"/>
+<circle class="marker background" cx="100" cy="84.147" r="0.55" fill="#B8C0CC"/>
+<circle class="marker background" cx="115" cy="84.147" r="0.55" fill="#B8C0CC"/>
+<circle class="marker background" cx="130" cy="84.249" r="0.55" fill="#B8C0CC"/>
+<path class="policy-line background" d="M 100.000 84.249 L 115.000 84.249 L 130.000 84.453" fill="none" stroke="#B8C0CC" stroke-width="0.353" stroke-linecap="butt" stroke-linejoin="miter"/>
+<circle class="marker background" cx="100" cy="84.249" r="0.55" fill="#B8C0CC"/>
+<circle class="marker background" cx="115" cy="84.249" r="0.55" fill="#B8C0CC"/>
+<circle class="marker background" cx="130" cy="84.453" r="0.55" fill="#B8C0CC"/>
+<path class="policy-line background" d="M 100.000 84.249 L 115.000 84.249 L 130.000 84.453" fill="none" stroke="#B8C0CC" stroke-width="0.353" stroke-linecap="butt" stroke-linejoin="miter"/>
+<circle class="marker background" cx="100" cy="84.249" r="0.55" fill="#B8C0CC"/>
+<circle class="marker background" cx="115" cy="84.249" r="0.55" fill="#B8C0CC"/>
+<circle class="marker background" cx="130" cy="84.453" r="0.55" fill="#B8C0CC"/>
+<path class="policy-line background" d="M 100.000 84.351 L 115.000 84.351 L 130.000 84.453" fill="none" stroke="#B8C0CC" stroke-width="0.353" stroke-linecap="butt" stroke-linejoin="miter"/>
+<circle class="marker background" cx="100" cy="84.351" r="0.55" fill="#B8C0CC"/>
+<circle class="marker background" cx="115" cy="84.351" r="0.55" fill="#B8C0CC"/>
+<circle class="marker background" cx="130" cy="84.453" r="0.55" fill="#B8C0CC"/>
+<path class="policy-line background" d="M 100.000 85.067 L 115.000 85.067 L 130.000 85.169" fill="none" stroke="#B8C0CC" stroke-width="0.353" stroke-linecap="butt" stroke-linejoin="miter"/>
+<circle class="marker background" cx="100" cy="85.067" r="0.55" fill="#B8C0CC"/>
+<circle class="marker background" cx="115" cy="85.067" r="0.55" fill="#B8C0CC"/>
+<circle class="marker background" cx="130" cy="85.169" r="0.55" fill="#B8C0CC"/>
+<path class="policy-line background" d="M 100.000 85.271 L 115.000 85.271 L 130.000 85.373" fill="none" stroke="#B8C0CC" stroke-width="0.353" stroke-linecap="butt" stroke-linejoin="miter"/>
+<circle class="marker background" cx="100" cy="85.271" r="0.55" fill="#B8C0CC"/>
+<circle class="marker background" cx="115" cy="85.271" r="0.55" fill="#B8C0CC"/>
+<circle class="marker background" cx="130" cy="85.373" r="0.55" fill="#B8C0CC"/>
+<path class="policy-line background" d="M 100.000 85.578 L 115.000 85.476 L 130.000 85.578" fill="none" stroke="#B8C0CC" stroke-width="0.353" stroke-linecap="butt" stroke-linejoin="miter"/>
+<circle class="marker background" cx="100" cy="85.578" r="0.55" fill="#B8C0CC"/>
+<circle class="marker background" cx="115" cy="85.476" r="0.55" fill="#B8C0CC"/>
+<circle class="marker background" cx="130" cy="85.578" r="0.55" fill="#B8C0CC"/>
+<path class="policy-line background" d="M 100.000 85.680 L 115.000 85.680 L 130.000 85.782" fill="none" stroke="#B8C0CC" stroke-width="0.353" stroke-linecap="butt" stroke-linejoin="miter"/>
+<circle class="marker background" cx="100" cy="85.68" r="0.55" fill="#B8C0CC"/>
+<circle class="marker background" cx="115" cy="85.68" r="0.55" fill="#B8C0CC"/>
+<circle class="marker background" cx="130" cy="85.782" r="0.55" fill="#B8C0CC"/>
+<path class="policy-line background" d="M 100.000 86.498 L 115.000 86.498 L 130.000 87.316" fill="none" stroke="#B8C0CC" stroke-width="0.353" stroke-linecap="butt" stroke-linejoin="miter"/>
+<circle class="marker background" cx="100" cy="86.498" r="0.55" fill="#B8C0CC"/>
+<circle class="marker background" cx="115" cy="86.498" r="0.55" fill="#B8C0CC"/>
+<circle class="marker background" cx="130" cy="87.316" r="0.55" fill="#B8C0CC"/>
+<path class="policy-line gpt52" d="M 100.000 95.698 L 115.000 95.698 L 130.000 95.902" fill="none" stroke="#D55E00" stroke-width="0.441" stroke-linecap="butt" stroke-linejoin="miter"/>
+<rect class="marker gpt52" x="99.05" y="94.748" width="1.9" height="1.9" fill="#D55E00"/>
+<rect class="marker gpt52" x="114.05" y="94.748" width="1.9" height="1.9" fill="#D55E00"/>
+<rect class="marker gpt52" x="129.05" y="94.952" width="1.9" height="1.9" fill="#D55E00"/>
+<path class="policy-line regex" d="M 100.000 101.627 L 115.000 101.524 L 130.000 101.933" fill="none" stroke="#5F6670" stroke-width="0.441" stroke-linecap="butt" stroke-linejoin="miter" stroke-dasharray="2.5,1.6"/>
+<circle class="marker regex" cx="100" cy="101.627" r="0.95" fill="#5F6670"/>
+<circle class="marker regex" cx="115" cy="101.524" r="0.95" fill="#5F6670"/>
+<circle class="marker regex" cx="130" cy="101.933" r="0.95" fill="#5F6670"/>
+<line class="legend-line" x1="37.657" y1="117.41" x2="42.657" y2="117.41" stroke="#B8C0CC" stroke-width="0.353" stroke-linecap="butt"/>
+<circle class="legend-marker" cx="40.157" cy="117.41" r="0.55" fill="#B8C0CC"/>
+<text class="legend-label" x="44.657" y="118.2" font-family="Arial, Helvetica, sans-serif" font-size="2.469" font-weight="normal" text-anchor="start" fill="#1A1D21">Other LLM systems</text>
+<line class="legend-line" x1="71.104" y1="117.41" x2="76.104" y2="117.41" stroke="#D55E00" stroke-width="0.441" stroke-linecap="butt"/>
+<rect class="legend-marker" x="72.654" y="116.46" width="1.9" height="1.9" fill="#D55E00"/>
+<text class="legend-label" x="78.104" y="118.2" font-family="Arial, Helvetica, sans-serif" font-size="2.469" font-weight="normal" text-anchor="start" fill="#1A1D21">GPT-5.2</text>
+<line class="legend-line" x1="93.438" y1="117.41" x2="98.438" y2="117.41" stroke="#5F6670" stroke-width="0.441" stroke-dasharray="2.5,1.6" stroke-linecap="butt"/>
+<circle class="legend-marker" cx="95.938" cy="117.41" r="0.95" fill="#5F6670"/>
+<text class="legend-label" x="100.438" y="118.2" font-family="Arial, Helvetica, sans-serif" font-size="2.469" font-weight="normal" text-anchor="start" fill="#1A1D21">Regex (deterministic baseline)</text>
+</svg>
