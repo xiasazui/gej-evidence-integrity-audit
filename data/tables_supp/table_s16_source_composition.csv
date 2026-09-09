@@ -1,5 +1,0 @@
-source_class,n_instances,n_unique_seeds,record_level_public
-real_original,20,20,no
-synthetic_original,80,80,yes
-real_derived,120,20,no
-synthetic_derived,480,80,yes
