@@ -1,0 +1,12 @@
+model,predicted_fail_outputs,outputs_with_nonempty_evidence,returned_evidence_items,recoverable_evidence_items,outputs_all_snippets_recoverable
+MiniMax-M2.1,574,572,1347,1023,339
+deepseek-v3.2-thinking,568,562,1168,945,350
+deterministic-baseline,480,320,320,320,320
+gemini-3-pro-preview-thinking,567,541,1096,1088,533
+gpt-5.2,897,896,1933,1709,682
+gpt-oss-120b,557,557,1316,1279,530
+gpt-oss-20b,595,594,1401,1379,573
+kimi-k2-thinking,564,564,1339,1223,489
+qwen3-235b-a22b-thinking-2507,567,562,1157,1010,422
+qwen3-30b-a3b-thinking-2507,577,576,827,730,479
+qwen3-next-80b-a3b-thinking,567,561,982,918,499

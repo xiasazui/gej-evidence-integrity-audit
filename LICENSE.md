@@ -1,14 +1,27 @@
-# Licence map
+# Licence
 
-The authors have approved the following dual-licence arrangement for this release candidate.
+Code in `code/` is released under the MIT licence below. Data in `data/` are released under the Creative Commons Attribution 4.0 International licence (CC BY 4.0, https://creativecommons.org/licenses/by/4.0/).
 
-| Content | Licence |
-| --- | --- |
-| Software in `code/` and Python source files in `methods/` | MIT |
-| Synthetic cases, normalized Gold and lineage, frozen outputs, evidence, tables, metadata and documentation | Creative Commons Attribution 4.0 International (CC BY 4.0) |
+```
+MIT License
 
-The full MIT text is in `LICENSE-CODE-MIT.txt`. The CC BY 4.0 scope, attribution guidance and
-official legal-code links are in `LICENSE-DATA-DOCS-CC-BY-4.0.md`.
+Copyright (c) 2026 the authors
 
-Where a file contains an explicit third-party notice, that notice takes precedence for the
-third-party portion. No real or real-derived clinical case text is included or licensed here.
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+```

@@ -1,0 +1,12 @@
+model,predicted_fail_outputs,outputs_with_nonempty_evidence,returned_evidence_items,recoverable_evidence_items,outputs_all_snippets_recoverable,fail_outputs_at_least_one_snippet_recoverable,fail_outputs_any_nonrecoverable_snippet,fail_outputs_empty_evidence,full_lenient_item_rate_3dp,full_gold_na_predicted_applicable,clinical_applicable_tp_plus_fp
+MiniMax-M2.1,797,794,1888,1490,504,718,290,3,0.926,27,207
+deepseek-v3.2-thinking,772,762,1585,1297,492,748,270,10,0.950,34,191
+deterministic-baseline,666,387,387,387,387,387,0,279,1.000,3,186
+gemini-3-pro-preview-thinking,755,721,1451,1438,708,721,13,34,0.998,15,183
+gpt-5.2,1206,1205,2612,2304,912,1175,293,1,0.944,35,283
+gpt-oss-120b,772,772,1856,1805,733,767,39,0,0.987,18,204
+gpt-oss-20b,831,830,1976,1943,799,830,31,1,0.991,102,194
+kimi-k2-thinking,774,773,1851,1709,676,742,97,1,0.979,29,190
+qwen3-235b-a22b-thinking-2507,779,772,1575,1393,602,761,170,7,0.978,40,192
+qwen3-30b-a3b-thinking-2507,785,784,1117,979,656,672,128,1,0.891,10,207
+qwen3-next-80b-a3b-thinking,787,781,1354,1257,697,708,84,6,0.937,18,208

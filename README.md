@@ -1,34 +1,37 @@
-# GEJ evidence-traceability benchmark: synthetic public release
+# GEJ documentation-audit benchmark: public synthetic layer
 
-This repository accompanies **Evidence traceability distinguishes large language models in a constructed gastroesophageal junction cancer benchmark**.
+Code and public data for the article *Exact-match scoring conflates citation format with evidence locatability in LLM clinical documentation audits*.
+
+The benchmark contains 700 Chinese-language outpatient records of gastroesophageal junction (GEJ) and gastric cardia cancer, audited under six rules (H1–H6) by ten large language models and a regex baseline. This repository contains the 560 synthetic records (80 template-generated originals and 480 rule-targeted variants), their Gold labels, the outputs of the 11 systems on these records, and the analysis code. The 140 clinical-source records are not public.
 
 ## Contents
 
-- `data/`: the 560-instance synthetic benchmark layer (80 originals + 480 H1–H6 variants), normalized Gold labels, lineage map, frozen aggregate tables, and manuscript table inputs.
-- `outputs/frozen_parsed_jsonl/`: 6,160 frozen parsed outputs (560 instances × 11 systems).
-- `outputs/rule_source_consistency_audit.csv`: result of the rule-source consistency audit (`code/audit_rule_source_consistency.py`).
-- `figures/`, `publication_figure_pipeline/`: the locked publication figures and their deterministic SVG source.
-- `code/`: evaluation, bootstrap, audit, and plotting utilities. `methods/`: the frozen prompt/rule pipeline snapshot.
+| Path | Contents |
+| --- | --- |
+| `data/synthetic_cases/` | 560 synthetic records |
+| `data/synthetic_gold_normalized.jsonl` | Gold PASS/FAIL/NA labels for H1–H6 |
+| `data/synthetic_lineage.csv` | Seed, record type and target rule of each record |
+| `data/model_outputs/` | Outputs of the 11 systems on the 560 records |
+| `data/normalized_prefix_whitelist.json` | Record headings accepted by the stricter normalizer |
+| `data/full_benchmark/` | Aggregate counts from the full 700-record evaluation, used to derive clinical-source counts |
+| `code/` | Analysis code |
 
-## Scope
+## Running the analyses
 
-The release is synthetic-only: no real or real-derived case text, real-source record-level labels or outputs, or patient/seed mapping. Manuscript 700-instance results are released as frozen aggregates and cannot be publicly recomputed from the record-level files. Hosted model endpoints cannot be rerun; provider snapshots and credentials are not included. See `DATA_AVAILABILITY.md` for details.
+Python 3.9 or later. From the repository root:
 
-## Reproduce
+```bash
+pip install -r requirements.txt
+python code/locatability.py            # exact and format-normalized evidence locatability
+python code/decision_metrics.py        # FAIL-class decision metrics
+python code/rule_based_validation.py   # validation of rescued and residual snippets
+python code/clinical_source_counts.py  # clinical-source exact counts by subtraction
+```
 
-See `REPRODUCE.md` for synthetic-layer rescoring and seed-cluster bootstrap commands. Regeneration identity of the synthetic originals is evaluated after universal-newline and synthetic-name-field normalization (the patient-name field uses package-local `患者XXXX` identifiers).
+Results are written to `results/`. No model is called. Confidence intervals use 2,000 bootstrap resamples of the 80 seed clusters (NumPy PCG64, seed 20261002).
 
-## Provenance
+`code/normalization_core.py` defines the citation-format categories, and `code/original_scoring.py` contains the matching functions of the original evaluation. `code/generate_mock_cases.py` generates the synthetic originals (`python code/generate_mock_cases.py --seed 20251220`; released records carry study identifiers in place of the generated names), and `code/generate_perturbed_cases.py` applies the rule-targeted operators that produce the variants. `code/frozen_prompt_rule_pipeline.py` contains the rule definitions and prompts used in the evaluation and is included for reference.
 
-The 80 synthetic originals are generated deterministically by the archived generator (`code/generate_mock_cases.py`) from embedded clinical templates and candidate lists; the generator does not read the 20 real records, and the historical knowledge source of the embedded templates was not contemporaneously documented. GPT-5.4 `xhigh` assisted rule-targeted variant construction; variants were finalized before the reported model-evaluation runs, and exact run timestamps are not recoverable from the retained artifacts. The annotation manual dated 1 May 2026 codifies the pre-existing frozen audit policy and did not change the PASS/FAIL/NA decision criteria or the released Gold labels. Two clinical reviewers (Wanzhe Liao, Zhou Junxian) jointly completed one review round of the 80 originals; 0 records were modified or excluded.
+## Licence
 
-## Licences
-
-- Software in `code/` and `methods/`: **MIT**.
-- Synthetic data, Gold/lineage, frozen outputs, and documentation: **CC BY 4.0**.
-
-See `LICENSE.md` for exact scope and attribution.
-
-## Citation
-
-Cite the associated manuscript and this repository. Provisional metadata in `CITATION.cff`; update to the journal article DOI when assigned.
+Code is released under the MIT licence and data under CC BY 4.0 (`LICENSE.md`).

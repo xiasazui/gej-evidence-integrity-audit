@@ -1,6 +1,4 @@
+results/
 __pycache__/
 *.py[cod]
-.venv/
-venv/
 .DS_Store
-reproduced_outputs/
